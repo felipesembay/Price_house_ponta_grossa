@@ -1,0 +1,25 @@
+# Ambiente virtual
+venv/
+env/
+ENV/
+
+# Dados sensíveis
+.env
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store

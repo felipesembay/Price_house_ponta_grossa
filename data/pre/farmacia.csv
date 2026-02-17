@@ -1,0 +1,10 @@
+geometry,amenity,dispensing,name,source,healthcare,addr:city,addr:housenumber,addr:street,addr:suburb,opening_hours,building,operator
+POINT (-50.1558824 -25.0935183),pharmacy,yes,Farmacia Nissei,Bing;Tracksource,,,,,,,,
+POINT (-50.1640108 -25.0903485),pharmacy,yes,,Bing;Tracksource,,,,,,,,
+POINT (-50.1614726 -25.0902901),pharmacy,yes,Farmacia Erva Doce,Bing;Tracksource,,,,,,,,
+POINT (-50.1556831 -25.0778827),pharmacy,,Farmácia Fleming,,pharmacy,,,,,,,
+POINT (-50.1665313 -25.0792802),pharmacy,,,,,,,,,,,
+POINT (-50.1606185 -25.0931017),pharmacy,,Farmácia Fleming,,,Ponta Grossa,284,Praça Barão do Rio Branco,Centro,24/7,,
+POINT (-50.1563488 -25.0546778),pharmacy,yes,Fleming,,pharmacy,,,,,,,
+POINT (-50.1423671 -25.1782388),pharmacy,yes,Farmácia Bom Jesus,,pharmacy,Ponta Grossa,,Rua 14 Bis,Cará-Cará,,,
+"POLYGON ((-50.1040203 -25.0970539, -50.1038903 -25.0970461, -50.1038978 -25.0969439, -50.1037927 -25.0969376, -50.1038413 -25.0962799, -50.1040113 -25.0963053, -50.1039894 -25.0966959, -50.1040464 -25.0966993, -50.1040203 -25.0970539))",pharmacy,,Laboratório Farmacêutico UEPG,,pharmacy,,,,,,yes,UEPG

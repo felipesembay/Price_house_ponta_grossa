@@ -1,0 +1,13 @@
+geometry,addr:street,amenity,capacity,name,phone,source,source_ref,opening_hours,operator,operator:wikidata,operator:wikipedia,police,addr:housenumber,website,name:pt,email,addr:city,addr:postcode,addr:suburb,operator:en,building
+POINT (-50.1580053 -25.1088785),Rua Saint Hilaire,courthouse,1,Tribunal Regional Eleitoral do Paraná,+55 42 3224 9654,Prefeitura de Ponta Grossa - PR,http://wiki.openstreetmap.org/wiki/Pt-br:WikiProject_Brazil/PR/Ponta_Grossa/Agreement,,,,,,,,,,,,,,
+POINT (-50.1667703 -25.086804),,police,,Polícia Rodoviária Federal,+55 41 3535 2130,Bing,,Mo-Fr 08:00-17:00,Polícia Rodoviária Federal,Q1158853,pt:Polícia Rodoviária Federal,traffic_police,,,,,,,,,
+POINT (-50.153385 -25.0944667),,police,,,,,,,,,,,,,,,,,,,
+POINT (-50.1168335 -25.0920435),Avenida General Carlos Cavalcanti,fire_station,,Corpo de Bombeiros,,,,24/7,,,,,,,,,,,,,
+POINT (-50.1583001 -25.1093328),Rua Doutor Leopoldo Guimarães da Cunha,courthouse,,Fórum - Desembargador Joaquim Ferreira Guimarães,+55 42 3220 4900,,,Mo-Fr 12:00-18:00,,,,,590,https://www.tjpr.jus.br/,,,,,,,
+POINT (-50.1649327 -25.1536386),Rua Batuíra,police,,Penitenciária Estadual de Ponta Grossa,,,,24/7,,,,,,,Penitenciária Estadual de Ponta Grossa,,,,,,
+POINT (-50.2837455 -25.04352),,police,,PRF - Polícia Rodoviária Federal,+55 41 3535 2131,,,,Polícia Rodoviária Federal,Q1158853,pt:Polícia Rodoviária Federal,traffic_police,,,,del03.pr@prf.gov.br,,,,,
+POINT (-50.1619114 -25.1028913),Rua Carlos Osternack,police,,Polícia Federal do Brasil,+55 42 3026 5965,,,,Polícia Federal do Brasil,Q2289697,pt:Polícia Federal do Brasil,,316,,,dpf.pgz.srpr@pf.gov.br,Ponta Grossa,84040-120,Vila Estrela,Federal Police of Brazil,
+"POLYGON ((-50.0606386 -25.2133194, -50.0607355 -25.213398, -50.0606259 -25.2135086, -50.060529 -25.21343, -50.0606386 -25.2133194))",,police,,Polícia Rodoviária Federal,,,,,,,,traffic_police,,,,,,,,,yes
+"POLYGON ((-50.1575313 -25.103194, -50.1573647 -25.1031869, -50.157311 -25.1031651, -50.1573378 -25.1030606, -50.1574237 -25.1030072, -50.157488 -25.1030145, -50.1575313 -25.103194))",,police,,,,,,,,,,,,,,,,,,,yes
+"POLYGON ((-50.1587638 -25.1090936, -50.1582581 -25.1093646, -50.1578734 -25.1087761, -50.1583791 -25.108505, -50.1587638 -25.1090936))",,courthouse,,,,,,,,,,,,,,,,,,,yes
+"POLYGON ((-50.1891002 -25.0785064, -50.1890856 -25.0784806, -50.1889928 -25.0783168, -50.1889846 -25.0783024, -50.1890922 -25.0782536, -50.1890045 -25.0780983, -50.189156 -25.0780351, -50.1893494 -25.0783854, -50.1891002 -25.0785064))",,fire_station,,,,,,,,,,,,,,,,,,,
