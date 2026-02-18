@@ -1,11 +1,11 @@
-# Projeto de Machine Learning: Previsão de Preços de Imóveis em Guarapuava
+# Projeto de Machine Learning: Previsão de Preços de Imóveis em Ponta Grossa
 
-Um projeto end-to-end de machine learning que utiliza regressão para prever o preço de imóveis em Guarapuava, PR, com dados coletados via web scraping do ZapImóveis.
+Um projeto end-to-end de machine learning que utiliza regressão para prever o preço de imóveis em Ponta Grossa, PR, com dados coletados via web scraping do ZapImóveis.
 
 ## 📋 Estrutura do Projeto
 
 ```
-Casas Guarapuava/
+Casas Ponta Grossa/
 ├── src/                          # Código-fonte principal
 │   ├── scraper.py               # Web scraping do ZapImóveis
 │   ├── preprocessing.py          # Limpeza e preparação de dados
