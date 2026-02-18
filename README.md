@@ -1,137 +1,181 @@
-# Projeto de Machine Learning: Previsão de Preços de Imóveis em Ponta Grossa
+# 🏡 Previsão de Preços de Imóveis — Ponta Grossa (PR)
 
-Um projeto end-to-end de machine learning que utiliza regressão para prever o preço de imóveis em Ponta Grossa, PR, com dados coletados via web scraping do ZapImóveis.
+Projeto **end-to-end de Machine Learning** para previsão de preços de imóveis residenciais em Ponta Grossa (PR), utilizando dados coletados via **web scraping**, enriquecidos com **features geoespaciais** e versionados com **MLflow** para uso em produção e APIs.
 
-## 📋 Estrutura do Projeto
-
-```
-Casas Ponta Grossa/
-├── src/                          # Código-fonte principal
-│   ├── scraper.py               # Web scraping do ZapImóveis
-│   ├── preprocessing.py          # Limpeza e preparação de dados
-│   └── modelo.py                # Treino e avaliação de modelos
-├── data/
-│   ├── raw/                     # Dados brutos (não rastreados)
-│   └── processed/               # Dados processados (não rastreados)
-├── models/                       # Modelos treinados (não rastreados)
-├── notebooks/                    # Jupyter notebooks para exploração
-├── requirements.txt             # Dependências do projeto
-├── .gitignore                   # Arquivos ignorados pelo Git
-└── README.md                    # Este arquivo
-```
-
-## 🛠️ Dependências
-
-- **requests**: Para requisições HTTP
-- **beautifulsoup4**: Para parsing de HTML
-- **pandas**: Manipulação de dados
-- **numpy**: Operações numéricas
-- **scikit-learn**: Machine learning
-- **matplotlib/seaborn**: Visualização
-
-## 🚀 Como Usar
-
-### 1. Configurar Ambiente
-
-```bash
-# Criar ambiente virtual
-python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
-
-# Instalar dependências
-pip install -r requirements.txt
-```
-
-### 2. Fazer Web Scraping
-
-```bash
-python src/scraper.py
-```
-
-Isso irá:
-- Fazer scraping de múltiplas páginas do ZapImóveis
-- Extrair dados como preço, localização, quartos, banheiros e área
-- Salvar dados brutos em `data/raw/imoveis_guarapuava.csv`
-
-### 3. Pré-processar Dados
-
-```bash
-python src/preprocessing.py
-```
-
-Operações realizadas:
-- Limpeza de valores monetários
-- Tratamento de valores faltantes
-- Remoção de outliers
-- Feature engineering (preço por m², etc.)
-- Normalização
-
-Saída: `data/processed/imoveis_guarapuava_processados.csv`
-
-### 4. Treinar Modelos
-
-```bash
-python src/modelo.py
-```
-
-Modelos treinados:
-- Regressão Linear
-- Ridge (L2 Regularization)
-- Lasso (L1 Regularization)
-- Random Forest
-- Gradient Boosting
-
-Saída:
-- Melhor modelo salvo em `models/`
-- Comparativo de métricas em `results/comparativo_modelos.csv`
-
-## 📊 Métricas de Avaliação
-
-Os modelos são avaliados usando:
-- **RMSE** (Root Mean Squared Error): Erro médio em reais
-- **MAE** (Mean Absolute Error): Erro absoluto médio
-- **R² Score**: Proporção da variância explicada (0-1)
-
-## 🔍 Features Utilizadas
-
-| Feature | Descrição |
-|---------|-----------|
-| `area_m2` | Área do imóvel em metros quadrados |
-| `quartos` | Número de quartos |
-| `banheiros` | Número de banheiros |
-| `preco_por_m2` | Preço por metro quadrado (engenharia) |
-| `banheiro_por_quarto` | Razão banheiros/quartos (engenharia) |
-| `tamanho_imovel` | Classificação de tamanho (engenharia) |
-
-## 📈 Pipeline Completo
-
-```
-Web Scraping → Limpeza → Exploração → Pré-processamento → 
-Feature Engineering → Treinamento → Avaliação → Deployment
-```
-
-## 🎯 Próximos Passos
-
-1. **Exploração de Dados**: Criar notebooks Jupyter para análise exploratória
-2. **Ajuste de Hiperparâmetros**: Otimização usando GridSearchCV
-3. **Validação Cruzada**: Implementar k-fold cross-validation
-4. **API**: Criar API REST para fazer predições
-5. **Monitoramento**: Acompanhar performance do modelo em produção
-
-## ⚠️ Importante
-
-- Respeite o `robots.txt` e os termos de serviço do ZapImóveis
-- Use delays adequados entre requisições (padrão: 2 segundos)
-- Os dados brutos e modelos não são rastreados no Git (veja `.gitignore`)
-
-## 📝 Licença
-
-Este projeto é fornecido como exemplo educacional.
-
-## 👤 Autor
-
-Felipe - Portfolio de Machine Learning
+O projeto cobre todo o ciclo de vida do modelo: **coleta → feature engineering → treinamento → versionamento → deploy**.
 
 ---
 
-**Última atualização**: 6 de fevereiro de 2026
+## 🎯 Objetivo
+
+Construir um modelo de regressão capaz de estimar o preço de imóveis com base em:
+
+- características estruturais do imóvel  
+- contexto urbano e infraestrutura local  
+- indicadores de segurança e serviços essenciais  
+
+O foco não é apenas acurácia, mas **reprodutibilidade, rastreabilidade e prontidão para produção**.
+
+---
+
+## 🧱 Arquitetura do Projeto
+
+casas-ponta-grossa/
+├── src/
+│ ├── ingestion.py # Web scraping e coleta de dados
+│ ├── features.py # Feature engineering e enriquecimento espacial
+│ ├── preprocessing.py # Pipeline de pré-processamento
+│ ├── train.py # Treinamento e registro no MLflow
+│ └── predict.py # Inferência
+│
+├── data/
+│ ├── raw/ # Dados brutos (não versionados)
+│ └── processed/ # Dados processados
+│
+├── models/ # Modelos serializados (via MLflow)
+├── notebooks/ # EDA e análises exploratórias
+├── mlruns/ # Experimentos MLflow
+├── requirements.txt
+├── .gitignore
+└── README.md
+
+
+---
+
+## 🔍 Coleta e Enriquecimento de Dados
+
+### Fonte primária
+- Web scraping de anúncios imobiliários (preço, área, quartos, banheiros e localização)
+
+### Enriquecimento geoespacial
+As propriedades são enriquecidas com informações do entorno, incluindo:
+
+- mercados  
+- farmácias  
+- escolas  
+- hospitais  
+- indicadores de segurança  
+
+Essas informações são transformadas em **features quantitativas**, como densidade, distância e presença por raio geográfico.
+
+---
+
+## 🧠 Feature Engineering
+
+Exemplos de features utilizadas:
+
+| Feature | Descrição |
+|------|----------|
+| `area_m2` | Área do imóvel |
+| `quartos` | Número de quartos |
+| `banheiros` | Número de banheiros |
+| `preco_por_m2` | Preço por metro quadrado |
+| `densidade_mercados` | Mercados em raio definido |
+| `dist_hospital` | Distância ao hospital mais próximo |
+| `indice_seguranca` | Indicador agregado de segurança |
+
+---
+
+## 🤖 Modelagem
+
+Modelos avaliados:
+
+- Regressão Linear  
+- Ridge e Lasso  
+- Random Forest Regressor  
+- Gradient Boosting Regressor  
+
+Todos os experimentos são rastreados com **MLflow**, incluindo:
+
+- parâmetros  
+- métricas  
+- artefatos  
+- versão do pipeline completo  
+
+O modelo final é registrado no **MLflow Model Registry**.
+
+---
+
+## 📊 Métricas de Avaliação
+
+- **RMSE** — erro médio quadrático  
+- **MAE** — erro absoluto médio  
+- **R²** — variância explicada  
+
+As métricas são comparadas entre modelos para seleção da melhor abordagem.
+
+---
+
+## 🔁 Pipeline End-to-End
+
+Web Scraping
+↓
+Tratamento de Dados
+↓
+Feature Engineering (Geo + Estrutural)
+↓
+Pré-processamento
+↓
+Treinamento (MLflow)
+↓
+Registro do Modelo
+↓
+API / Produção
+
+
+---
+
+## 🚀 Como Executar
+
+### 1️⃣ Criar ambiente
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+---------------------------------
+
+## 🚀 Como Executar
+
+### 1️⃣ Criar ambiente
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+#### Treinar e registrar o modelo
+```bash
+python src/train.py
+```
+
+#### Interface do MLflow:
+
+```bash
+mlflow ui
+```
+## 🔌 Deploy e API (em andamento)
+
+* O pipeline é projetado para ser consumido via API REST, recebendo dados brutos do imóvel e retornando a previsão de preço com o mesmo pré-processamento utilizado no treino.
+
+## 🛣️ Próximos Passos
+
+* Deploy via FastAPI
+
+* Monitoramento de performance e data drift
+
+* Automatização com Airflow
+
+* CI/CD para modelos
+
+* Feature Store
+
+## 👤 Autor
+
+**Felipe Sembay**
+**Cientista de Dados | Machine Learning | MLOps**
+
+Última atualização: 17 de Fevereiro de 2026
+
