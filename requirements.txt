@@ -14,3 +14,7 @@ xgboost==3.2.0
 shap==0.50.0
 optuna==4.6.0
 mlflow==3.3.2
+fastapi==0.121.1
+uvicorn==0.40.0
+streamlit==1.54.0
+mysql-connector-python==9.6.0
