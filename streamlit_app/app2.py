@@ -1,362 +1,195 @@
-"""
-App Streamlit com Pipeline Completo de Feature Engineering
-
-Este app segue a mesma lógica dos notebooks Coleta_e_tratamento.ipynb e EDA.ipynb:
-1. Usuário insere endereço do imóvel
-2. Geocoding do endereço → lat/lon
-3. Cálculo de distâncias e contagens de POIs (escolas, hospitais, mercados, etc.)
-4. Geração de scores de proximidade
-5. Predição via API
-6. Salvamento no banco de dados
-"""
-
+# ==========================================
+# Imports
+# ==========================================
 import os
-import time
 
-import numpy as np
+import geopandas as gpd
+import osmnx as ox
 import pandas as pd
+import requests
 import streamlit as st
-from db import salvar_predicao
-from geopy.geocoders import Nominatim
-from shapely import wkt
-from sklearn.neighbors import BallTree
+from dotenv import load_dotenv
+from shapely.geometry import Point
 
-from api import prever_preco
+# ==========================================
+# Configurações iniciais
+# ==========================================
+st.set_page_config(
+    page_title="Geocoding + POIs",
+    layout="centered"
+)
 
-# ============================================================
-# Configuração
-# ============================================================
+load_dotenv()
 
-st.set_page_config(page_title="Previsão de Imóveis - Pipeline Completo", layout="wide")
+GOOGLE_API_KEY = os.getenv("GEOCODING_MAPS")
 
-# Caminhos dos POIs
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "pre")
+if not GOOGLE_API_KEY:
+    st.error("❌ Chave GEOCODING_MAPS não encontrada no .env")
+    st.stop()
 
-# Cache para não recarregar a cada interação
-@st.cache_data
-def carregar_pois():
-    """Carrega todos os datasets de POIs"""
-    
-    escolas = pd.read_csv(os.path.join(DATA_DIR, "escolas.csv"))
-    hospitais = pd.read_csv(os.path.join(DATA_DIR, "hospitais.csv"))
-    parques = pd.read_csv(os.path.join(DATA_DIR, "parques.csv"))
-    farmacia = pd.read_csv(os.path.join(DATA_DIR, "farmacia.csv"))
-    mercado = pd.read_csv(os.path.join(DATA_DIR, "mercados.csv"))
-    policia = pd.read_csv(os.path.join(DATA_DIR, "policia.csv"))
-    
-    # Separar escolas por tipo
-    escolas_publicas = escolas[escolas["tipo_escola"] == "publica"].copy()
-    escolas_privadas = escolas[escolas["tipo_escola"] == "privada"].copy()
-    
+# ==========================================
+# Funções — Google Geocoding
+# ==========================================
+def geocode_google(endereco):
+    url = "https://maps.googleapis.com/maps/api/geocode/json"
+
+    params = {
+        "address": endereco,
+        "key": GOOGLE_API_KEY,
+        "region": "br",
+        "language": "pt-BR"
+    }
+
+    r = requests.get(url, params=params, timeout=10)
+    data = r.json()
+
+    if data["status"] != "OK":
+        return None
+
+    result = data["results"][0]
+
+    location = result["geometry"]["location"]
+    location_type = result["geometry"]["location_type"]
+
     return {
-        "escolas_publicas": escolas_publicas,
-        "escolas_privadas": escolas_privadas,
-        "hospitais": hospitais,
-        "parques": parques,
-        "farmacia": farmacia,
-        "mercado": mercado,
-        "policia": policia
+        "lat": location["lat"],
+        "lng": location["lng"],
+        "endereco_formatado": result["formatted_address"],
+        "precisao": location_type
     }
 
-# ============================================================
-# Funções de Feature Engineering (mesmas do EDA.ipynb)
-# ============================================================
-
-def extract_lat_lon_from_geometry(df, geometry_col="geometry"):
-    """
-    Extrai lat/lon de geometrias POINT ou POLYGON usando centróide
-    Mesma função do EDA.ipynb
-    """
-    def get_lat_lon(geom_wkt):
-        try:
-            geom = wkt.loads(geom_wkt)
-            point = geom.centroid
-            return pd.Series({
-                "lat": point.y,
-                "lon": point.x
-            })
-        except:
-            return pd.Series({
-                "lat": None,
-                "lon": None
-            })
-
-    coords = df[geometry_col].apply(get_lat_lon)
-    df = pd.concat([df, coords], axis=1)
-    return df
-
-
-def calcular_poi_features(lat, lon, pois):
-    """
-    Calcula distâncias e contagens de POIs para um único imóvel
-    Baseado na função add_poi_features do EDA.ipynb
-    
-    Retorna dict com:
-    - dist_escolas_privadas_mais_proximo
-    - qtd_escolas_privadas_500m
-    - dist_escola_publicas_mais_proximo
-    - qtd_escola_publicas_500m
-    - dist_hospital_mais_proximo
-    - qtd_hospital_1000m
-    - dist_mercado_mais_proximo
-    - qtd_mercado_500m
-    - dist_farmacia_mais_proximo
-    - qtd_farmacia_300m
-    - dist_parque_mais_proximo
-    - qtd_parque_1000m
-    - dist_policia_mais_proximo
-    - qtd_policia_500m
-    """
-    
-    features = {}
-    imovel_coords = np.radians([[lat, lon]])
-    
-    # Configurações de raios por tipo de POI (mesmas do notebook)
-    configs = {
-        "escolas_privadas": 500,
-        "escola_publicas": 500,  # Note: usa "escola_publicas" sem 's' no final
-        "hospital": 1000,
-        "mercado": 500,
-        "farmacia": 300,
-        "parque": 1000,
-        "policia": 500
-    }
-    
-    for poi_name, radius in configs.items():
-        # Ajustar nome do POI se necessário
-        poi_key = poi_name
-        if poi_name == "escola_publicas":
-            poi_key = "escolas_publicas"
-        elif poi_name == "hospital":
-            poi_key = "hospitais"
-        elif poi_name == "parque":
-            poi_key = "parques"
-        
-        df_poi = pois[poi_key]
-        
-        # Extrair coordenadas (se ainda não tiver lat/lon)
-        if "lat" not in df_poi.columns or "lon" not in df_poi.columns:
-            geom_col = "geometry_std" if "geometry_std" in df_poi.columns else "geometry"
-            df_poi = extract_lat_lon_from_geometry(df_poi, geom_col)
-        
-        # Remover POIs sem coordenadas
-        df_poi = df_poi.dropna(subset=["lat", "lon"])
-        
-        if len(df_poi) == 0:
-            features[f"dist_{poi_name}_mais_proximo"] = np.nan
-            features[f"qtd_{poi_name}_{radius}m"] = 0
-            continue
-        
-        # Converter para radianos
-        poi_coords = np.radians(df_poi[["lat", "lon"]].values)
-        
-        # Construir BallTree
-        tree = BallTree(poi_coords, metric="haversine")
-        
-        # Distância mínima
-        dist, _ = tree.query(imovel_coords, k=1)
-        features[f"dist_{poi_name}_mais_proximo"] = dist[0, 0] * 6371000  # metros
-        
-        # Contagem no raio
-        count = tree.query_radius(
-            imovel_coords,
-            r=radius / 6371000,
-            count_only=True
-        )
-        features[f"qtd_{poi_name}_{radius}m"] = int(count[0])
-    
-    return features
-
-
-def calcular_scores(features):
-    """
-    Calcula os scores de proximidade baseado nas distâncias e contagens
-    Mesma lógica do EDA.ipynb
-    """
-    
-    scores = {}
-    
-    # Score de escolas privadas
-    scores['score_escola_privada'] = (
-        1.2 * np.exp(-features['dist_escolas_privadas_mais_proximo'] / 600) +
-        0.6 * features['qtd_escolas_privadas_500m']
+# ==========================================
+# Funções — Geoespaciais
+# ==========================================
+def ponto_imovel(lat, lng):
+    return gpd.GeoDataFrame(
+        [{"id": 1}],
+        geometry=[Point(lng, lat)],
+        crs="EPSG:4326"
     )
-    
-    # Score de escolas públicas
-    scores['score_escola_publica'] = (
-        0.6 * np.exp(-features['dist_escola_publicas_mais_proximo'] / 600) +
-        0.2 * features['qtd_escola_publicas_500m']
+
+def projetar_metrico(gdf):
+    return gdf.to_crs(epsg=3857)
+
+def distancia_minima(ponto_gdf, pois_gdf):
+    if pois_gdf.empty:
+        return None
+
+    ponto_m = projetar_metrico(ponto_gdf)
+    pois_m = projetar_metrico(pois_gdf)
+
+    distancias = pois_m.geometry.distance(ponto_m.geometry.iloc[0])
+    return round(distancias.min(), 2)
+
+def contar_pois_raio(ponto_gdf, pois_gdf, raio_m=1000):
+    if pois_gdf.empty:
+        return 0
+
+    ponto_m = projetar_metrico(ponto_gdf)
+    pois_m = projetar_metrico(pois_gdf)
+
+    buffer = ponto_m.geometry.iloc[0].buffer(raio_m)
+    return int(pois_m.within(buffer).sum())
+
+# ==========================================
+# Cache — POIs (OSMnx)
+# ==========================================
+@st.cache_data(show_spinner="🔄 Carregando POIs da cidade...")
+def carregar_pois(cidade):
+    hospitais = ox.features_from_place(cidade, {"amenity": "hospital"})
+    mercados = ox.features_from_place(cidade, {"shop": ["supermarket", "convenience"]})
+    farmacias = ox.features_from_place(cidade, {"amenity": "pharmacy"})
+    parques = ox.features_from_place(
+        cidade,
+        {"leisure": ["park", "garden"], "landuse": "recreation_ground"}
     )
-    
-    # Score de hospitais
-    scores['score_hospitais'] = (
-        0.8 * np.exp(-features['dist_hospital_mais_proximo'] / 1200) +
-        0.4 * features['qtd_hospital_1000m']
+    policia = ox.features_from_place(
+        cidade,
+        {"amenity": ["police", "fire_station", "courthouse"]}
     )
-    
-    # Score de mercados
-    scores['score_mercado'] = (
-        1.0 * np.exp(-features['dist_mercado_mais_proximo'] / 400) +
-        0.4 * features['qtd_mercado_500m']
+    escolas = ox.features_from_place(
+        cidade,
+        {"amenity": ["school", "college", "university"]}
     )
-    
-    # Score de farmácias
-    scores['score_farmacia'] = (
-        0.6 * np.exp(-features['dist_farmacia_mais_proximo'] / 300) +
-        0.2 * features['qtd_farmacia_300m']
+
+    # Normalizar geometrias
+    escolas["geometry"] = escolas.geometry.apply(
+        lambda g: g.centroid if g.geom_type != "Point" else g
     )
-    
-    # Score de parques
-    scores['score_parque'] = (
-        1.2 * np.exp(-features['dist_parque_mais_proximo'] / 1200) +
-        0.8 * features['qtd_parque_1000m']
-    )
-    
-    # Score de segurança (polícia)
-    scores['score_seguranca'] = (
-        1.0 * np.exp(-features['dist_policia_mais_proximo'] / 1500) +
-        0.3 * features['qtd_policia_500m']
-    )
-    
-    return scores
 
+    return hospitais, mercados, farmacias, escolas, parques, policia
 
-def geocode_endereco(endereco_completo):
-    """
-    Converte endereço em lat/lon usando Nominatim (mesmo do Coleta_e_tratamento)
-    """
-    geolocator = Nominatim(user_agent="price_house_app")
-    
-    try:
-        time.sleep(1)  # Rate limiting
-        location = geolocator.geocode(endereco_completo, timeout=10)
-        
-        if location:
-            return location.latitude, location.longitude, "sucesso"
-        else:
-            return None, None, "nao_encontrado"
-    except Exception as e:
-        return None, None, f"erro: {str(e)}"
+# ==========================================
+# Interface
+# ==========================================
+st.title("📍 Geocoding + POIs (Google + OSMnx)")
 
+endereco = st.text_input(
+    "Endereço completo",
+    placeholder="Rua Marechal Deodoro, 217, Guarapuava, PR"
+)
 
-# ============================================================
-# Interface Streamlit
-# ============================================================
+cidade = "Guarapuava, Paraná, Brasil"
 
-st.title("🏡 Previsão de Preço de Imóveis")
-st.caption("Pipeline completo: Endereço → Geocoding → Feature Engineering → Predição")
+if st.button("Buscar localização"):
+    with st.spinner("🔍 Consultando Google Maps..."):
+        resultado = geocode_google(endereco)
 
-# Carregar POIs (apenas uma vez)
-with st.spinner("Carregando base de dados de POIs..."):
-    pois = carregar_pois()
+    if not resultado:
+        st.error("❌ Endereço não encontrado.")
+        st.stop()
 
-st.success(f"✅ POIs carregados: {sum(len(df) for df in pois.values())} registros")
+    # Persistência
+    st.session_state["resultado"] = resultado
 
-# Formulário
-with st.form("form_imovel"):
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.subheader("📍 Localização")
-        rua = st.text_input("Rua/Avenida", placeholder="Ex: Rua XV de Novembro")
-        bairro = st.text_input("Bairro", placeholder="Ex: Centro")
-        cidade = st.text_input("Cidade", value="Ponta Grossa")
-        estado = st.text_input("Estado", value="PR")
-        
-    with col2:
-        st.subheader("🏠 Características do Imóvel")
-        area = st.number_input("Área (m²)", min_value=10, value=100, step=10)
-        quartos = st.number_input("Quartos", min_value=0, value=3, step=1)
-        banheiros = st.number_input("Banheiros", min_value=0, value=2, step=1)
-        vagas = st.number_input("Vagas de garagem", min_value=0, value=1, step=1)
-    
-    submit = st.form_submit_button("🔮 Processar e Prever Preço", use_container_width=True)
+# ==========================================
+# Resultado persistente
+# ==========================================
+if "resultado" in st.session_state:
+    r = st.session_state["resultado"]
 
-# Processamento
-if submit:
-    if not rua or not bairro:
-        st.error("❌ Por favor, preencha ao menos a Rua e o Bairro")
-    else:
-        # Construir endereço completo
-        endereco_completo = f"{rua}, {bairro}, {cidade}, {estado}, Brasil"
-        
-        st.info(f"📌 Endereço: {endereco_completo}")
-        
-        # ETAPA 1: Geocoding
-        with st.spinner("🌍 Fazendo geocoding do endereço..."):
-            lat, lon, status = geocode_endereco(endereco_completo)
-        
-        if lat is None:
-            st.error(f"❌ Não foi possível geocodificar o endereço. Status: {status}")
-            st.stop()
-        
-        st.success(f"✅ Coordenadas: {lat:.6f}, {lon:.6f}")
-        
-        # Mostrar no mapa
-        st.map(pd.DataFrame({'lat': [lat], 'lon': [lon]}))
-        
-        # ETAPA 2: Calcular features de POI
-        with st.spinner("📊 Calculando distâncias e contagens de POIs..."):
-            poi_features = calcular_poi_features(lat, lon, pois)
-        
-        # Mostrar features calculadas
-        with st.expander("🔍 Ver Features de POI calculadas"):
-            st.json(poi_features)
-        
-        # ETAPA 3: Calcular scores
-        with st.spinner("🧮 Calculando scores de proximidade..."):
-            scores = calcular_scores(poi_features)
-        
-        # Mostrar scores
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("🏫 Score Escolas Privadas", f"{scores['score_escola_privada']:.2f}")
-            st.metric("🏫 Score Escolas Públicas", f"{scores['score_escola_publica']:.2f}")
-        with col2:
-            st.metric("🏥 Score Hospitais", f"{scores['score_hospitais']:.2f}")
-            st.metric("🛒 Score Mercados", f"{scores['score_mercado']:.2f}")
-        with col3:
-            st.metric("💊 Score Farmácias", f"{scores['score_farmacia']:.2f}")
-            st.metric("🌳 Score Parques", f"{scores['score_parque']:.2f}")
-            st.metric("👮 Score Segurança", f"{scores['score_seguranca']:.2f}")
-        
-        # ETAPA 4: Preparar payload para API
-        payload = {
-            "cidade": cidade,
-            "bairro": bairro,
-            "area_m2": float(area),
-            "quartos": int(quartos),
-            "banheiros": int(banheiros),
-            "vagas_garagem": int(vagas),
-            "score_escola_privada": float(scores['score_escola_privada']),
-            "score_escola_publica": float(scores['score_escola_publica']),
-            "score_hospitais": float(scores['score_hospitais']),
-            "score_mercado": float(scores['score_mercado']),
-            "score_farmacia": float(scores['score_farmacia']),
-            "score_parque": float(scores['score_parque']),
-            "score_seguranca": float(scores['score_seguranca'])
-        }
-        
-        # ETAPA 5: Predição
-        with st.spinner("🤖 Fazendo predição do preço..."):
-            try:
-                resultado = prever_preco(payload)
-                preco = resultado["preco_estimado"]
-                
-                st.success(f"### 💰 Preço Estimado: R$ {preco:,.2f}")
-                st.caption(f"Log(preço): {resultado.get('log_preco', 0):.4f}")
-                
-                # ETAPA 6: Salvar no banco
-                with st.spinner("💾 Salvando predição no banco de dados..."):
-                    salvar_predicao(
-                        payload,
-                        preco,
-                        "RealEstatePriceModel",
-                        "1.0.0"
-                    )
-                
-                st.success("✅ Predição salva no banco de dados!")
-                
-            except Exception as e:
-                st.error(f"❌ Erro na predição: {str(e)}")
-                st.exception(e)
+    st.success("✅ Endereço localizado com sucesso!")
+
+    st.markdown("### 📌 Endereço retornado")
+    st.write(r["endereco_formatado"])
+
+    st.markdown("### 🌐 Coordenadas")
+    st.write(f"Latitude: **{r['lat']}**")
+    st.write(f"Longitude: **{r['lng']}**")
+
+    st.markdown("### 🎯 Precisão do Google")
+    st.write(r["precisao"])
+
+    # Mapa
+    df_map = pd.DataFrame([{
+        "lat": r["lat"],
+        "lon": r["lng"]
+    }])
+
+    st.markdown("### 🗺️ Localização")
+    st.map(df_map)
+
+    # ======================================
+    # POIs
+    # ======================================
+    hospitais, mercados, farmacias, escolas, parques, policia = carregar_pois(cidade)
+
+    ponto = ponto_imovel(r["lat"], r["lng"])
+
+    st.markdown("## 📏 Distância mínima aos POIs (metros)")
+
+    st.write(f"🏥 Hospital: **{distancia_minima(ponto, hospitais)} m**")
+    st.write(f"🛒 Mercado: **{distancia_minima(ponto, mercados)} m**")
+    st.write(f"💊 Farmácia: **{distancia_minima(ponto, farmacias)} m**")
+    st.write(f"🏫 Escola: **{distancia_minima(ponto, escolas)} m**")
+    st.write(f"🌳 Parque: **{distancia_minima(ponto, parques)} m**")
+    st.write(f"🚓 Segurança pública: **{distancia_minima(ponto, policia)} m**")
+
+    st.markdown("## 📊 POIs em um raio de 1 km")
+
+    st.write(f"🏫 Escolas: {contar_pois_raio(ponto, escolas, 500)}")
+    st.write(f"🛒 Mercados: {contar_pois_raio(ponto, mercados, 500)}")
+    st.write(f"💊 Farmácias: {contar_pois_raio(ponto, farmacias, 300)}")
+    st.write(f"🚓 Segurança pública: {contar_pois_raio(ponto, policia, 1000)}")
+    st.write(f"🏥 Hospital: {contar_pois_raio(ponto, hospitais, 1000)}")
+    st.write(f"🌳 Parque: {contar_pois_raio(ponto, parques, 1000)}")

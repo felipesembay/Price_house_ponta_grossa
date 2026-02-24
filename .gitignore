@@ -23,3 +23,6 @@ __pycache__/
 
 # OS
 .DS_Store
+
+#Streamlit
+streamlit_app/.env

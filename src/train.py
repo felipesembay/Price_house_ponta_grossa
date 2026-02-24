@@ -41,10 +41,10 @@ from src.preprocessing import build_preprocessor
 DATA_PATH = os.path.join(
     os.path.dirname(__file__), "..", "data", "processed", "complete.csv"
 )
-EXPERIMENT_NAME = "price_house_ponta_grossa"
-MODEL_NAME = "RealEstatePriceModel"
+EXPERIMENT_NAME = "price_house_ponta_grossa_version2"
+MODEL_NAME = "RealEstatePriceModel_version2"
 RANDOM_STATE = 42
-N_TRIALS = 50
+N_TRIALS = 250
 TEST_SIZE = 0.2
 
 

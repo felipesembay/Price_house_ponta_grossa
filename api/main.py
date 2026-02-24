@@ -38,7 +38,15 @@ class ImovelInput(BaseModel):
     banheiros: int = Field(ge=0, le=20, description="Número de banheiros")
     vagas_garagem: int = Field(ge=0, le=20, default=0, description="Vagas de garagem")
     area_m2: float = Field(gt=0, le=10000, description="Área em m²")
-    bairro: str = Field(description="Nome do bairro")
+    
+    # Tipo de imóvel
+    tipo_imovel_cat: str = Field(
+        default="casa",
+        description="Tipo do imóvel: casa, apartamento, comercial ou outros"
+    )
+    
+    # É sobrado? (0 ou 1)
+    is_sobrado: int = Field(default=0, ge=0, le=1, description="1 se for sobrado, 0 caso contrário")
 
     # Scores de proximidade (opcionais — usa 0.0 se não enviado)
     score_escola_privada: float = Field(default=0.0, ge=0)
@@ -57,7 +65,8 @@ class ImovelInput(BaseModel):
                     "banheiros": 2,
                     "vagas_garagem": 2,
                     "area_m2": 150.0,
-                    "bairro": "Centro",
+                    "tipo_imovel_cat": "casa",
+                    "is_sobrado": 0,
                     "score_escola_privada": 1.5,
                     "score_escola_publica": 0.8,
                     "score_hospitais": 0.6,

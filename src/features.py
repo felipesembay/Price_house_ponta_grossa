@@ -86,6 +86,18 @@ def classificar_tipo_imovel(tipo: str) -> str:
 
     return "outros"
 
+# ============================================================
+# É sobrado?
+def add_is_sobrado(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    df["is_sobrado"] = (
+        df["tipo_imovel"]
+        .str.lower()
+        .str.contains("sobrado", na=False)
+        .astype(int)
+    )
+    return df
+
 
 # ============================================================
 # 3. Faixa de área (do ML.ipynb)
@@ -132,6 +144,9 @@ def prepare_dataset(
 
     # Filtrar tipos válidos
     df = df[df["tipo_imovel_cat"].isin(tipos_validos)].copy()
+    
+    # É sobrado?
+    df = add_is_sobrado(df)
 
     # Faixa de área
     df = add_faixa_area(df)
@@ -161,9 +176,10 @@ NUM_FEATURES = [
     "score_mercado",
     "score_farmacia",
     "score_parque",
-    "score_seguranca",
+    "score_seguranca", 
+    "is_sobrado"
 ]
 
-CAT_FEATURES = ["bairro", "faixa_area"]
+CAT_FEATURES = ["tipo_imovel_cat"]
 
 TARGET = "log_preco"
