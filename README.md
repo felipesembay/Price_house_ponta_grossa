@@ -144,7 +144,7 @@ python src/train.py
 ### 3️⃣ Iniciar a API (FastAPI + Uvicorn)
 
 ```bash
-uvicorn api.main:app --reload --port 8000
+uvicorn api.main:app --reload --port 8009
 ```
 
 A API estará disponível em: `http://localhost:8000`  

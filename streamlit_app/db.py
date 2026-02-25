@@ -10,24 +10,23 @@ def get_connection():
     )
 
 
-def salvar_predicao(dados, preco, modelo, versao):
+def salvar_predicao(dados, preco_predito, modelo, versao):
     conn = get_connection()
     cursor = conn.cursor()
 
     query = """
     INSERT INTO predicoes (
-        area_m2, bairro, cidade, banheiros, quartos, vagas_garagem,
+        area_m2, endereco, banheiros, quartos, vagas_garagem,
         tipo_imovel_cat, is_sobrado,
         score_escola_privada, score_escola_publica, score_farmacia,
         score_hospitais, score_mercado, score_parque, score_seguranca,
-        preco_predito, modelo, versao_modelo
+        preco_anuncio, preco_predito, modelo, versao_modelo
     ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
 
     values = (
         dados["area_m2"],
-        dados.get("bairro", "N/A"),
-        dados.get("cidade", "Ponta Grossa"),
+        dados.get("endereco", "N/A"),
         dados["banheiros"],
         dados["quartos"],
         dados["vagas_garagem"],
@@ -40,7 +39,8 @@ def salvar_predicao(dados, preco, modelo, versao):
         dados["score_mercado"],
         dados["score_parque"],
         dados["score_seguranca"],
-        preco,
+        dados.get("preco_anuncio"),
+        preco_predito,
         modelo,
         versao
     )

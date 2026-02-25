@@ -12,10 +12,10 @@ import osmnx as ox
 import pandas as pd
 import requests
 import streamlit as st
+from db import salvar_predicao
 from dotenv import load_dotenv
 from shapely.geometry import Point
 from sklearn.neighbors import BallTree
-from streamlit_folium import st_folium
 
 from api import prever_preco
 
@@ -197,7 +197,7 @@ def calcular_scores(features):
         0.3 * features['qtd_policia_500m']
     )
     
-    return {k: round(v, 4) for k, v in scores.items()}
+    return {k: round(v, 2) for k, v in scores.items()}
 
 # ==========================================
 # Interface Principal
@@ -225,7 +225,8 @@ with col1:
     
 with col2:
     is_sobrado = st.checkbox("Sobrado", value=False)
-    tipo_imovel = st.selectbox("Tipo de imóvel", ["apartamento", "casa", "sala comercial"])
+    tipo_imovel = st.selectbox("Tipo de imóvel", ["casa", "apartamento", "sala comercial"])
+    preco_anuncio = st.number_input("Preço do anúncio (opcional)", min_value=0, value=0, step=100000)
 
 if st.button("🚀 Calcular Previsão", type="primary", use_container_width=True):
     if not endereco.strip():
@@ -276,18 +277,21 @@ if st.button("🚀 Calcular Previsão", type="primary", use_container_width=True
     
     # 4. PREPARAR PAYLOAD (compatível com API original)
     payload = {
-        "cidade": "Não disponível",  # OSMnx não fornece cidade diretamente
-        "bairro": "Não disponível",
-        "area_m2": float(area_m2),
-        "quartos": int(quartos),
-        "banheiros": int(banheiros),
-        "vagas_garagem": int(vagas),
-        "sobrado:": bool(is_sobrado),
-        "tipo_imovel": tipo_imovel,
-        **scores
-    }
+    "area_m2": float(area_m2),
+    "endereco": geo["endereco_formatado"],
+    "banheiros": int(banheiros),
+    "is_sobrado": int(is_sobrado),
+    "quartos": int(quartos),
+    "tipo_imovel_cat": tipo_imovel,
+    "vagas_garagem": int(vagas),
+    "preco_anuncio": float(preco_anuncio) if preco_anuncio > 0 else None,
+    **scores
+}
     
     # 5. PREVISÃO
+    with st.expander("📤 Payload enviado à API (compare com seu curl)"):
+        st.json(payload)
+
     with st.spinner("🤖 Fazendo predição com IA..."):
         try:
             resultado = prever_preco(payload)
@@ -295,6 +299,17 @@ if st.button("🚀 Calcular Previsão", type="primary", use_container_width=True
             
             st.success(f"#### 💰 Preço Estimado: R$ {preco:,.2f}")
             st.caption(f"Log(preço): {resultado.get('log_preco', 0):.4f}")
+            
+            # ETAPA 6: Salvar no banco
+            with st.spinner("💾 Salvando predição no banco de dados..."):
+                salvar_predicao(
+                    payload,
+                    preco,
+                    "RealEstatePriceModel",
+                    "2.0.0"
+                )
+            
+            st.success("✅ Predição salva no banco de dados!")
             
         except Exception as e:
             st.error(f"❌ Erro na predição: {str(e)}")

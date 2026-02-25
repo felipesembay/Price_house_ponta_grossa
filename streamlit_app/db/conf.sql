@@ -5,8 +5,7 @@ USE imoveis;
 CREATE TABLE predicoes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     area_m2 FLOAT,
-    bairro VARCHAR(100),
-    cidade VARCHAR(100),
+    endereco VARCHAR(255),
     banheiros INT,
     quartos INT,
     vagas_garagem INT,
@@ -21,6 +20,7 @@ CREATE TABLE predicoes (
     score_mercado FLOAT,
     score_parque FLOAT,
     score_seguranca FLOAT,
+    preco_anuncio FLOAT,
 
     preco_predito FLOAT,
     modelo VARCHAR(100),
@@ -61,6 +61,13 @@ CREATE TABLE pois (
     INDEX idx_poi_tipo (tipo_poi),
     INDEX idx_poi_lat_lon (latitude, longitude)
 );
+
+ALTER TABLE predicoes DROP COLUMN bairro;
+ALTER TABLE predicoes DROP COLUMN cidade;
+ALTER TABLE predicoes ADD COLUMN endereco VARCHAR(255) AFTER area_m2;
+```> ALTER TABLE predicoes DROP COLUMN bairro;
+ALTER TABLE predicoes DROP COLUMN cidade;
+ALTER TABLE predicoes ADD COLUMN endereco VARCHAR(255) AFTER area_m2;
 
 
 
