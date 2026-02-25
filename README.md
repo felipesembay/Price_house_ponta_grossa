@@ -134,31 +134,41 @@ python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
----------------------------------
 
-## 🚀 Como Executar
+### 2️⃣ Treinar e registrar o modelo
 
-### 1️⃣ Criar ambiente
-
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-#### Treinar e registrar o modelo
 ```bash
 python src/train.py
 ```
 
-#### Interface do MLflow:
+### 3️⃣ Iniciar a API (FastAPI + Uvicorn)
+
+```bash
+uvicorn api.main:app --reload --port 8000
+```
+
+A API estará disponível em: `http://localhost:8000`  
+Documentação interativa (Swagger): `http://localhost:8000/docs`
+
+### 4️⃣ Iniciar a interface do MLflow
 
 ```bash
 mlflow ui
 ```
-## 🔌 Deploy e API (em andamento)
 
-* O pipeline é projetado para ser consumido via API REST, recebendo dados brutos do imóvel e retornando a previsão de preço com o mesmo pré-processamento utilizado no treino.
+A interface estará disponível em: `http://localhost:5000`
+
+### 5️⃣ Iniciar o app Streamlit
+
+```bash
+streamlit run streamlit_app/app2.py
+```
+
+---
+
+## 🔌 Deploy e API
+
+* A API REST foi implementada com **FastAPI**, recebendo dados brutos do imóvel e retornando a previsão de preço com o mesmo pré-processamento utilizado no treino.
 
 ## 🛣️ Próximos Passos
 
@@ -177,5 +187,5 @@ mlflow ui
 **Felipe Sembay**
 **Cientista de Dados | Machine Learning | MLOps**
 
-Última atualização: 17 de Fevereiro de 2026
+Última atualização: 25 de Fevereiro de 2026
 
