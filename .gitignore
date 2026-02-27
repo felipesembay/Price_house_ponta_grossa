@@ -26,3 +26,5 @@ __pycache__/
 
 #Streamlit
 streamlit_app/.env
+
+cache/

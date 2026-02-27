@@ -22,11 +22,12 @@ from api import prever_preco
 # ==========================================
 # Configurações globais
 # ==========================================
-st.set_page_config(
-    page_title="🏠 Precificação Imobiliária",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
+# st.set_page_config() - Desabilitado quando usado via general.py
+# st.set_page_config(
+#     page_title="🏠 Precificação Imobiliária",
+#     layout="wide",
+#     initial_sidebar_state="collapsed"
+# )
 
 ox.settings.use_cache = True  # Cache para melhor performance
 ox.settings.log_console = False
@@ -202,7 +203,7 @@ def calcular_scores(features):
 # ==========================================
 # Interface Principal
 # ==========================================
-st.title("🏡 Previsão de Preço de Imóveis")
+#st.title("🏡 Previsão de Preço de Imóveis")
 st.caption("🔮 Endereço → Google Maps → POIs Dinâmicos → Predição em tempo real")
 
 

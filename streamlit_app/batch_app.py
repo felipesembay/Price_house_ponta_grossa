@@ -38,12 +38,13 @@ GOOGLE_API_KEY = os.getenv("GEOCODING_MAPS")
 # ─────────────────────────────────────────────────────────────
 # Configuração da página
 # ─────────────────────────────────────────────────────────────
-st.set_page_config(
-    page_title="📦 Predição em Lote",
-    page_icon="📦",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
+# st.set_page_config() - Desabilitado quando usado via general.py
+# st.set_page_config(
+#     page_title="📦 Predição em Lote",
+#     page_icon="📦",
+#     layout="wide",
+#     initial_sidebar_state="collapsed",
+# )
 
 
 # ─────────────────────────────────────────────────────────────
