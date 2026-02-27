@@ -1,191 +1,452 @@
 # 🏡 Previsão de Preços de Imóveis — Ponta Grossa (PR)
 
-Projeto **end-to-end de Machine Learning** para previsão de preços de imóveis residenciais em Ponta Grossa (PR), utilizando dados coletados via **web scraping**, enriquecidos com **features geoespaciais** e versionados com **MLflow** para uso em produção e APIs.
-
-O projeto cobre todo o ciclo de vida do modelo: **coleta → feature engineering → treinamento → versionamento → deploy**.
+Projeto **end-to-end de Ciência de Dados e Engenharia de Machine Learning** para previsão de preços de imóveis em Ponta Grossa (PR). Cobre todo o ciclo de vida do modelo: **coleta de dados → feature engineering geoespacial → modelagem → versionamento → deploy → monitoramento**.
 
 ---
 
-## 🎯 Objetivo
+## 📋 Índice
 
-Construir um modelo de regressão capaz de estimar o preço de imóveis com base em:
-
-- características estruturais do imóvel  
-- contexto urbano e infraestrutura local  
-- indicadores de segurança e serviços essenciais  
-
-O foco não é apenas acurácia, mas **reprodutibilidade, rastreabilidade e prontidão para produção**.
+1. [Visão Geral](#-visão-geral)
+2. [Arquitetura](#-arquitetura)
+3. [Estrutura do Projeto](#-estrutura-do-projeto)
+4. [Tecnologias](#-tecnologias)
+5. [Instalação e Configuração](#-instalação-e-configuração)
+6. [Como Executar](#-como-executar)
+7. [API REST](#-api-rest)
+8. [Notebooks](#-notebooks)
+9. [Monitoramento](#-monitoramento)
+10. [Métricas do Modelo](#-métricas-do-modelo)
+11. [Features Utilizadas](#-features-utilizadas)
 
 ---
 
-## 🧱 Arquitetura do Projeto
+## 🎯 Visão Geral
 
-casas-ponta-grossa/
-├── src/
-│ ├── ingestion.py # Web scraping e coleta de dados
-│ ├── features.py # Feature engineering e enriquecimento espacial
-│ ├── preprocessing.py # Pipeline de pré-processamento
-│ ├── train.py # Treinamento e registro no MLflow
-│ └── predict.py # Inferência
+O objetivo é construir um modelo de regressão capaz de estimar o preço de imóveis com base em:
+
+- Características estruturais (área, quartos, banheiros, vagas)
+- Contexto urbano e infraestrutura local (hospitais, mercados, escolas, parques)
+- Indicadores de segurança e serviços essenciais
+
+O foco vai além da acurácia: **reprodutibilidade, rastreabilidade e prontidão para produção (MLOps)**.
+
+---
+
+## 🧱 Arquitetura
+
+```
+Web Scraping (ZAP Imóveis)
+        ↓
+Geocoding (Google Maps API)
+        ↓
+Enriquecimento Geoespacial (OSMnx / OpenStreetMap)
+        ↓
+Feature Engineering (Scores de Proximidade)
+        ↓
+Treinamento + Otimização (XGBoost + Optuna)
+        ↓
+Versionamento (MLflow Model Registry)
+        ↓
+        ├── API REST (FastAPI)
+        └── Interface Web (Streamlit)
+                ↓
+        Banco de Dados (MySQL)
+                ↓
+        Monitoramento de Data Drift (Evidently)
+                ↓
+        Observabilidade (Prometheus + Grafana)
+```
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+Regression_PriceHouse/
+│
+├── api/                          # API REST (FastAPI)
+│   └── main.py                   # Endpoints /predict, /health
+│
+├── src/                          # Módulos de ciência de dados
+│   ├── features.py               # Feature engineering
+│   ├── geocoding.py              # Geocoding com Google Maps API
+│   ├── modelo.py                 # Definição do pipeline do modelo
+│   ├── predict.py                # Inferência / carregamento do modelo
+│   ├── preprocessing.py          # Pré-processamento dos dados
+│   ├── scraper_robusto.py        # Web scraper (ZAP Imóveis)
+│   └── train.py                  # Treinamento e registro (MLflow)
+│
+├── notebooks/                    # Análise exploratória e modelagem
+│   ├── Coleta_e_tratamento.ipynb # Coleta e tratamento dos dados
+│   ├── EDA.ipynb                 # Análise exploratória
+│   ├── ML.ipynb                  # Modelagem v1
+│   └── ML2.ipynb                 # Modelagem v2 (XGBoost + Optuna + SHAP)
+│
+├── streamlit_app/                # Interface web (Streamlit)
+│   ├── app2.py                   # App principal (geocoding dinâmico)
+│   ├── batch_app.py              # App para predição em lote
+│   ├── api.py                    # Cliente da API REST
+│   ├── db.py                     # Persistência no MySQL
+│   └── config.py                 # Configurações do app
+│
+├── monitoring/                   # MLOps — Monitoramento
+│   ├── config/
+│   │   └── features.yaml         # Features monitoradas + thresholds
+│   ├── db/
+│   │   ├── mysql.py              # Conexão e queries MySQL
+│   │   └── conf.sql              # Schema do banco de dados
+│   ├── jobs/
+│   │   ├── generate_baseline.py  # Gera baseline de referência (parquet)
+│   │   └── run_data_drift.py     # Calcula data drift (Evidently)
+│   ├── exporters/
+│   │   └── prometheus_exporter.py # Expõe métricas para Prometheus
+│   └── docker/
+│       ├── docker-compose.yml    # Stack: MySQL + Exporter + Prometheus + Grafana
+│       ├── Dockerfile.exporter   # Imagem do exporter Python
+│       ├── prometheus.yml        # Config do Prometheus (scrape)
+│       ├── alerts.yml            # Regras de alerta (Wasserstein threshold)
+│       └── grafana/
+│           ├── provisioning/     # Datasource + Dashboard auto-provisionados
+│           └── dashboards/
+│               └── drift_dashboard.json
 │
 ├── data/
-│ ├── raw/ # Dados brutos (não versionados)
-│ └── processed/ # Dados processados
+│   ├── raw/                      # Dados brutos (não versionados)
+│   ├── pre/                      # POIs processados (escolas, hospitais, etc.)
+│   └── processed/
+│       ├── complete.csv          # Dataset completo com POIs
+│       └── baseline_monitoring.parquet  # Baseline para monitoramento
 │
-├── models/ # Modelos serializados (via MLflow)
-├── notebooks/ # EDA e análises exploratórias
-├── mlruns/ # Experimentos MLflow
+├── mlruns/                       # Experimentos MLflow
+├── results/
+│   └── drift_reports/            # Relatórios HTML do Evidently
 ├── requirements.txt
-├── .gitignore
 └── README.md
-
-
----
-
-## 🔍 Coleta e Enriquecimento de Dados
-
-### Fonte primária
-- Web scraping de anúncios imobiliários (preço, área, quartos, banheiros e localização)
-
-### Enriquecimento geoespacial
-As propriedades são enriquecidas com informações do entorno, incluindo:
-
-- mercados  
-- farmácias  
-- escolas  
-- hospitais  
-- indicadores de segurança  
-
-Essas informações são transformadas em **features quantitativas**, como densidade, distância e presença por raio geográfico.
+```
 
 ---
 
-## 🧠 Feature Engineering
+## 🛠️ Tecnologias
 
-Exemplos de features utilizadas:
-
-| Feature | Descrição |
-|------|----------|
-| `area_m2` | Área do imóvel |
-| `quartos` | Número de quartos |
-| `banheiros` | Número de banheiros |
-| `preco_por_m2` | Preço por metro quadrado |
-| `densidade_mercados` | Mercados em raio definido |
-| `dist_hospital` | Distância ao hospital mais próximo |
-| `indice_seguranca` | Indicador agregado de segurança |
-
----
-
-## 🤖 Modelagem
-
-Modelos avaliados:
-
-- Regressão Linear  
-- Ridge e Lasso  
-- Random Forest Regressor  
-- Gradient Boosting Regressor  
-
-Todos os experimentos são rastreados com **MLflow**, incluindo:
-
-- parâmetros  
-- métricas  
-- artefatos  
-- versão do pipeline completo  
-
-O modelo final é registrado no **MLflow Model Registry**.
+| Camada | Tecnologia |
+|---|---|
+| Linguagem | Python 3.12 |
+| Coleta | Selenium, BeautifulSoup4, Requests |
+| Geoespacial | OSMnx, Shapely, GeoPy |
+| Geocoding | Google Maps Geocoding API |
+| ML / Modelagem | Scikit-learn, XGBoost, SHAP, Optuna |
+| Versionamento | MLflow (tracking + model registry) |
+| API | FastAPI + Uvicorn |
+| Interface | Streamlit |
+| Banco de Dados | MySQL 8.0 |
+| Monitoramento | Evidently 0.7.x |
+| Observabilidade | Prometheus + Grafana |
+| Containers | Docker + Docker Compose |
 
 ---
 
-## 📊 Métricas de Avaliação
+## ⚙️ Instalação e Configuração
 
-- **RMSE** — erro médio quadrático  
-- **MAE** — erro absoluto médio  
-- **R²** — variância explicada  
+### 1. Clonar o repositório
 
-As métricas são comparadas entre modelos para seleção da melhor abordagem.
+```bash
+git clone https://github.com/felipesembay/Price_house_ponta_grossa.git
+cd Price_house_ponta_grossa
+```
 
----
+### 2. Criar ambiente conda
 
-## 🔁 Pipeline End-to-End
+```bash
+conda create -n regression python=3.12
+conda activate regression
+pip install -r requirements.txt
+```
 
-Web Scraping
-↓
-Tratamento de Dados
-↓
-Feature Engineering (Geo + Estrutural)
-↓
-Pré-processamento
-↓
-Treinamento (MLflow)
-↓
-Registro do Modelo
-↓
-API / Produção
+### 3. Configurar variáveis de ambiente
 
+Crie o arquivo `streamlit_app/.env`:
+
+```env
+# Google Maps Geocoding API
+GEOCODING_MAPS=sua_chave_aqui
+
+# Banco de dados MySQL
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=senha_aqui
+DB_NAME=imoveis
+```
 
 ---
 
 ## 🚀 Como Executar
 
-### 1️⃣ Criar ambiente
+> **Pré-requisito:** ativar o ambiente conda antes de qualquer serviço.
+>
+> ```bash
+> conda activate regression
+> ```
+
+---
+
+### 1️⃣ API REST (FastAPI)
 
 ```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+# A partir da raiz do projeto
+uvicorn api.main:app --reload --port 8009
 ```
 
-### 2️⃣ Treinar e registrar o modelo
+- Swagger UI: [http://localhost:8009/docs](http://localhost:8009/docs)
+- ReDoc: [http://localhost:8009/redoc](http://localhost:8009/redoc)
+- Health check: [http://localhost:8009/health](http://localhost:8009/health)
+
+---
+
+### 2️⃣ Interface Streamlit
+
+```bash
+cd streamlit_app
+streamlit run app2.py
+```
+
+Acesse em: [http://localhost:8501](http://localhost:8501)
+
+O app realiza o pipeline completo em tempo real:
+1. Endereço → Google Geocoding
+2. Coordenadas → POIs via OpenStreetMap
+3. POIs → Scores de proximidade
+4. Features + Scores → Predição via API
+
+Para predição em lote:
+
+```bash
+streamlit run batch_app.py
+```
+
+---
+
+### 3️⃣ MLflow (rastreamento de experimentos)
+
+```bash
+# A partir da raiz do projeto
+mlflow ui --port 5000
+```
+
+Acesse em: [http://localhost:5000](http://localhost:5000)
+
+Para treinar e registrar um novo modelo:
 
 ```bash
 python src/train.py
 ```
 
-### 3️⃣ Iniciar a API (FastAPI + Uvicorn)
+---
+
+### 4️⃣ Stack de Monitoramento (Docker)
 
 ```bash
-uvicorn api.main:app --reload --port 8009
+cd monitoring/docker
+docker-compose up -d
 ```
 
-A API estará disponível em: `http://localhost:8000`  
-Documentação interativa (Swagger): `http://localhost:8000/docs`
+Serviços disponíveis após o start:
 
-### 4️⃣ Iniciar a interface do MLflow
+| Serviço | URL | Credenciais |
+|---|---|---|
+| Grafana | [http://localhost:3002](http://localhost:3002) | admin / admin |
+| Prometheus | [http://localhost:9090](http://localhost:9090) | — |
+| Prometheus Exporter | [http://localhost:8007/metrics](http://localhost:8007/metrics) | — |
+| MySQL | localhost:3307 | root / airflow |
 
-```bash
-mlflow ui
-```
-
-A interface estará disponível em: `http://localhost:5000`
-
-### 5️⃣ Iniciar o app Streamlit
+Para parar:
 
 ```bash
-streamlit run streamlit_app/app2.py
+docker-compose down
 ```
 
 ---
 
-## 🔌 Deploy e API
+### 5️⃣ Calcular Data Drift
 
-* A API REST foi implementada com **FastAPI**, recebendo dados brutos do imóvel e retornando a previsão de preço com o mesmo pré-processamento utilizado no treino.
+**Gerar o baseline** (necessário apenas na primeira vez):
 
-## 🛣️ Próximos Passos
+```bash
+python monitoring/jobs/generate_baseline.py
+```
 
-* Deploy via FastAPI
+**Rodar o job de drift** (dados de produção → MySQL):
 
-* Monitoramento de performance e data drift
+```bash
+# Modo produção (requer predições no MySQL)
+MYSQL_PORT=3307 python monitoring/jobs/run_data_drift.py
 
-* Automatização com Airflow
+# Modo seed — popula o MySQL com baseline (primeira execução)
+MYSQL_PORT=3307 DRIFT_SEED=1 python monitoring/jobs/run_data_drift.py
 
-* CI/CD para modelos
+# Dry run — apenas imprime, sem salvar
+DRIFT_DRY_RUN=1 python monitoring/jobs/run_data_drift.py
+```
 
-* Feature Store
+> **Recomendação:** agendar `run_data_drift.py` via cron ou Airflow com intervalo de 6h.
+
+Exemplo de crontab (a cada 6 horas):
+
+```cron
+0 */6 * * * cd /caminho/do/projeto && MYSQL_PORT=3307 conda run -n regression python monitoring/jobs/run_data_drift.py >> results/drift.log 2>&1
+```
+
+---
+
+## 🔌 API REST
+
+### Endpoint principal: `POST /predict`
+
+**Request body:**
+
+```json
+{
+  "area_m2": 150.0,
+  "quartos": 3,
+  "banheiros": 2,
+  "vagas_garagem": 2,
+  "tipo_imovel_cat": "casa",
+  "is_sobrado": 0,
+  "score_escola_privada": 0.85,
+  "score_escola_publica": 0.42,
+  "score_hospitais": 0.63,
+  "score_mercado": 0.31,
+  "score_farmacia": 0.18,
+  "score_parque": 1.20,
+  "score_seguranca": 0.47
+}
+```
+
+**Response:**
+
+```json
+{
+  "preco_estimado": 580000.0,
+  "log_preco": 13.271,
+  "modelo": "RealEstatePriceModel",
+  "versao": "2.0.0"
+}
+```
+
+**Outros endpoints:**
+
+| Método | Rota | Descrição |
+|---|---|---|
+| `GET` | `/` | Health check simples |
+| `GET` | `/health` | Status + versão do modelo carregado |
+| `POST` | `/predict` | Previsão de preço |
+
+---
+
+## 📓 Notebooks
+
+| Notebook | Descrição |
+|---|---|
+| `Coleta_e_tratamento.ipynb` | Web scraping, limpeza e enriquecimento geoespacial |
+| `EDA.ipynb` | Análise exploratória, distribuições, correlações, mapas |
+| `ML.ipynb` | Benchmarking de modelos (baseline) |
+| `ML2.ipynb` | Pipeline final: XGBoost + Optuna + SHAP values |
+
+---
+
+## 📊 Monitoramento
+
+### Métricas de Data Drift (Evidently + Prometheus)
+
+O monitoramento usa **Wasserstein distance (normed)** para detectar drift nas features de entrada:
+
+| Faixa | Interpretação |
+|---|---|
+| `0.00 – 0.09` | ✅ Sem drift — distribuição estável |
+| `0.10 – 0.29` | ⚠️ Drift moderado — monitorar |
+| `≥ 0.30` | 🔴 Drift crítico — avaliar retreinamento |
+
+### Alertas configurados (Grafana / Prometheus)
+
+| Alerta | Condição | Severidade |
+|---|---|---|
+| `FeatureDriftHigh` | Wasserstein ≥ 0.10 por 5 min | Warning |
+| `FeatureDriftCritical` | Wasserstein ≥ 0.30 por 5 min | Critical |
+| `DatasetDriftDetected` | ≥ 50% das features driftadas | Critical |
+| `MajorityFeaturesDrifted` | `share_drifted_columns > 0.5` | Critical |
+| `DriftJobStopped` | Sem coleta de métricas há mais de 2 horas | Warning |
+
+### Dashboard Grafana
+
+O dashboard **"Data Drift — Precificação de Imóveis"** é provisionado automaticamente e inclui:
+
+- Cards de status (dataset drift, % de features driftadas, última atualização)
+- Bargauge com scores por feature (colorido por threshold)
+- Timeseries de evolução do drift ao longo do tempo
+- Tabela ranqueada das features com maior drift
+
+---
+
+## 📈 Métricas do Modelo
+
+Resultados do modelo final (XGBoost otimizado com Optuna):
+
+| Métrica | Valor |
+|---|---|
+| R² | ~0.87 |
+| RMSE (log) | ~0.33 |
+| MAE (log) | ~0.23 |
+| MAPE | ~17% |
+
+> O modelo prediz `log(preço)` e o valor real é recuperado com `exp(log_preço)`.
+
+---
+
+## 🧠 Features Utilizadas
+
+### Estruturais
+
+| Feature | Descrição |
+|---|---|
+| `area_m2` | Área total do imóvel em m² |
+| `quartos` | Número de quartos |
+| `banheiros` | Número de banheiros |
+| `vagas_garagem` | Vagas de garagem |
+| `is_sobrado` | 1 para sobrado, 0 para outros |
+| `tipo_imovel_cat` | Categoria: casa, apartamento, comercial |
+
+### Scores de Localização
+
+Os scores são calculados combinando **distância ao POI mais próximo** e **quantidade no raio definido**:
+
+| Score | POI | Raio de Contagem |
+|---|---|---|
+| `score_escola_privada` | Escolas privadas | 500 m |
+| `score_escola_publica` | Escolas públicas | 500 m |
+| `score_hospitais` | Hospitais | 1.000 m |
+| `score_mercado` | Supermercados | 500 m |
+| `score_farmacia` | Farmácias | 300 m |
+| `score_parque` | Parques e praças | 1.000 m |
+| `score_seguranca` | Delegacias / corpo de bombeiros | 500 m |
+
+**Fórmula geral:**
+
+```
+score = peso_dist × exp(-dist_mais_proximo / raio_decaimento)
+      + peso_qtd  × qtd_no_raio
+```
+
+---
 
 ## 👤 Autor
 
-**Felipe Sembay**
-**Cientista de Dados | Machine Learning | MLOps**
+**Felipe Sembay**  
+Cientista de Dados | Machine Learning | MLOps
 
-Última atualização: 25 de Fevereiro de 2026
+[![GitHub](https://img.shields.io/badge/GitHub-felipesembay-black?logo=github)](https://github.com/felipesembay)
+
+---
+
+*Última atualização: 26 de Fevereiro de 2026*
+
 
