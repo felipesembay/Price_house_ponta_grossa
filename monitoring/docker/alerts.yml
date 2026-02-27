@@ -49,7 +49,7 @@ groups:
         annotations:
           summary: "Maioria das features com drift no modelo {{ $labels.modelo }}"
           description: >
-            {{ printf \"%.0f\" (mul $value 100) }}% das features do modelo {{ $labels.modelo }}
+            {{ $value | humanizePercentage }} das features do modelo {{ $labels.modelo }}
             apresentam drift. Retreinamento urgente recomendado.
 
       # ── Alerta: job de drift parado (sem coleta há mais de 2h) ────────────
@@ -61,6 +61,5 @@ groups:
         annotations:
           summary: "Job de drift não executado há mais de 2 horas"
           description: >
-            O job run_data_drift.py não atualizou métricas há
-            {{ printf \"%.0f\" (div (sub (time) last_drift_run_timestamp) 3600) }} horas.
+            O job run_data_drift.py não atualizou métricas há {{ $value | humanizeDuration }}.
             Verifique o agendamento (cron/Airflow).

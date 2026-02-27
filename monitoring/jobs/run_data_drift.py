@@ -21,9 +21,9 @@ Modo teste (sem MySQL):
     DRIFT_DRY_RUN=1 python monitoring/jobs/run_data_drift.py
 """
 
+import datetime
 import os
 import sys
-import datetime
 
 import pandas as pd
 import yaml
@@ -31,10 +31,11 @@ import yaml
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 sys.path.insert(0, ROOT)
 
-from monitoring.db.mysql import load_baseline_data, load_current_data, save_metric
-
-from evidently import Report, Dataset
+from evidently import Dataset, Report
 from evidently.presets import DataDriftPreset
+
+from monitoring.db.mysql import (load_baseline_data, load_current_data,
+                                 save_metric)
 
 # ── Configuração ──────────────────────────────────────────────────────────────
 CONFIG_PATH      = os.path.join(os.path.dirname(__file__), "../config/features.yaml")
@@ -54,20 +55,23 @@ NUM_FEATURES  = config["features"]["numerical"]
 # Wasserstein normed: alerta quando dist > wasserstein_threshold (default 0.1)
 WASSERSTEIN_THRESHOLD = config.get("drift", {}).get("wasserstein_threshold", 0.1)
 
-DRY_RUN = os.getenv("DRIFT_DRY_RUN", "0") == "1"
+DRY_RUN  = os.getenv("DRIFT_DRY_RUN", "0") == "1"
+# DRIFT_SEED=1 → usa parquet para baseline E current, mas salva no MySQL
+# útil para popular o banco na primeira execução (sem dados de produção ainda)
+SEED_MODE = os.getenv("DRIFT_SEED", "0") == "1"
 
 # ── Carregar dados ────────────────────────────────────────────────────────────
 print("📂 Carregando dados de referência...")
 
-if DRY_RUN:
+if DRY_RUN or SEED_MODE:
     import numpy as np
-    print("   [DRY RUN] Parquet como referência + ruído leve como current.")
+    mode_label = "SEED (salva no MySQL)" if SEED_MODE else "DRY RUN (sem MySQL)"
+    print(f"   [{mode_label}] Parquet como referência + ruído leve como current.")
     _raw = pd.read_parquet(BASELINE_PARQUET)
     baseline_df = _raw[NUM_FEATURES].dropna()
     current_df  = baseline_df.sample(min(300, len(baseline_df)), random_state=1).copy()
-    # ruído moderado em algumas features
-    current_df["area_m2"]      *= np.random.uniform(0.8, 1.2, len(current_df))
-    current_df["score_mercado"] *= np.random.uniform(1.0, 1.5, len(current_df))
+    current_df["area_m2"]       *= np.random.uniform(0.8, 1.2, len(current_df))
+    current_df["score_mercado"]  *= np.random.uniform(1.0, 1.5, len(current_df))
 else:
     baseline_db = load_baseline_data(BASELINE_DAYS)
     if baseline_db.empty:
@@ -124,7 +128,7 @@ for entry in snap_dict.get("metrics", []):
         drifted_count   = int(value.get("count", 0))
         dataset_drifted = share_drifted >= 0.5
 
-        if not DRY_RUN:
+        if not DRY_RUN or SEED_MODE:
             save_metric("dataset_drift_detected", float(dataset_drifted),
                         "dataset", "drift", MODEL_NAME, MODEL_VERSION)
             save_metric("share_drifted_columns", round(share_drifted, 4),
@@ -147,7 +151,7 @@ for entry in snap_dict.get("metrics", []):
         if feature_drifted:
             drifted_features.append(feature_name)
 
-        if not DRY_RUN:
+        if not DRY_RUN or SEED_MODE:
             save_metric("data_drift", drift_score,
                         feature_name, "drift", MODEL_NAME, MODEL_VERSION)
 
@@ -160,4 +164,6 @@ for feat, ds in sorted(all_drift_scores.items(), key=lambda x: -x[1]):
     print(f"{flag}{feat:<28} {ds:>18.4f}  {'YES' if feat in drifted_features else 'no'}")
 print("─────────────────────────────────────────────────────────────────")
 print(f"\nFeatures com drift ({len(drifted_features)}): {drifted_features}")
-print(f"\n✅ Data Drift {'(DRY_RUN)' if DRY_RUN else 'salvo no MySQL'} com sucesso.")
+mode_desc = "DRY_RUN (sem salvar)" if DRY_RUN else ("SEED (parquet → MySQL)" if SEED_MODE else "salvo no MySQL")
+print(f"\n✅ Data Drift {mode_desc} com sucesso.")
+print(f"\n✅ Data Drift {mode_desc} com sucesso.")

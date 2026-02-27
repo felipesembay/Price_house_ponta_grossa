@@ -78,11 +78,27 @@ def collect_and_expose() -> None:
                 # ── Feature drift (última leitura por feature/modelo/versão) ──
                 cur.execute(
                     """
-                    SELECT feature_name, metric_name, metric_value, modelo, versao_modelo, MAX(created_at) AS ts
-                    FROM metrics_monitoramento
-                    WHERE metric_name IN ('data_drift', 'dataset_drift_detected', 'share_drifted_columns')
-                    GROUP BY feature_name, metric_name, modelo, versao_modelo
-                    ORDER BY ts DESC
+                    SELECT m.feature_name, m.metric_name, m.metric_value,
+                           m.modelo, m.versao_modelo, m.created_at AS ts
+                    FROM metrics_monitoramento m
+                    INNER JOIN (
+                        SELECT feature_name, metric_name, modelo, versao_modelo,
+                               MAX(created_at) AS max_ts
+                        FROM metrics_monitoramento
+                        WHERE metric_name IN (
+                            'data_drift', 'dataset_drift_detected', 'share_drifted_columns'
+                        )
+                        GROUP BY feature_name, metric_name, modelo, versao_modelo
+                    ) latest
+                        ON  COALESCE(m.feature_name, '')  = COALESCE(latest.feature_name, '')
+                        AND m.metric_name                 = latest.metric_name
+                        AND COALESCE(m.modelo, '')        = COALESCE(latest.modelo, '')
+                        AND COALESCE(m.versao_modelo, '') = COALESCE(latest.versao_modelo, '')
+                        AND m.created_at                  = latest.max_ts
+                    WHERE m.metric_name IN (
+                        'data_drift', 'dataset_drift_detected', 'share_drifted_columns'
+                    )
+                    ORDER BY m.created_at DESC
                     LIMIT 500
                     """
                 )
