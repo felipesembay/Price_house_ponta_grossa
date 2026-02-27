@@ -1,0 +1,33 @@
+model:
+  name: "precificacao_imoveis"
+  version: "v2"
+
+time_windows:
+  baseline_days: 180
+  current_days: 14
+
+features:
+  numerical:
+    - area_m2
+    - banheiros
+    - quartos
+    - vagas_garagem
+    - score_escola_privada
+    - score_escola_publica
+    - score_farmacia
+    - score_hospitais
+    - score_mercado
+    - score_parque
+    - score_seguranca
+
+targets:
+  - preco_anuncio
+
+predictions:
+  - preco_predito
+
+drift:
+  # Evidently 0.7.x usa Wasserstein distance (normed): 0=idêntico, maior=mais drift
+  # Alerta warning  : drift_score >= 0.10
+  # Alerta critical : drift_score >= 0.30
+  wasserstein_threshold: 0.10

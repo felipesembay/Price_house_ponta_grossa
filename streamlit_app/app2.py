@@ -12,7 +12,7 @@ import osmnx as ox
 import pandas as pd
 import requests
 import streamlit as st
-from db import salvar_predicao
+from db import salvar_features_monitoramento, salvar_predicao
 from dotenv import load_dotenv
 from shapely.geometry import Point
 from sklearn.neighbors import BallTree
@@ -296,18 +296,41 @@ if st.button("🚀 Calcular Previsão", type="primary", use_container_width=True
         try:
             resultado = prever_preco(payload)
             preco = resultado["preco_estimado"]
+            preco_predito = preco
+            preco_real = payload.get("preco_anuncio")
+
+            erro_abs = None
+            erro_pct = None
+
+            if preco_real is not None and preco_real > 0:
+                erro_abs = abs(preco_predito - preco_real)
+                erro_pct = erro_abs / preco_real
             
             st.success(f"#### 💰 Preço Estimado: R$ {preco:,.2f}")
             st.caption(f"Log(preço): {resultado.get('log_preco', 0):.4f}")
+
+            if erro_abs is not None:
+                st.info(f"""
+    📉 **Erro da previsão**
+    - Erro absoluto: R$ {erro_abs:,.2f}
+    - Erro percentual: {erro_pct * 100:.2f}%
+    """)
             
             # ETAPA 6: Salvar no banco
             with st.spinner("💾 Salvando predição no banco de dados..."):
-                salvar_predicao(
-                    payload,
-                    preco,
-                    "RealEstatePriceModel",
-                    "2.0.0"
+                predicao_id = salvar_predicao(
+                    dados=payload,
+                    preco_predito=preco,
+                    modelo="RealEstatePriceModel",
+                    versao="2.0.0",
+                    erro_abs=erro_abs,
+                    erro_pct=erro_pct
                 )
+                
+                salvar_features_monitoramento(
+                    predicao_id=predicao_id,
+                    area_m2=payload["area_m2"],
+                    scores=scores)
             
             st.success("✅ Predição salva no banco de dados!")
             
@@ -318,3 +341,6 @@ if st.button("🚀 Calcular Previsão", type="primary", use_container_width=True
 # Rodapé
 st.markdown("---")
 st.caption("✅ Funciona em qualquer cidade do Brasil via Google Maps + OpenStreetMap")
+
+
+

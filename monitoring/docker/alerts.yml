@@ -1,0 +1,66 @@
+groups:
+  - name: data_drift_alerts
+    rules:
+
+      # ── Alerta: feature individual com drift (Wasserstein >= 0.10) ────────────
+      - alert: FeatureDriftHigh
+        expr: feature_drift_score >= 0.10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Drift detectado na feature {{ $labels.feature }}"
+          description: >
+            A feature {{ $labels.feature }} do modelo {{ $labels.modelo }} ({{ $labels.versao }})
+            apresenta Wasserstein distance de {{ printf "%.4f" $value }},
+            acima do threshold 0.10. Verifique a distribuição dos dados de entrada.
+
+      # ── Alerta: drift crítico (Wasserstein >= 0.30) ─────────────────────────
+      - alert: FeatureDriftCritical
+        expr: feature_drift_score >= 0.30
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Drift CRÍTICO na feature {{ $labels.feature }}"
+          description: >
+            A feature {{ $labels.feature }} apresenta Wasserstein distance de {{ printf "%.4f" $value }}
+            (>= 0.30). Retreinamento do modelo pode ser necessário.
+
+      # ── Alerta: dataset inteiro driftou ───────────────────────────────────
+      - alert: DatasetDriftDetected
+        expr: dataset_drift_detected == 1
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Dataset drift detectado no modelo {{ $labels.modelo }}"
+          description: >
+            O Evidently detectou drift no dataset completo do modelo {{ $labels.modelo }}
+            versão {{ $labels.versao }}.
+            Ação recomendada: rever os dados de entrada e considerar retreinamento.
+
+      # ── Alerta: mais de 50% das features driftadas ────────────────────────
+      - alert: MajorityFeaturesDrifted
+        expr: share_drifted_columns > 0.5
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Maioria das features com drift no modelo {{ $labels.modelo }}"
+          description: >
+            {{ printf \"%.0f\" (mul $value 100) }}% das features do modelo {{ $labels.modelo }}
+            apresentam drift. Retreinamento urgente recomendado.
+
+      # ── Alerta: job de drift parado (sem coleta há mais de 2h) ────────────
+      - alert: DriftJobStopped
+        expr: (time() - last_drift_run_timestamp) > 7200
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Job de drift não executado há mais de 2 horas"
+          description: >
+            O job run_data_drift.py não atualizou métricas há
+            {{ printf \"%.0f\" (div (sub (time) last_drift_run_timestamp) 3600) }} horas.
+            Verifique o agendamento (cron/Airflow).

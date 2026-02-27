@@ -1,0 +1,25 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Dependências do sistema
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    default-libmysqlclient-dev gcc pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
+# Dependências Python
+COPY requirements.txt .
+RUN pip install --no-cache-dir \
+    pymysql \
+    prometheus_client \
+    pandas \
+    pyarrow \
+    pyyaml
+
+# Copiar código do projeto
+COPY monitoring/ monitoring/
+COPY data/processed/baseline_monitoring.parquet data/processed/baseline_monitoring.parquet
+
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "monitoring/exporters/prometheus_exporter.py"]

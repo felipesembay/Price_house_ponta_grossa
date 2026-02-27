@@ -1,0 +1,104 @@
+# ─── Rede compartilhada ───────────────────────────────────────────────────────
+networks:
+  monitoring:
+    driver: bridge
+
+# ─── Volumes persistentes ─────────────────────────────────────────────────────
+volumes:
+  mysql_data:
+  prometheus_data:
+  grafana_data:
+
+# ─── Serviços ─────────────────────────────────────────────────────────────────
+services:
+
+  # ── MySQL ──────────────────────────────────────────────────────────────────
+  mysql:
+    image: mysql:8.0
+    container_name: imoveis_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: airflow
+      MYSQL_DATABASE: imoveis
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./../../monitoring/db/conf.sql:/docker-entrypoint-initdb.d/conf.sql:ro
+    networks:
+      - monitoring
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pairflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Prometheus Exporter (Python) ───────────────────────────────────────────
+  prometheus_exporter:
+    build:
+      context: ../..
+      dockerfile: monitoring/docker/Dockerfile.exporter
+    container_name: drift_exporter
+    restart: unless-stopped
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: airflow
+      MYSQL_DATABASE: imoveis
+      EXPORTER_PORT: 8007
+      EXPORTER_POLL_SECONDS: 60
+    ports:
+      - "8007:8007"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - monitoring
+
+  # ── Prometheus ─────────────────────────────────────────────────────────────
+  prometheus:
+    image: prom/prometheus:v2.51.0
+    container_name: prometheus
+    restart: unless-stopped
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./alerts.yml:/etc/prometheus/alerts.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.retention.time=30d"
+      - "--web.enable-lifecycle"
+    ports:
+      - "9090:9090"
+    depends_on:
+      - prometheus_exporter
+    networks:
+      - monitoring
+
+  # ── Grafana ────────────────────────────────────────────────────────────────
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: grafana
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      # SMTP para alertas por e-mail (preencha com suas credenciais)
+      GF_SMTP_ENABLED: "false"
+      GF_SMTP_HOST: smtp.gmail.com:587
+      GF_SMTP_USER: ""
+      GF_SMTP_PASSWORD: ""
+      GF_SMTP_FROM_ADDRESS: alertas@seuprojeto.com
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports:
+      - "3002:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - monitoring
