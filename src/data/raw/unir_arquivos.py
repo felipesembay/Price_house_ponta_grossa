@@ -2,26 +2,33 @@
 Script para unir todos os arquivos CSV de páginas individuais em um único DataFrame
 """
 
-import pandas as pd
-from pathlib import Path
 import glob
 import re
+from pathlib import Path
+
+import pandas as pd
 
 
-def unir_arquivos_por_cidade(cidade: str, estado: str, diretorio: str = ".") -> pd.DataFrame:
+def unir_arquivos_por_cidade(cidade: str, estado: str, diretorio: str = None, excluir_paginas: list = None) -> pd.DataFrame:
     """
     Une todos os arquivos CSV de uma cidade específica
     
     Args:
         cidade: Nome da cidade
         estado: Sigla do estado
-        diretorio: Diretório onde estão os arquivos (padrão: diretório atual)
+        diretorio: Diretório onde estão os arquivos (None = usar pasta por_pagina/)
+        excluir_paginas: Lista de números de páginas a excluir (ex: [334, 335])
         
     Returns:
         DataFrame com todos os dados unidos
     """
-    # Caminho base - usar diretório atual se não especificado
-    base_path = Path(diretorio).resolve()
+    # Caminho base - usar por_pagina/ se não especificado
+    if diretorio is None:
+        # Diretório do script atual
+        script_dir = Path(__file__).parent
+        base_path = script_dir / "por_pagina"
+    else:
+        base_path = Path(diretorio).resolve()
     
     # Padrão de busca: cidade_estado_paginaN.csv
     pattern = f"{cidade}_{estado}_pagina*.csv"
@@ -38,17 +45,28 @@ def unir_arquivos_por_cidade(cidade: str, estado: str, diretorio: str = ".") -> 
     
     # Ler e unir todos os arquivos
     dfs = []
+    excluidos = 0
     for arquivo in arquivos:
         try:
-            df = pd.read_csv(arquivo)
             # Extrair número da página do nome do arquivo
             match = re.search(r'pagina(\d+)', arquivo.name)
             pagina_num = int(match.group(1)) if match else 0
+            
+            # Verificar se a página deve ser excluída
+            if excluir_paginas and pagina_num in excluir_paginas:
+                print(f"   ⊘ {arquivo.name}: EXCLUÍDA (página {pagina_num})")
+                excluidos += 1
+                continue
+            
+            df = pd.read_csv(arquivo)
             
             print(f"   ✓ {arquivo.name}: {len(df)} imóveis")
             dfs.append(df)
         except Exception as e:
             print(f"   ✗ Erro ao ler {arquivo.name}: {e}")
+    
+    if excluidos > 0:
+        print(f"\n🚫 Total de páginas excluídas: {excluidos}")
     
     if not dfs:
         return pd.DataFrame()
@@ -68,18 +86,23 @@ def unir_arquivos_por_cidade(cidade: str, estado: str, diretorio: str = ".") -> 
     return df_completo
 
 
-def unir_todos_arquivos(diretorio: str = ".") -> pd.DataFrame:
+def unir_todos_arquivos(diretorio: str = None) -> pd.DataFrame:
     """
     Une TODOS os arquivos CSV do diretório, independente da cidade
     
     Args:
-        diretorio: Diretório onde estão os arquivos (padrão: diretório atual)
+        diretorio: Diretório onde estão os arquivos (None = usar pasta por_pagina/)
         
     Returns:
         DataFrame com todos os dados unidos
     """
-    # Caminho base - usar diretório atual se não especificado
-    base_path = Path(diretorio).resolve()
+    # Caminho base - usar por_pagina/ se não especificado
+    if diretorio is None:
+        # Diretório do script atual
+        script_dir = Path(__file__).parent
+        base_path = script_dir / "por_pagina"
+    else:
+        base_path = Path(diretorio).resolve()
     
     # Buscar todos os arquivos CSV com padrão cidade_estado_paginaN.csv
     arquivos = sorted(base_path.glob("*_pagina*.csv"))
@@ -133,8 +156,9 @@ def salvar_arquivo_unido(df: pd.DataFrame, cidade: str = None, estado: str = Non
         print("⚠️  DataFrame vazio, nada para salvar")
         return
     
-    # Salvar no diretório pai (sair de por_pagina/)
-    output_dir = Path.cwd().parent
+    # Salvar no diretório src/data/raw/
+    script_dir = Path(__file__).parent
+    output_dir = script_dir  # Salva no mesmo diretório do script (src/data/raw/)
     
     # Nome do arquivo
     if cidade and estado:
@@ -168,8 +192,21 @@ def main():
         cidade = input("\n📍 Digite o nome da cidade: ").strip().lower()
         estado = input("📍 Digite a sigla do estado: ").strip().lower()
         
+        # Perguntar sobre exclusão de páginas
+        excluir = input("\n🚫 Deseja excluir páginas específicas? (s/n): ").strip().lower()
+        excluir_paginas = None
+        
+        if excluir in ['s', 'sim', 'y', 'yes']:
+            paginas_str = input("   Digite os números das páginas separados por vírgula (ex: 334,335): ").strip()
+            try:
+                excluir_paginas = [int(p.strip()) for p in paginas_str.split(',') if p.strip()]
+                print(f"   Páginas a excluir: {excluir_paginas}")
+            except ValueError:
+                print("   ⚠️  Formato inválido. Nenhuma página será excluída.")
+                excluir_paginas = None
+        
         print(f"\n🔄 Unindo arquivos de {cidade.title()}/{estado.upper()}...")
-        df = unir_arquivos_por_cidade(cidade, estado)
+        df = unir_arquivos_por_cidade(cidade, estado, excluir_paginas=excluir_paginas)
         
         if not df.empty:
             print("\n" + "="*60)
@@ -178,6 +215,19 @@ def main():
             print(df.info())
             print("\nPrimeiros registros:")
             print(df.head())
+            
+            # Mostrar estatísticas básicas
+            if 'preco' in df.columns:
+                print("\n💰 Estatísticas de preço:")
+                # Tentar converter preço para numérico se estiver como string
+                try:
+                    preco_numerico = df['preco'].str.replace('R$ ', '').str.replace('.', '').str.replace(',', '.').astype(float)
+                    print(f"   Média: R$ {preco_numerico.mean():,.2f}")
+                    print(f"   Mediana: R$ {preco_numerico.median():,.2f}")
+                    print(f"   Mínimo: R$ {preco_numerico.min():,.2f}")
+                    print(f"   Máximo: R$ {preco_numerico.max():,.2f}")
+                except:
+                    pass
             
             salvar_arquivo_unido(df, cidade, estado)
     

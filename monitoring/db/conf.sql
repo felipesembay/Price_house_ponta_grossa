@@ -79,6 +79,31 @@ CREATE TABLE IF NOT EXISTS metrics_monitoramento (
     INDEX idx_mm_modelo   (modelo, versao_modelo)
 );
 
+-- ── Estatísticas de Distribuição (baseline vs produção) ─────────────────────
+CREATE TABLE IF NOT EXISTS distribution_stats (
+    id             INT AUTO_INCREMENT PRIMARY KEY,
+    feature_name   VARCHAR(100)  NOT NULL,
+    dataset_type   ENUM('baseline', 'production') NOT NULL,
+    
+    mean_value     FLOAT,
+    std_value      FLOAT,
+    min_value      FLOAT,
+    max_value      FLOAT,
+    p25_value      FLOAT,   -- percentil 25
+    p50_value      FLOAT,   -- mediana
+    p75_value      FLOAT,   -- percentil 75
+    sample_count   INT,
+    
+    modelo         VARCHAR(100),
+    versao_modelo  VARCHAR(50),
+    created_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    INDEX idx_ds_feature   (feature_name),
+    INDEX idx_ds_type      (dataset_type),
+    INDEX idx_ds_created   (created_at),
+    INDEX idx_ds_modelo    (modelo, versao_modelo)
+);
+
 -- ── POIs (pontos de interesse) ───────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS pois (
     id        BIGINT AUTO_INCREMENT PRIMARY KEY,

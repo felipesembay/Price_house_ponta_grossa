@@ -8103,3 +8103,1955 @@
 2026-02-09 10:28:13,112 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
 2026-02-09 10:28:13,112 - INFO - Acessando: https://www.zapimoveis.com.br/venda/imoveis/pr+ponta-grossa/?pagina=294
 2026-02-09 10:28:14,194 - INFO - Aguardando 5.6s para carregamento...
+2026-03-13 15:34:50,132 - INFO - ============================================================
+2026-03-13 15:34:50,133 - INFO - INICIANDO SCRAPING
+2026-03-13 15:34:50,133 - INFO - Cidade: Sao-Paulo/SP
+2026-03-13 15:34:50,133 - INFO - Páginas: 2
+2026-03-13 15:34:50,133 - INFO - Delay entre páginas: 5.0-10.0s
+2026-03-13 15:34:50,133 - INFO - Salvar por página: Sim
+2026-03-13 15:34:50,133 - INFO - ============================================================
+2026-03-13 15:34:50,133 - INFO - ============================================================
+2026-03-13 15:34:50,133 - INFO - PÁGINA 1
+2026-03-13 15:34:50,133 - INFO - ============================================================
+2026-03-13 15:34:50,133 - INFO - ====== WebDriver manager ======
+2026-03-13 15:34:50,198 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:34:50,318 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:34:50,400 - INFO - There is no [linux64] chromedriver "145.0.7632.117" for browser google-chrome "145.0.7632" in cache
+2026-03-13 15:34:50,400 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:34:50,636 - INFO - WebDriver version 145.0.7632.117 selected
+2026-03-13 15:34:50,639 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/linux64/chromedriver-linux64.zip
+2026-03-13 15:34:50,639 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/linux64/chromedriver-linux64.zip
+2026-03-13 15:34:50,832 - INFO - Driver downloading response is 200
+2026-03-13 15:34:51,466 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:34:51,634 - INFO - Driver has been saved in cache [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117]
+2026-03-13 15:34:52,393 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 15:34:52,393 - INFO - Acessando: https://www.zapimoveis.com.br/venda/imoveis/sp+sao-paulo/?pagina=1
+2026-03-13 15:34:53,820 - INFO - Aguardando 6.6s para carregamento...
+2026-03-13 15:35:07,496 - INFO - Analisando página HTML...
+2026-03-13 15:35:07,497 - INFO - Tentativa 1 (links com /imovel/): 5 cards
+2026-03-13 15:35:07,498 - INFO - ✓ Página 1: 5 imóveis extraídos
+2026-03-13 15:35:07,572 - INFO - Driver fechado
+2026-03-13 15:35:07,577 - INFO - ✓ Página 1 salva em data/raw/por_pagina/sao-paulo_sp_pagina1.csv
+2026-03-13 15:35:07,577 - INFO - Aguardando 7.7s antes da próxima página...
+2026-03-13 15:35:15,242 - INFO - ============================================================
+2026-03-13 15:35:15,243 - INFO - PÁGINA 2
+2026-03-13 15:35:15,243 - INFO - ============================================================
+2026-03-13 15:35:15,243 - INFO - ====== WebDriver manager ======
+2026-03-13 15:35:15,302 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:35:15,372 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:35:15,442 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:35:16,291 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 15:35:16,291 - INFO - Acessando: https://www.zapimoveis.com.br/venda/imoveis/sp+sao-paulo/?pagina=2
+2026-03-13 15:35:17,334 - INFO - Aguardando 7.5s para carregamento...
+2026-03-13 15:35:33,037 - INFO - Analisando página HTML...
+2026-03-13 15:35:33,038 - INFO - Tentativa 1 (links com /imovel/): 7 cards
+2026-03-13 15:35:33,039 - INFO - ✓ Página 2: 7 imóveis extraídos
+2026-03-13 15:35:33,115 - INFO - Driver fechado
+2026-03-13 15:35:33,117 - INFO - ✓ Página 2 salva em data/raw/por_pagina/sao-paulo_sp_pagina2.csv
+2026-03-13 15:35:33,120 - INFO - ============================================================
+2026-03-13 15:35:33,120 - INFO - SCRAPING CONCLUÍDO
+2026-03-13 15:35:33,120 - INFO - Total de imóveis coletados: 12
+2026-03-13 15:35:33,120 - INFO - ============================================================
+2026-03-13 15:35:33,134 - INFO - ✓ Dados salvos em data/raw/imoveis_sao-paulo_20260313_153533.csv
+2026-03-13 15:39:47,190 - INFO - ============================================================
+2026-03-13 15:39:47,191 - INFO - INICIANDO SCRAPING
+2026-03-13 15:39:47,191 - INFO - Cidade: Sao-Paulo/SP
+2026-03-13 15:39:47,191 - INFO - Páginas: Até acabar
+2026-03-13 15:39:47,191 - INFO - Delay entre páginas: 5.0-10.0s
+2026-03-13 15:39:47,191 - INFO - Salvar por página: Sim
+2026-03-13 15:39:47,191 - INFO - ============================================================
+2026-03-13 15:39:47,191 - INFO - ============================================================
+2026-03-13 15:39:47,191 - INFO - PÁGINA 1
+2026-03-13 15:39:47,191 - INFO - ============================================================
+2026-03-13 15:39:47,191 - INFO - ====== WebDriver manager ======
+2026-03-13 15:39:47,252 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:39:47,327 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:39:47,409 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:39:48,234 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 15:39:48,234 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/imoveis/sp+sao-paulo/?pagina=1
+2026-03-13 15:39:49,321 - INFO - Aguardando 5.2s para carregamento...
+2026-03-13 15:40:03,088 - INFO - Analisando página HTML...
+2026-03-13 15:40:03,090 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 15:40:03,092 - INFO - ✓ Página 1: 28 imóveis extraídos
+2026-03-13 15:40:03,165 - INFO - Driver fechado
+2026-03-13 15:40:03,168 - INFO - ✓ Página 1 salva em data/raw/por_pagina/sao-paulo_sp_pagina1.csv
+2026-03-13 15:40:03,168 - INFO - Aguardando 5.4s antes da próxima página...
+2026-03-13 15:40:08,554 - INFO - ============================================================
+2026-03-13 15:40:08,554 - INFO - PÁGINA 2
+2026-03-13 15:40:08,554 - INFO - ============================================================
+2026-03-13 15:40:08,554 - INFO - ====== WebDriver manager ======
+2026-03-13 15:40:08,615 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:40:08,705 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:40:08,800 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:40:09,632 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 15:40:09,632 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/imoveis/sp+sao-paulo/?pagina=2
+2026-03-13 15:40:10,752 - INFO - Aguardando 6.5s para carregamento...
+2026-03-13 15:40:25,770 - INFO - Analisando página HTML...
+2026-03-13 15:40:25,771 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 15:40:25,774 - INFO - ✓ Página 2: 30 imóveis extraídos
+2026-03-13 15:40:25,852 - INFO - Driver fechado
+2026-03-13 15:40:25,854 - INFO - ✓ Página 2 salva em data/raw/por_pagina/sao-paulo_sp_pagina2.csv
+2026-03-13 15:40:25,854 - INFO - Aguardando 8.7s antes da próxima página...
+2026-03-13 15:40:34,577 - INFO - ============================================================
+2026-03-13 15:40:34,577 - INFO - PÁGINA 3
+2026-03-13 15:40:34,577 - INFO - ============================================================
+2026-03-13 15:40:34,577 - INFO - ====== WebDriver manager ======
+2026-03-13 15:40:34,637 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:40:34,729 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:40:34,819 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:40:35,640 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 15:40:35,640 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/imoveis/sp+sao-paulo/?pagina=3
+2026-03-13 15:40:36,749 - INFO - Aguardando 5.9s para carregamento...
+2026-03-13 15:40:50,599 - INFO - Analisando página HTML...
+2026-03-13 15:40:50,600 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 15:40:50,603 - INFO - ✓ Página 3: 30 imóveis extraídos
+2026-03-13 15:40:50,677 - INFO - Driver fechado
+2026-03-13 15:40:50,679 - INFO - ✓ Página 3 salva em data/raw/por_pagina/sao-paulo_sp_pagina3.csv
+2026-03-13 15:40:50,679 - INFO - Aguardando 7.4s antes da próxima página...
+2026-03-13 15:40:58,099 - INFO - ============================================================
+2026-03-13 15:40:58,099 - INFO - PÁGINA 4
+2026-03-13 15:40:58,099 - INFO - ============================================================
+2026-03-13 15:40:58,099 - INFO - ====== WebDriver manager ======
+2026-03-13 15:40:58,158 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:40:58,241 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:40:58,308 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:40:59,125 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 15:40:59,125 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/imoveis/sp+sao-paulo/?pagina=4
+2026-03-13 15:41:00,239 - INFO - Aguardando 5.9s para carregamento...
+2026-03-13 15:41:14,405 - INFO - Analisando página HTML...
+2026-03-13 15:41:14,406 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 15:41:14,408 - INFO - ✓ Página 4: 30 imóveis extraídos
+2026-03-13 15:41:14,483 - INFO - Driver fechado
+2026-03-13 15:41:14,485 - INFO - ✓ Página 4 salva em data/raw/por_pagina/sao-paulo_sp_pagina4.csv
+2026-03-13 15:41:14,485 - INFO - Aguardando 5.7s antes da próxima página...
+2026-03-13 15:41:20,234 - INFO - ============================================================
+2026-03-13 15:41:20,234 - INFO - PÁGINA 5
+2026-03-13 15:41:20,234 - INFO - ============================================================
+2026-03-13 15:41:20,234 - INFO - ====== WebDriver manager ======
+2026-03-13 15:41:20,294 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:41:20,384 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:41:20,459 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:41:21,276 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 15:41:21,276 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/imoveis/sp+sao-paulo/?pagina=5
+2026-03-13 15:41:22,275 - INFO - Aguardando 5.3s para carregamento...
+2026-03-13 15:41:35,158 - INFO - Analisando página HTML...
+2026-03-13 15:41:35,159 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 15:41:35,162 - INFO - ✓ Página 5: 30 imóveis extraídos
+2026-03-13 15:41:35,231 - INFO - Driver fechado
+2026-03-13 15:41:35,233 - INFO - ✓ Página 5 salva em data/raw/por_pagina/sao-paulo_sp_pagina5.csv
+2026-03-13 15:41:35,233 - INFO - Aguardando 8.7s antes da próxima página...
+2026-03-13 15:41:43,974 - INFO - ============================================================
+2026-03-13 15:41:43,974 - INFO - PÁGINA 6
+2026-03-13 15:41:43,974 - INFO - ============================================================
+2026-03-13 15:41:43,975 - INFO - ====== WebDriver manager ======
+2026-03-13 15:41:44,033 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:41:44,114 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:41:44,205 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:41:45,024 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 15:41:45,024 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/imoveis/sp+sao-paulo/?pagina=6
+2026-03-13 15:41:46,271 - INFO - Aguardando 5.0s para carregamento...
+2026-03-13 15:42:00,111 - INFO - Analisando página HTML...
+2026-03-13 15:42:00,112 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 15:42:00,114 - INFO - ✓ Página 6: 29 imóveis extraídos
+2026-03-13 15:42:00,188 - INFO - Driver fechado
+2026-03-13 15:42:00,190 - INFO - ✓ Página 6 salva em data/raw/por_pagina/sao-paulo_sp_pagina6.csv
+2026-03-13 15:42:00,190 - INFO - Aguardando 5.7s antes da próxima página...
+2026-03-13 15:42:05,891 - INFO - ============================================================
+2026-03-13 15:42:05,891 - INFO - PÁGINA 7
+2026-03-13 15:42:05,891 - INFO - ============================================================
+2026-03-13 15:42:05,891 - INFO - ====== WebDriver manager ======
+2026-03-13 15:42:05,950 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:42:06,040 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:42:06,132 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:42:06,948 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 15:42:06,948 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/imoveis/sp+sao-paulo/?pagina=7
+2026-03-13 15:42:08,245 - INFO - Aguardando 5.8s para carregamento...
+2026-03-13 15:42:22,689 - INFO - Analisando página HTML...
+2026-03-13 15:42:22,690 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 15:42:22,692 - INFO - ✓ Página 7: 28 imóveis extraídos
+2026-03-13 15:42:22,771 - INFO - Driver fechado
+2026-03-13 15:42:22,773 - INFO - ✓ Página 7 salva em data/raw/por_pagina/sao-paulo_sp_pagina7.csv
+2026-03-13 15:42:22,773 - INFO - Aguardando 8.0s antes da próxima página...
+2026-03-13 15:42:30,769 - INFO - ============================================================
+2026-03-13 15:42:30,769 - INFO - PÁGINA 8
+2026-03-13 15:42:30,769 - INFO - ============================================================
+2026-03-13 15:42:30,769 - INFO - ====== WebDriver manager ======
+2026-03-13 15:42:30,828 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:42:30,908 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:42:30,992 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:42:31,803 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 15:42:31,803 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/imoveis/sp+sao-paulo/?pagina=8
+2026-03-13 15:42:33,389 - INFO - Aguardando 5.2s para carregamento...
+2026-03-13 15:42:45,378 - INFO - Analisando página HTML...
+2026-03-13 15:42:45,380 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 15:42:45,382 - INFO - ✓ Página 8: 30 imóveis extraídos
+2026-03-13 15:42:45,451 - INFO - Driver fechado
+2026-03-13 15:42:45,453 - INFO - ✓ Página 8 salva em data/raw/por_pagina/sao-paulo_sp_pagina8.csv
+2026-03-13 15:42:45,453 - INFO - Aguardando 9.4s antes da próxima página...
+2026-03-13 15:42:54,852 - INFO - ============================================================
+2026-03-13 15:42:54,852 - INFO - PÁGINA 9
+2026-03-13 15:42:54,852 - INFO - ============================================================
+2026-03-13 15:42:54,852 - INFO - ====== WebDriver manager ======
+2026-03-13 15:42:54,916 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:42:54,985 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:42:55,055 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:42:55,889 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 15:42:55,889 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/imoveis/sp+sao-paulo/?pagina=9
+2026-03-13 15:42:57,971 - INFO - Aguardando 5.7s para carregamento...
+2026-03-13 15:43:11,854 - INFO - Analisando página HTML...
+2026-03-13 15:43:11,855 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 15:43:11,858 - INFO - ✓ Página 9: 30 imóveis extraídos
+2026-03-13 15:43:11,934 - INFO - Driver fechado
+2026-03-13 15:43:11,937 - INFO - ✓ Página 9 salva em data/raw/por_pagina/sao-paulo_sp_pagina9.csv
+2026-03-13 15:43:11,937 - INFO - Aguardando 8.3s antes da próxima página...
+2026-03-13 15:58:30,181 - INFO - ============================================================
+2026-03-13 15:58:30,182 - INFO - INICIANDO SCRAPING
+2026-03-13 15:58:30,182 - INFO - Cidade: Sao-Paulo/SP
+2026-03-13 15:58:30,182 - INFO - Páginas: Até acabar
+2026-03-13 15:58:30,182 - INFO - Delay entre páginas: 5.0-10.0s
+2026-03-13 15:58:30,182 - INFO - Salvar por página: Sim
+2026-03-13 15:58:30,182 - INFO - ============================================================
+2026-03-13 15:58:30,182 - INFO - ============================================================
+2026-03-13 15:58:30,182 - INFO - PÁGINA 1
+2026-03-13 15:58:30,182 - INFO - ============================================================
+2026-03-13 15:58:30,182 - INFO - ====== WebDriver manager ======
+2026-03-13 15:58:30,243 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:58:30,334 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:58:30,428 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:58:31,235 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 15:58:31,236 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=1
+2026-03-13 15:58:32,604 - INFO - Aguardando 7.7s para carregamento...
+2026-03-13 15:58:49,123 - INFO - Analisando página HTML...
+2026-03-13 15:58:49,124 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 15:58:49,128 - INFO - ✓ Página 1: 30 imóveis extraídos
+2026-03-13 15:58:49,204 - INFO - Driver fechado
+2026-03-13 15:58:49,207 - INFO - ✓ Página 1 salva em data/raw/por_pagina/sao-paulo_sp_pagina1.csv
+2026-03-13 15:58:49,207 - INFO - Aguardando 7.6s antes da próxima página...
+2026-03-13 15:58:56,851 - INFO - ============================================================
+2026-03-13 15:58:56,851 - INFO - PÁGINA 2
+2026-03-13 15:58:56,851 - INFO - ============================================================
+2026-03-13 15:58:56,851 - INFO - ====== WebDriver manager ======
+2026-03-13 15:58:56,912 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:58:57,004 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:58:57,084 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:58:57,911 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 15:58:57,911 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=2
+2026-03-13 15:58:58,940 - INFO - Aguardando 7.2s para carregamento...
+2026-03-13 15:59:13,899 - INFO - Analisando página HTML...
+2026-03-13 15:59:13,900 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 15:59:13,903 - INFO - ✓ Página 2: 30 imóveis extraídos
+2026-03-13 15:59:13,980 - INFO - Driver fechado
+2026-03-13 15:59:13,981 - INFO - ✓ Página 2 salva em data/raw/por_pagina/sao-paulo_sp_pagina2.csv
+2026-03-13 15:59:13,981 - INFO - Aguardando 7.5s antes da próxima página...
+2026-03-13 15:59:21,476 - INFO - ============================================================
+2026-03-13 15:59:21,476 - INFO - PÁGINA 3
+2026-03-13 15:59:21,476 - INFO - ============================================================
+2026-03-13 15:59:21,477 - INFO - ====== WebDriver manager ======
+2026-03-13 15:59:21,538 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:59:21,615 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:59:21,710 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:59:22,556 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 15:59:22,556 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=3
+2026-03-13 15:59:23,616 - INFO - Aguardando 6.0s para carregamento...
+2026-03-13 15:59:37,183 - INFO - Analisando página HTML...
+2026-03-13 15:59:37,185 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 15:59:37,188 - INFO - ✓ Página 3: 28 imóveis extraídos
+2026-03-13 15:59:37,261 - INFO - Driver fechado
+2026-03-13 15:59:37,265 - INFO - ✓ Página 3 salva em data/raw/por_pagina/sao-paulo_sp_pagina3.csv
+2026-03-13 15:59:37,265 - INFO - Aguardando 8.6s antes da próxima página...
+2026-03-13 15:59:45,831 - INFO - ============================================================
+2026-03-13 15:59:45,831 - INFO - PÁGINA 4
+2026-03-13 15:59:45,831 - INFO - ============================================================
+2026-03-13 15:59:45,831 - INFO - ====== WebDriver manager ======
+2026-03-13 15:59:45,892 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:59:45,963 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 15:59:46,056 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 15:59:46,892 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 15:59:46,892 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=4
+2026-03-13 15:59:48,096 - INFO - Aguardando 6.5s para carregamento...
+2026-03-13 16:00:02,733 - INFO - Analisando página HTML...
+2026-03-13 16:00:02,734 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:00:02,737 - INFO - ✓ Página 4: 28 imóveis extraídos
+2026-03-13 16:00:02,813 - INFO - Driver fechado
+2026-03-13 16:00:02,815 - INFO - ✓ Página 4 salva em data/raw/por_pagina/sao-paulo_sp_pagina4.csv
+2026-03-13 16:00:02,815 - INFO - Aguardando 5.7s antes da próxima página...
+2026-03-13 16:00:08,565 - INFO - ============================================================
+2026-03-13 16:00:08,565 - INFO - PÁGINA 5
+2026-03-13 16:00:08,565 - INFO - ============================================================
+2026-03-13 16:00:08,565 - INFO - ====== WebDriver manager ======
+2026-03-13 16:00:08,625 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:00:08,722 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:00:08,805 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:00:09,659 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:00:09,659 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=5
+2026-03-13 16:00:11,266 - INFO - Aguardando 5.4s para carregamento...
+2026-03-13 16:00:25,067 - INFO - Analisando página HTML...
+2026-03-13 16:00:25,068 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:00:25,071 - INFO - ✓ Página 5: 27 imóveis extraídos
+2026-03-13 16:00:25,147 - INFO - Driver fechado
+2026-03-13 16:00:25,148 - INFO - ✓ Página 5 salva em data/raw/por_pagina/sao-paulo_sp_pagina5.csv
+2026-03-13 16:00:25,149 - INFO - Aguardando 7.2s antes da próxima página...
+2026-03-13 16:00:32,336 - INFO - ============================================================
+2026-03-13 16:00:32,336 - INFO - PÁGINA 6
+2026-03-13 16:00:32,336 - INFO - ============================================================
+2026-03-13 16:00:32,337 - INFO - ====== WebDriver manager ======
+2026-03-13 16:00:32,397 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:00:32,485 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:00:32,554 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:00:33,414 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:00:33,414 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=6
+2026-03-13 16:00:34,738 - INFO - Aguardando 6.6s para carregamento...
+2026-03-13 16:00:48,378 - INFO - Analisando página HTML...
+2026-03-13 16:00:48,379 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:00:48,382 - INFO - ✓ Página 6: 27 imóveis extraídos
+2026-03-13 16:00:48,456 - INFO - Driver fechado
+2026-03-13 16:00:48,458 - INFO - ✓ Página 6 salva em data/raw/por_pagina/sao-paulo_sp_pagina6.csv
+2026-03-13 16:00:48,458 - INFO - Aguardando 5.8s antes da próxima página...
+2026-03-13 16:00:54,210 - INFO - ============================================================
+2026-03-13 16:00:54,211 - INFO - PÁGINA 7
+2026-03-13 16:00:54,211 - INFO - ============================================================
+2026-03-13 16:00:54,211 - INFO - ====== WebDriver manager ======
+2026-03-13 16:00:54,276 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:00:54,368 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:00:54,459 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:00:55,313 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:00:55,313 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=7
+2026-03-13 16:00:57,214 - INFO - Aguardando 7.5s para carregamento...
+2026-03-13 16:01:13,548 - INFO - Analisando página HTML...
+2026-03-13 16:01:13,549 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:01:13,552 - INFO - ✓ Página 7: 28 imóveis extraídos
+2026-03-13 16:01:13,627 - INFO - Driver fechado
+2026-03-13 16:01:13,630 - INFO - ✓ Página 7 salva em data/raw/por_pagina/sao-paulo_sp_pagina7.csv
+2026-03-13 16:01:13,630 - INFO - Aguardando 9.7s antes da próxima página...
+2026-03-13 16:01:23,377 - INFO - ============================================================
+2026-03-13 16:01:23,377 - INFO - PÁGINA 8
+2026-03-13 16:01:23,377 - INFO - ============================================================
+2026-03-13 16:01:23,377 - INFO - ====== WebDriver manager ======
+2026-03-13 16:01:23,437 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:01:28,561 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:01:28,643 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:01:29,499 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:01:29,499 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=8
+2026-03-13 16:01:40,512 - INFO - Aguardando 7.2s para carregamento...
+2026-03-13 16:01:54,316 - INFO - Analisando página HTML...
+2026-03-13 16:01:54,317 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:01:54,320 - INFO - ✓ Página 8: 29 imóveis extraídos
+2026-03-13 16:01:54,397 - INFO - Driver fechado
+2026-03-13 16:01:54,399 - INFO - ✓ Página 8 salva em data/raw/por_pagina/sao-paulo_sp_pagina8.csv
+2026-03-13 16:01:54,399 - INFO - Aguardando 9.4s antes da próxima página...
+2026-03-13 16:02:03,798 - INFO - ============================================================
+2026-03-13 16:02:03,799 - INFO - PÁGINA 9
+2026-03-13 16:02:03,799 - INFO - ============================================================
+2026-03-13 16:02:03,799 - INFO - ====== WebDriver manager ======
+2026-03-13 16:02:03,859 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:02:03,969 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:02:04,054 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:02:04,905 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:02:04,905 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=9
+2026-03-13 16:02:06,019 - INFO - Aguardando 5.0s para carregamento...
+2026-03-13 16:02:19,645 - INFO - Analisando página HTML...
+2026-03-13 16:02:19,646 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:02:19,649 - INFO - ✓ Página 9: 29 imóveis extraídos
+2026-03-13 16:02:19,716 - INFO - Driver fechado
+2026-03-13 16:02:19,718 - INFO - ✓ Página 9 salva em data/raw/por_pagina/sao-paulo_sp_pagina9.csv
+2026-03-13 16:02:19,718 - INFO - Aguardando 7.0s antes da próxima página...
+2026-03-13 16:02:26,765 - INFO - ============================================================
+2026-03-13 16:02:26,765 - INFO - PÁGINA 10
+2026-03-13 16:02:26,765 - INFO - ============================================================
+2026-03-13 16:02:26,765 - INFO - ====== WebDriver manager ======
+2026-03-13 16:02:26,825 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:02:26,981 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:02:27,057 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:02:27,876 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:02:27,876 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=10
+2026-03-13 16:02:30,302 - INFO - Aguardando 5.5s para carregamento...
+2026-03-13 16:02:44,235 - INFO - Analisando página HTML...
+2026-03-13 16:02:44,237 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:02:44,240 - INFO - ✓ Página 10: 29 imóveis extraídos
+2026-03-13 16:02:44,320 - INFO - Driver fechado
+2026-03-13 16:02:44,322 - INFO - ✓ Página 10 salva em data/raw/por_pagina/sao-paulo_sp_pagina10.csv
+2026-03-13 16:02:44,322 - INFO - Aguardando 8.1s antes da próxima página...
+2026-03-13 16:02:52,450 - INFO - ============================================================
+2026-03-13 16:02:52,450 - INFO - PÁGINA 11
+2026-03-13 16:02:52,450 - INFO - ============================================================
+2026-03-13 16:02:52,450 - INFO - ====== WebDriver manager ======
+2026-03-13 16:02:52,510 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:02:57,668 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:02:57,737 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:02:58,615 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:02:58,615 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=11
+2026-03-13 16:02:59,801 - INFO - Aguardando 5.5s para carregamento...
+2026-03-13 16:03:13,313 - INFO - Analisando página HTML...
+2026-03-13 16:03:13,315 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:03:13,317 - INFO - ✓ Página 11: 28 imóveis extraídos
+2026-03-13 16:03:13,389 - INFO - Driver fechado
+2026-03-13 16:03:13,390 - INFO - ✓ Página 11 salva em data/raw/por_pagina/sao-paulo_sp_pagina11.csv
+2026-03-13 16:03:13,391 - INFO - Aguardando 7.9s antes da próxima página...
+2026-03-13 16:03:21,243 - INFO - ============================================================
+2026-03-13 16:03:21,243 - INFO - PÁGINA 12
+2026-03-13 16:03:21,243 - INFO - ============================================================
+2026-03-13 16:03:21,244 - INFO - ====== WebDriver manager ======
+2026-03-13 16:03:21,304 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:03:21,375 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:03:21,445 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:03:22,306 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:03:22,306 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=12
+2026-03-13 16:03:23,422 - INFO - Aguardando 7.0s para carregamento...
+2026-03-13 16:03:38,857 - INFO - Analisando página HTML...
+2026-03-13 16:03:38,859 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:03:38,862 - INFO - ✓ Página 12: 28 imóveis extraídos
+2026-03-13 16:03:38,939 - INFO - Driver fechado
+2026-03-13 16:03:38,941 - INFO - ✓ Página 12 salva em data/raw/por_pagina/sao-paulo_sp_pagina12.csv
+2026-03-13 16:03:38,942 - INFO - Aguardando 6.7s antes da próxima página...
+2026-03-13 16:03:45,675 - INFO - ============================================================
+2026-03-13 16:03:45,675 - INFO - PÁGINA 13
+2026-03-13 16:03:45,675 - INFO - ============================================================
+2026-03-13 16:03:45,676 - INFO - ====== WebDriver manager ======
+2026-03-13 16:03:45,735 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:03:46,110 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:03:46,194 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:03:47,049 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:03:47,049 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=13
+2026-03-13 16:03:48,155 - INFO - Aguardando 5.2s para carregamento...
+2026-03-13 16:04:01,999 - INFO - Analisando página HTML...
+2026-03-13 16:04:02,000 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:04:02,003 - INFO - ✓ Página 13: 28 imóveis extraídos
+2026-03-13 16:04:02,077 - INFO - Driver fechado
+2026-03-13 16:04:02,078 - INFO - ✓ Página 13 salva em data/raw/por_pagina/sao-paulo_sp_pagina13.csv
+2026-03-13 16:04:02,078 - INFO - Aguardando 7.7s antes da próxima página...
+2026-03-13 16:04:09,785 - INFO - ============================================================
+2026-03-13 16:04:09,785 - INFO - PÁGINA 14
+2026-03-13 16:04:09,785 - INFO - ============================================================
+2026-03-13 16:04:09,785 - INFO - ====== WebDriver manager ======
+2026-03-13 16:04:09,847 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:04:09,943 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:04:10,036 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:04:10,901 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:04:10,901 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=14
+2026-03-13 16:04:12,138 - INFO - Aguardando 5.9s para carregamento...
+2026-03-13 16:04:25,823 - INFO - Analisando página HTML...
+2026-03-13 16:04:25,824 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:04:25,827 - INFO - ✓ Página 14: 28 imóveis extraídos
+2026-03-13 16:04:25,900 - INFO - Driver fechado
+2026-03-13 16:04:25,901 - INFO - ✓ Página 14 salva em data/raw/por_pagina/sao-paulo_sp_pagina14.csv
+2026-03-13 16:04:25,901 - INFO - Aguardando 8.4s antes da próxima página...
+2026-03-13 16:04:34,345 - INFO - ============================================================
+2026-03-13 16:04:34,345 - INFO - PÁGINA 15
+2026-03-13 16:04:34,345 - INFO - ============================================================
+2026-03-13 16:04:34,346 - INFO - ====== WebDriver manager ======
+2026-03-13 16:04:34,407 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:04:34,497 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:04:34,562 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:04:35,404 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:04:35,404 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=15
+2026-03-13 16:04:37,056 - INFO - Aguardando 6.1s para carregamento...
+2026-03-13 16:04:51,988 - INFO - Analisando página HTML...
+2026-03-13 16:04:51,989 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:04:51,992 - INFO - ✓ Página 15: 29 imóveis extraídos
+2026-03-13 16:04:52,070 - INFO - Driver fechado
+2026-03-13 16:04:52,071 - INFO - ✓ Página 15 salva em data/raw/por_pagina/sao-paulo_sp_pagina15.csv
+2026-03-13 16:04:52,071 - INFO - Aguardando 9.4s antes da próxima página...
+2026-03-13 16:05:01,427 - INFO - ============================================================
+2026-03-13 16:05:01,427 - INFO - PÁGINA 16
+2026-03-13 16:05:01,427 - INFO - ============================================================
+2026-03-13 16:05:01,427 - INFO - ====== WebDriver manager ======
+2026-03-13 16:05:01,489 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:05:01,567 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:05:01,632 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:05:02,495 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:05:02,495 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=16
+2026-03-13 16:05:03,836 - INFO - Aguardando 6.5s para carregamento...
+2026-03-13 16:05:19,409 - INFO - Analisando página HTML...
+2026-03-13 16:05:19,411 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:05:19,414 - INFO - ✓ Página 16: 26 imóveis extraídos
+2026-03-13 16:05:19,490 - INFO - Driver fechado
+2026-03-13 16:05:19,492 - INFO - ✓ Página 16 salva em data/raw/por_pagina/sao-paulo_sp_pagina16.csv
+2026-03-13 16:05:19,492 - INFO - Aguardando 6.2s antes da próxima página...
+2026-03-13 16:05:25,670 - INFO - ============================================================
+2026-03-13 16:05:25,670 - INFO - PÁGINA 17
+2026-03-13 16:05:25,670 - INFO - ============================================================
+2026-03-13 16:05:25,670 - INFO - ====== WebDriver manager ======
+2026-03-13 16:05:25,730 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:05:25,810 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:05:25,890 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:05:26,748 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:05:26,748 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=17
+2026-03-13 16:05:27,921 - INFO - Aguardando 5.3s para carregamento...
+2026-03-13 16:05:40,834 - INFO - Analisando página HTML...
+2026-03-13 16:05:40,835 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:05:40,838 - INFO - ✓ Página 17: 30 imóveis extraídos
+2026-03-13 16:05:40,909 - INFO - Driver fechado
+2026-03-13 16:05:40,910 - INFO - ✓ Página 17 salva em data/raw/por_pagina/sao-paulo_sp_pagina17.csv
+2026-03-13 16:05:40,911 - INFO - Aguardando 7.9s antes da próxima página...
+2026-03-13 16:05:48,766 - INFO - ============================================================
+2026-03-13 16:05:48,766 - INFO - PÁGINA 18
+2026-03-13 16:05:48,766 - INFO - ============================================================
+2026-03-13 16:05:48,766 - INFO - ====== WebDriver manager ======
+2026-03-13 16:05:48,826 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:05:48,922 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:05:49,023 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:05:49,873 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:05:49,873 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=18
+2026-03-13 16:05:51,423 - INFO - Aguardando 7.7s para carregamento...
+2026-03-13 16:06:06,819 - INFO - Analisando página HTML...
+2026-03-13 16:06:06,820 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:06:06,823 - INFO - ✓ Página 18: 30 imóveis extraídos
+2026-03-13 16:06:06,899 - INFO - Driver fechado
+2026-03-13 16:06:06,900 - INFO - ✓ Página 18 salva em data/raw/por_pagina/sao-paulo_sp_pagina18.csv
+2026-03-13 16:06:06,901 - INFO - Aguardando 6.3s antes da próxima página...
+2026-03-13 16:06:13,210 - INFO - ============================================================
+2026-03-13 16:06:13,211 - INFO - PÁGINA 19
+2026-03-13 16:06:13,211 - INFO - ============================================================
+2026-03-13 16:06:13,211 - INFO - ====== WebDriver manager ======
+2026-03-13 16:06:13,270 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:06:13,348 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:06:13,436 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:06:14,300 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:06:14,300 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=19
+2026-03-13 16:06:15,427 - INFO - Aguardando 5.1s para carregamento...
+2026-03-13 16:06:28,682 - INFO - Analisando página HTML...
+2026-03-13 16:06:28,684 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:06:28,686 - INFO - ✓ Página 19: 27 imóveis extraídos
+2026-03-13 16:06:28,757 - INFO - Driver fechado
+2026-03-13 16:06:28,758 - INFO - ✓ Página 19 salva em data/raw/por_pagina/sao-paulo_sp_pagina19.csv
+2026-03-13 16:06:28,758 - INFO - Aguardando 8.6s antes da próxima página...
+2026-03-13 16:06:37,345 - INFO - ============================================================
+2026-03-13 16:06:37,346 - INFO - PÁGINA 20
+2026-03-13 16:06:37,346 - INFO - ============================================================
+2026-03-13 16:06:37,346 - INFO - ====== WebDriver manager ======
+2026-03-13 16:06:37,405 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:06:37,493 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:06:37,587 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:06:38,432 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:06:38,432 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=20
+2026-03-13 16:06:39,572 - INFO - Aguardando 7.4s para carregamento...
+2026-03-13 16:06:55,888 - INFO - Analisando página HTML...
+2026-03-13 16:06:55,889 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:06:55,892 - INFO - ✓ Página 20: 29 imóveis extraídos
+2026-03-13 16:06:55,968 - INFO - Driver fechado
+2026-03-13 16:06:55,970 - INFO - ✓ Página 20 salva em data/raw/por_pagina/sao-paulo_sp_pagina20.csv
+2026-03-13 16:06:55,970 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:07:01,994 - INFO - ============================================================
+2026-03-13 16:07:01,994 - INFO - PÁGINA 21
+2026-03-13 16:07:01,994 - INFO - ============================================================
+2026-03-13 16:07:01,994 - INFO - ====== WebDriver manager ======
+2026-03-13 16:07:02,053 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:07:02,157 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:07:02,234 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:07:03,101 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:07:03,101 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=21
+2026-03-13 16:07:04,354 - INFO - Aguardando 7.0s para carregamento...
+2026-03-13 16:07:19,493 - INFO - Analisando página HTML...
+2026-03-13 16:07:19,495 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:07:19,497 - INFO - ✓ Página 21: 27 imóveis extraídos
+2026-03-13 16:07:19,573 - INFO - Driver fechado
+2026-03-13 16:07:19,575 - INFO - ✓ Página 21 salva em data/raw/por_pagina/sao-paulo_sp_pagina21.csv
+2026-03-13 16:07:19,575 - INFO - Aguardando 8.5s antes da próxima página...
+2026-03-13 16:07:28,104 - INFO - ============================================================
+2026-03-13 16:07:28,104 - INFO - PÁGINA 22
+2026-03-13 16:07:28,104 - INFO - ============================================================
+2026-03-13 16:07:28,104 - INFO - ====== WebDriver manager ======
+2026-03-13 16:07:28,163 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:07:28,252 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:07:28,323 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:07:29,177 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:07:29,177 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=22
+2026-03-13 16:07:30,175 - INFO - Aguardando 7.5s para carregamento...
+2026-03-13 16:07:45,430 - INFO - Analisando página HTML...
+2026-03-13 16:07:45,432 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:07:45,434 - INFO - ✓ Página 22: 30 imóveis extraídos
+2026-03-13 16:07:45,511 - INFO - Driver fechado
+2026-03-13 16:07:45,512 - INFO - ✓ Página 22 salva em data/raw/por_pagina/sao-paulo_sp_pagina22.csv
+2026-03-13 16:07:45,512 - INFO - Aguardando 8.1s antes da próxima página...
+2026-03-13 16:07:53,659 - INFO - ============================================================
+2026-03-13 16:07:53,659 - INFO - PÁGINA 23
+2026-03-13 16:07:53,659 - INFO - ============================================================
+2026-03-13 16:07:53,659 - INFO - ====== WebDriver manager ======
+2026-03-13 16:07:53,720 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:07:53,796 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:07:53,885 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:07:54,747 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:07:54,747 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=23
+2026-03-13 16:07:55,964 - INFO - Aguardando 6.8s para carregamento...
+2026-03-13 16:08:12,247 - INFO - Analisando página HTML...
+2026-03-13 16:08:12,248 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:08:12,251 - INFO - ✓ Página 23: 29 imóveis extraídos
+2026-03-13 16:08:12,327 - INFO - Driver fechado
+2026-03-13 16:08:12,329 - INFO - ✓ Página 23 salva em data/raw/por_pagina/sao-paulo_sp_pagina23.csv
+2026-03-13 16:08:12,329 - INFO - Aguardando 7.2s antes da próxima página...
+2026-03-13 16:08:19,559 - INFO - ============================================================
+2026-03-13 16:08:19,559 - INFO - PÁGINA 24
+2026-03-13 16:08:19,560 - INFO - ============================================================
+2026-03-13 16:08:19,560 - INFO - ====== WebDriver manager ======
+2026-03-13 16:08:19,623 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:08:19,702 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:08:19,782 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:08:20,643 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:08:20,643 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=24
+2026-03-13 16:08:21,864 - INFO - Aguardando 5.2s para carregamento...
+2026-03-13 16:08:36,069 - INFO - Analisando página HTML...
+2026-03-13 16:08:36,071 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:08:36,074 - INFO - ✓ Página 24: 28 imóveis extraídos
+2026-03-13 16:08:36,148 - INFO - Driver fechado
+2026-03-13 16:08:36,149 - INFO - ✓ Página 24 salva em data/raw/por_pagina/sao-paulo_sp_pagina24.csv
+2026-03-13 16:08:36,149 - INFO - Aguardando 5.4s antes da próxima página...
+2026-03-13 16:08:41,510 - INFO - ============================================================
+2026-03-13 16:08:41,510 - INFO - PÁGINA 25
+2026-03-13 16:08:41,510 - INFO - ============================================================
+2026-03-13 16:08:41,510 - INFO - ====== WebDriver manager ======
+2026-03-13 16:08:41,570 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:08:41,648 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:08:41,742 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:08:42,565 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:08:42,565 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=25
+2026-03-13 16:08:43,762 - INFO - Aguardando 7.8s para carregamento...
+2026-03-13 16:08:58,595 - INFO - Analisando página HTML...
+2026-03-13 16:08:58,597 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:08:58,599 - INFO - ✓ Página 25: 26 imóveis extraídos
+2026-03-13 16:08:58,675 - INFO - Driver fechado
+2026-03-13 16:08:58,677 - INFO - ✓ Página 25 salva em data/raw/por_pagina/sao-paulo_sp_pagina25.csv
+2026-03-13 16:08:58,677 - INFO - Aguardando 8.0s antes da próxima página...
+2026-03-13 16:09:06,689 - INFO - ============================================================
+2026-03-13 16:09:06,689 - INFO - PÁGINA 26
+2026-03-13 16:09:06,689 - INFO - ============================================================
+2026-03-13 16:09:06,689 - INFO - ====== WebDriver manager ======
+2026-03-13 16:09:06,749 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:09:06,831 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:09:06,922 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:09:07,767 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:09:07,767 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=26
+2026-03-13 16:09:09,182 - INFO - Aguardando 7.7s para carregamento...
+2026-03-13 16:09:24,593 - INFO - Analisando página HTML...
+2026-03-13 16:09:24,594 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:09:24,597 - INFO - ✓ Página 26: 28 imóveis extraídos
+2026-03-13 16:09:24,672 - INFO - Driver fechado
+2026-03-13 16:09:24,674 - INFO - ✓ Página 26 salva em data/raw/por_pagina/sao-paulo_sp_pagina26.csv
+2026-03-13 16:09:24,674 - INFO - Aguardando 8.4s antes da próxima página...
+2026-03-13 16:09:33,029 - INFO - ============================================================
+2026-03-13 16:09:33,029 - INFO - PÁGINA 27
+2026-03-13 16:09:33,029 - INFO - ============================================================
+2026-03-13 16:09:33,029 - INFO - ====== WebDriver manager ======
+2026-03-13 16:09:33,092 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:09:33,176 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:09:33,243 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:09:34,109 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:09:34,109 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=27
+2026-03-13 16:09:35,554 - INFO - Aguardando 6.9s para carregamento...
+2026-03-13 16:09:50,598 - INFO - Analisando página HTML...
+2026-03-13 16:09:50,600 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:09:50,602 - INFO - ✓ Página 27: 28 imóveis extraídos
+2026-03-13 16:09:50,680 - INFO - Driver fechado
+2026-03-13 16:09:50,682 - INFO - ✓ Página 27 salva em data/raw/por_pagina/sao-paulo_sp_pagina27.csv
+2026-03-13 16:09:50,682 - INFO - Aguardando 5.1s antes da próxima página...
+2026-03-13 16:09:55,821 - INFO - ============================================================
+2026-03-13 16:09:55,821 - INFO - PÁGINA 28
+2026-03-13 16:09:55,821 - INFO - ============================================================
+2026-03-13 16:09:55,821 - INFO - ====== WebDriver manager ======
+2026-03-13 16:09:55,882 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:09:55,952 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:09:56,034 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:09:56,891 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:09:56,891 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=28
+2026-03-13 16:09:58,129 - INFO - Aguardando 5.3s para carregamento...
+2026-03-13 16:10:11,149 - INFO - Analisando página HTML...
+2026-03-13 16:10:11,150 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:10:11,153 - INFO - ✓ Página 28: 28 imóveis extraídos
+2026-03-13 16:10:11,224 - INFO - Driver fechado
+2026-03-13 16:10:11,225 - INFO - ✓ Página 28 salva em data/raw/por_pagina/sao-paulo_sp_pagina28.csv
+2026-03-13 16:10:11,225 - INFO - Aguardando 6.5s antes da próxima página...
+2026-03-13 16:10:17,717 - INFO - ============================================================
+2026-03-13 16:10:17,717 - INFO - PÁGINA 29
+2026-03-13 16:10:17,717 - INFO - ============================================================
+2026-03-13 16:10:17,717 - INFO - ====== WebDriver manager ======
+2026-03-13 16:10:17,778 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:10:17,855 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:10:17,939 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:10:18,805 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:10:18,805 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=29
+2026-03-13 16:10:20,089 - INFO - Aguardando 5.4s para carregamento...
+2026-03-13 16:10:34,193 - INFO - Analisando página HTML...
+2026-03-13 16:10:34,195 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:10:34,197 - INFO - ✓ Página 29: 29 imóveis extraídos
+2026-03-13 16:10:34,273 - INFO - Driver fechado
+2026-03-13 16:10:34,275 - INFO - ✓ Página 29 salva em data/raw/por_pagina/sao-paulo_sp_pagina29.csv
+2026-03-13 16:10:34,275 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:10:40,283 - INFO - ============================================================
+2026-03-13 16:10:40,283 - INFO - PÁGINA 30
+2026-03-13 16:10:40,283 - INFO - ============================================================
+2026-03-13 16:10:40,283 - INFO - ====== WebDriver manager ======
+2026-03-13 16:10:40,343 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:10:40,410 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:10:40,510 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:10:41,363 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:10:41,363 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=30
+2026-03-13 16:10:42,454 - INFO - Aguardando 5.5s para carregamento...
+2026-03-13 16:10:55,907 - INFO - Analisando página HTML...
+2026-03-13 16:10:55,908 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:10:55,911 - INFO - ✓ Página 30: 29 imóveis extraídos
+2026-03-13 16:10:55,980 - INFO - Driver fechado
+2026-03-13 16:10:55,981 - INFO - ✓ Página 30 salva em data/raw/por_pagina/sao-paulo_sp_pagina30.csv
+2026-03-13 16:10:55,981 - INFO - Aguardando 5.9s antes da próxima página...
+2026-03-13 16:11:01,911 - INFO - ============================================================
+2026-03-13 16:11:01,911 - INFO - PÁGINA 31
+2026-03-13 16:11:01,911 - INFO - ============================================================
+2026-03-13 16:11:01,911 - INFO - ====== WebDriver manager ======
+2026-03-13 16:11:01,970 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:11:02,070 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:11:02,172 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:11:02,980 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:11:02,980 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=31
+2026-03-13 16:11:04,135 - INFO - Aguardando 7.5s para carregamento...
+2026-03-13 16:11:19,642 - INFO - Analisando página HTML...
+2026-03-13 16:11:19,643 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:11:19,646 - INFO - ✓ Página 31: 30 imóveis extraídos
+2026-03-13 16:11:19,722 - INFO - Driver fechado
+2026-03-13 16:11:19,724 - INFO - ✓ Página 31 salva em data/raw/por_pagina/sao-paulo_sp_pagina31.csv
+2026-03-13 16:11:19,724 - INFO - Aguardando 9.6s antes da próxima página...
+2026-03-13 16:11:29,355 - INFO - ============================================================
+2026-03-13 16:11:29,356 - INFO - PÁGINA 32
+2026-03-13 16:11:29,356 - INFO - ============================================================
+2026-03-13 16:11:29,356 - INFO - ====== WebDriver manager ======
+2026-03-13 16:11:29,416 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:11:29,495 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:11:29,576 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:11:30,415 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:11:30,415 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=32
+2026-03-13 16:11:31,966 - INFO - Aguardando 7.4s para carregamento...
+2026-03-13 16:11:48,002 - INFO - Analisando página HTML...
+2026-03-13 16:11:48,003 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:11:48,006 - INFO - ✓ Página 32: 28 imóveis extraídos
+2026-03-13 16:11:48,082 - INFO - Driver fechado
+2026-03-13 16:11:48,084 - INFO - ✓ Página 32 salva em data/raw/por_pagina/sao-paulo_sp_pagina32.csv
+2026-03-13 16:11:48,084 - INFO - Aguardando 9.1s antes da próxima página...
+2026-03-13 16:11:57,158 - INFO - ============================================================
+2026-03-13 16:11:57,158 - INFO - PÁGINA 33
+2026-03-13 16:11:57,158 - INFO - ============================================================
+2026-03-13 16:11:57,158 - INFO - ====== WebDriver manager ======
+2026-03-13 16:11:57,218 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:11:57,311 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:11:57,403 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:11:58,223 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:11:58,223 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=33
+2026-03-13 16:11:59,290 - INFO - Aguardando 6.6s para carregamento...
+2026-03-13 16:12:12,602 - INFO - Analisando página HTML...
+2026-03-13 16:12:12,604 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:12:12,606 - INFO - ✓ Página 33: 27 imóveis extraídos
+2026-03-13 16:12:12,678 - INFO - Driver fechado
+2026-03-13 16:12:12,680 - INFO - ✓ Página 33 salva em data/raw/por_pagina/sao-paulo_sp_pagina33.csv
+2026-03-13 16:12:12,680 - INFO - Aguardando 6.3s antes da próxima página...
+2026-03-13 16:12:19,001 - INFO - ============================================================
+2026-03-13 16:12:19,001 - INFO - PÁGINA 34
+2026-03-13 16:12:19,001 - INFO - ============================================================
+2026-03-13 16:12:19,001 - INFO - ====== WebDriver manager ======
+2026-03-13 16:12:19,061 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:12:19,152 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:12:19,236 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:12:20,047 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:12:20,047 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=34
+2026-03-13 16:12:21,159 - INFO - Aguardando 6.4s para carregamento...
+2026-03-13 16:12:35,319 - INFO - Analisando página HTML...
+2026-03-13 16:12:35,320 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:12:35,323 - INFO - ✓ Página 34: 29 imóveis extraídos
+2026-03-13 16:12:35,398 - INFO - Driver fechado
+2026-03-13 16:12:35,399 - INFO - ✓ Página 34 salva em data/raw/por_pagina/sao-paulo_sp_pagina34.csv
+2026-03-13 16:12:35,399 - INFO - Aguardando 7.2s antes da próxima página...
+2026-03-13 16:12:42,624 - INFO - ============================================================
+2026-03-13 16:12:42,624 - INFO - PÁGINA 35
+2026-03-13 16:12:42,624 - INFO - ============================================================
+2026-03-13 16:12:42,624 - INFO - ====== WebDriver manager ======
+2026-03-13 16:12:42,683 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:12:42,768 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:12:42,854 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:12:43,709 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:12:43,709 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=35
+2026-03-13 16:12:44,860 - INFO - Aguardando 7.9s para carregamento...
+2026-03-13 16:13:01,576 - INFO - Analisando página HTML...
+2026-03-13 16:13:01,578 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:13:01,581 - INFO - ✓ Página 35: 29 imóveis extraídos
+2026-03-13 16:13:01,658 - INFO - Driver fechado
+2026-03-13 16:13:01,659 - INFO - ✓ Página 35 salva em data/raw/por_pagina/sao-paulo_sp_pagina35.csv
+2026-03-13 16:13:01,659 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:13:07,660 - INFO - ============================================================
+2026-03-13 16:13:07,660 - INFO - PÁGINA 36
+2026-03-13 16:13:07,660 - INFO - ============================================================
+2026-03-13 16:13:07,660 - INFO - ====== WebDriver manager ======
+2026-03-13 16:13:07,722 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:13:07,795 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:13:07,874 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:13:08,685 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:13:08,685 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=36
+2026-03-13 16:13:10,069 - INFO - Aguardando 6.6s para carregamento...
+2026-03-13 16:13:24,036 - INFO - Analisando página HTML...
+2026-03-13 16:13:24,038 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:13:24,040 - INFO - ✓ Página 36: 29 imóveis extraídos
+2026-03-13 16:13:24,116 - INFO - Driver fechado
+2026-03-13 16:13:24,117 - INFO - ✓ Página 36 salva em data/raw/por_pagina/sao-paulo_sp_pagina36.csv
+2026-03-13 16:13:24,117 - INFO - Aguardando 6.7s antes da próxima página...
+2026-03-13 16:13:30,791 - INFO - ============================================================
+2026-03-13 16:13:30,791 - INFO - PÁGINA 37
+2026-03-13 16:13:30,791 - INFO - ============================================================
+2026-03-13 16:13:30,791 - INFO - ====== WebDriver manager ======
+2026-03-13 16:13:30,849 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:13:30,934 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:13:31,012 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:13:31,823 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:13:31,823 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=37
+2026-03-13 16:13:32,993 - INFO - Aguardando 5.8s para carregamento...
+2026-03-13 16:13:47,781 - INFO - Analisando página HTML...
+2026-03-13 16:13:47,782 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:13:47,785 - INFO - ✓ Página 37: 29 imóveis extraídos
+2026-03-13 16:13:47,862 - INFO - Driver fechado
+2026-03-13 16:13:47,864 - INFO - ✓ Página 37 salva em data/raw/por_pagina/sao-paulo_sp_pagina37.csv
+2026-03-13 16:13:47,864 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:13:53,825 - INFO - ============================================================
+2026-03-13 16:13:53,825 - INFO - PÁGINA 38
+2026-03-13 16:13:53,825 - INFO - ============================================================
+2026-03-13 16:13:53,825 - INFO - ====== WebDriver manager ======
+2026-03-13 16:13:53,886 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:13:53,970 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:13:54,061 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:13:54,882 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:13:54,882 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=38
+2026-03-13 16:13:55,931 - INFO - Aguardando 7.0s para carregamento...
+2026-03-13 16:14:12,299 - INFO - Analisando página HTML...
+2026-03-13 16:14:12,301 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:14:12,304 - INFO - ✓ Página 38: 28 imóveis extraídos
+2026-03-13 16:14:12,381 - INFO - Driver fechado
+2026-03-13 16:14:12,383 - INFO - ✓ Página 38 salva em data/raw/por_pagina/sao-paulo_sp_pagina38.csv
+2026-03-13 16:14:12,383 - INFO - Aguardando 7.9s antes da próxima página...
+2026-03-13 16:14:20,263 - INFO - ============================================================
+2026-03-13 16:14:20,264 - INFO - PÁGINA 39
+2026-03-13 16:14:20,264 - INFO - ============================================================
+2026-03-13 16:14:20,264 - INFO - ====== WebDriver manager ======
+2026-03-13 16:14:20,323 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:14:20,400 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:14:20,484 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:14:21,299 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:14:21,299 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=39
+2026-03-13 16:14:22,417 - INFO - Aguardando 7.8s para carregamento...
+2026-03-13 16:14:38,653 - INFO - Analisando página HTML...
+2026-03-13 16:14:38,654 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:14:38,657 - INFO - ✓ Página 39: 28 imóveis extraídos
+2026-03-13 16:14:38,731 - INFO - Driver fechado
+2026-03-13 16:14:38,733 - INFO - ✓ Página 39 salva em data/raw/por_pagina/sao-paulo_sp_pagina39.csv
+2026-03-13 16:14:38,733 - INFO - Aguardando 7.8s antes da próxima página...
+2026-03-13 16:14:46,509 - INFO - ============================================================
+2026-03-13 16:14:46,509 - INFO - PÁGINA 40
+2026-03-13 16:14:46,509 - INFO - ============================================================
+2026-03-13 16:14:46,510 - INFO - ====== WebDriver manager ======
+2026-03-13 16:14:46,568 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:14:46,648 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:14:46,718 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:14:47,532 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:14:47,532 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=40
+2026-03-13 16:14:49,590 - INFO - Aguardando 6.9s para carregamento...
+2026-03-13 16:15:03,470 - INFO - Analisando página HTML...
+2026-03-13 16:15:03,471 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:15:03,474 - INFO - ✓ Página 40: 30 imóveis extraídos
+2026-03-13 16:15:03,551 - INFO - Driver fechado
+2026-03-13 16:15:03,553 - INFO - ✓ Página 40 salva em data/raw/por_pagina/sao-paulo_sp_pagina40.csv
+2026-03-13 16:15:03,553 - INFO - Aguardando 9.1s antes da próxima página...
+2026-03-13 16:15:12,692 - INFO - ============================================================
+2026-03-13 16:15:12,692 - INFO - PÁGINA 41
+2026-03-13 16:15:12,692 - INFO - ============================================================
+2026-03-13 16:15:12,692 - INFO - ====== WebDriver manager ======
+2026-03-13 16:15:12,754 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:15:12,846 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:15:12,922 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:15:13,741 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:15:13,741 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=41
+2026-03-13 16:15:14,827 - INFO - Aguardando 6.5s para carregamento...
+2026-03-13 16:15:29,917 - INFO - Analisando página HTML...
+2026-03-13 16:15:29,919 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:15:29,922 - INFO - ✓ Página 41: 30 imóveis extraídos
+2026-03-13 16:15:29,999 - INFO - Driver fechado
+2026-03-13 16:15:30,001 - INFO - ✓ Página 41 salva em data/raw/por_pagina/sao-paulo_sp_pagina41.csv
+2026-03-13 16:15:30,001 - INFO - Aguardando 9.8s antes da próxima página...
+2026-03-13 16:15:39,803 - INFO - ============================================================
+2026-03-13 16:15:39,803 - INFO - PÁGINA 42
+2026-03-13 16:15:39,803 - INFO - ============================================================
+2026-03-13 16:15:39,803 - INFO - ====== WebDriver manager ======
+2026-03-13 16:15:39,863 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:15:39,971 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:15:40,064 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:15:40,880 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:15:40,880 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=42
+2026-03-13 16:15:41,997 - INFO - Aguardando 6.5s para carregamento...
+2026-03-13 16:15:57,873 - INFO - Analisando página HTML...
+2026-03-13 16:15:57,874 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:15:57,877 - INFO - ✓ Página 42: 29 imóveis extraídos
+2026-03-13 16:15:57,954 - INFO - Driver fechado
+2026-03-13 16:15:57,955 - INFO - ✓ Página 42 salva em data/raw/por_pagina/sao-paulo_sp_pagina42.csv
+2026-03-13 16:15:57,955 - INFO - Aguardando 9.7s antes da próxima página...
+2026-03-13 16:16:07,635 - INFO - ============================================================
+2026-03-13 16:16:07,636 - INFO - PÁGINA 43
+2026-03-13 16:16:07,636 - INFO - ============================================================
+2026-03-13 16:16:07,636 - INFO - ====== WebDriver manager ======
+2026-03-13 16:16:07,694 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:16:07,772 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:16:07,860 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:16:08,686 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:16:08,686 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=43
+2026-03-13 16:16:09,809 - INFO - Aguardando 6.0s para carregamento...
+2026-03-13 16:16:24,709 - INFO - Analisando página HTML...
+2026-03-13 16:16:24,710 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:16:24,713 - INFO - ✓ Página 43: 28 imóveis extraídos
+2026-03-13 16:16:24,789 - INFO - Driver fechado
+2026-03-13 16:16:24,790 - INFO - ✓ Página 43 salva em data/raw/por_pagina/sao-paulo_sp_pagina43.csv
+2026-03-13 16:16:24,791 - INFO - Aguardando 7.7s antes da próxima página...
+2026-03-13 16:16:32,530 - INFO - ============================================================
+2026-03-13 16:16:32,530 - INFO - PÁGINA 44
+2026-03-13 16:16:32,530 - INFO - ============================================================
+2026-03-13 16:16:32,530 - INFO - ====== WebDriver manager ======
+2026-03-13 16:16:32,589 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:16:32,810 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:16:32,902 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:16:33,710 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:16:33,710 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=44
+2026-03-13 16:16:34,884 - INFO - Aguardando 5.1s para carregamento...
+2026-03-13 16:16:48,603 - INFO - Analisando página HTML...
+2026-03-13 16:16:48,604 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:16:48,607 - INFO - ✓ Página 44: 29 imóveis extraídos
+2026-03-13 16:16:48,680 - INFO - Driver fechado
+2026-03-13 16:16:48,682 - INFO - ✓ Página 44 salva em data/raw/por_pagina/sao-paulo_sp_pagina44.csv
+2026-03-13 16:16:48,682 - INFO - Aguardando 9.8s antes da próxima página...
+2026-03-13 16:16:58,473 - INFO - ============================================================
+2026-03-13 16:16:58,473 - INFO - PÁGINA 45
+2026-03-13 16:16:58,473 - INFO - ============================================================
+2026-03-13 16:16:58,473 - INFO - ====== WebDriver manager ======
+2026-03-13 16:16:58,532 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:16:58,707 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:16:58,786 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:16:59,652 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:16:59,652 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=45
+2026-03-13 16:17:00,812 - INFO - Aguardando 7.2s para carregamento...
+2026-03-13 16:17:17,257 - INFO - Analisando página HTML...
+2026-03-13 16:17:17,259 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:17:17,261 - INFO - ✓ Página 45: 26 imóveis extraídos
+2026-03-13 16:17:17,338 - INFO - Driver fechado
+2026-03-13 16:17:17,339 - INFO - ✓ Página 45 salva em data/raw/por_pagina/sao-paulo_sp_pagina45.csv
+2026-03-13 16:17:17,339 - INFO - Aguardando 5.9s antes da próxima página...
+2026-03-13 16:17:23,249 - INFO - ============================================================
+2026-03-13 16:17:23,250 - INFO - PÁGINA 46
+2026-03-13 16:17:23,250 - INFO - ============================================================
+2026-03-13 16:17:23,250 - INFO - ====== WebDriver manager ======
+2026-03-13 16:17:23,310 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:17:23,382 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:17:23,464 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:17:24,287 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:17:24,287 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=46
+2026-03-13 16:17:25,388 - INFO - Aguardando 5.2s para carregamento...
+2026-03-13 16:17:38,988 - INFO - Analisando página HTML...
+2026-03-13 16:17:38,989 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:17:38,992 - INFO - ✓ Página 46: 29 imóveis extraídos
+2026-03-13 16:17:39,065 - INFO - Driver fechado
+2026-03-13 16:17:39,067 - INFO - ✓ Página 46 salva em data/raw/por_pagina/sao-paulo_sp_pagina46.csv
+2026-03-13 16:17:39,067 - INFO - Aguardando 5.0s antes da próxima página...
+2026-03-13 16:17:44,103 - INFO - ============================================================
+2026-03-13 16:17:44,103 - INFO - PÁGINA 47
+2026-03-13 16:17:44,103 - INFO - ============================================================
+2026-03-13 16:17:44,103 - INFO - ====== WebDriver manager ======
+2026-03-13 16:17:44,161 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:17:44,252 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:17:44,344 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:17:45,179 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:17:45,179 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=47
+2026-03-13 16:17:46,508 - INFO - Aguardando 6.3s para carregamento...
+2026-03-13 16:18:00,419 - INFO - Analisando página HTML...
+2026-03-13 16:18:00,420 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:18:00,423 - INFO - ✓ Página 47: 28 imóveis extraídos
+2026-03-13 16:18:00,498 - INFO - Driver fechado
+2026-03-13 16:18:00,501 - INFO - ✓ Página 47 salva em data/raw/por_pagina/sao-paulo_sp_pagina47.csv
+2026-03-13 16:18:00,501 - INFO - Aguardando 9.6s antes da próxima página...
+2026-03-13 16:18:10,108 - INFO - ============================================================
+2026-03-13 16:18:10,108 - INFO - PÁGINA 48
+2026-03-13 16:18:10,108 - INFO - ============================================================
+2026-03-13 16:18:10,108 - INFO - ====== WebDriver manager ======
+2026-03-13 16:18:10,168 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:18:10,257 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:18:10,339 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:18:11,177 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:18:11,177 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=48
+2026-03-13 16:18:12,432 - INFO - Aguardando 6.4s para carregamento...
+2026-03-13 16:18:26,362 - INFO - Analisando página HTML...
+2026-03-13 16:18:26,364 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:18:26,367 - INFO - ✓ Página 48: 30 imóveis extraídos
+2026-03-13 16:18:26,441 - INFO - Driver fechado
+2026-03-13 16:18:26,443 - INFO - ✓ Página 48 salva em data/raw/por_pagina/sao-paulo_sp_pagina48.csv
+2026-03-13 16:18:26,443 - INFO - Aguardando 7.6s antes da próxima página...
+2026-03-13 16:18:34,040 - INFO - ============================================================
+2026-03-13 16:18:34,040 - INFO - PÁGINA 49
+2026-03-13 16:18:34,040 - INFO - ============================================================
+2026-03-13 16:18:34,040 - INFO - ====== WebDriver manager ======
+2026-03-13 16:18:34,100 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:18:34,167 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:18:34,241 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:18:35,053 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:18:35,053 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=49
+2026-03-13 16:18:36,185 - INFO - Aguardando 5.8s para carregamento...
+2026-03-13 16:18:48,588 - INFO - Analisando página HTML...
+2026-03-13 16:18:48,590 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:18:48,592 - INFO - ✓ Página 49: 28 imóveis extraídos
+2026-03-13 16:18:48,662 - INFO - Driver fechado
+2026-03-13 16:18:48,663 - INFO - ✓ Página 49 salva em data/raw/por_pagina/sao-paulo_sp_pagina49.csv
+2026-03-13 16:18:48,663 - INFO - Aguardando 5.3s antes da próxima página...
+2026-03-13 16:18:53,928 - INFO - ============================================================
+2026-03-13 16:18:53,928 - INFO - PÁGINA 50
+2026-03-13 16:18:53,928 - INFO - ============================================================
+2026-03-13 16:18:53,928 - INFO - ====== WebDriver manager ======
+2026-03-13 16:18:53,987 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:18:54,068 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:18:54,142 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:18:54,951 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:18:54,951 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=50
+2026-03-13 16:18:56,250 - INFO - Aguardando 5.0s para carregamento...
+2026-03-13 16:19:09,269 - INFO - Analisando página HTML...
+2026-03-13 16:19:09,270 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:19:09,273 - INFO - ✓ Página 50: 27 imóveis extraídos
+2026-03-13 16:19:09,345 - INFO - Driver fechado
+2026-03-13 16:19:09,347 - INFO - ✓ Página 50 salva em data/raw/por_pagina/sao-paulo_sp_pagina50.csv
+2026-03-13 16:19:09,347 - INFO - Aguardando 8.6s antes da próxima página...
+2026-03-13 16:19:17,941 - INFO - ============================================================
+2026-03-13 16:19:17,941 - INFO - PÁGINA 51
+2026-03-13 16:19:17,941 - INFO - ============================================================
+2026-03-13 16:19:17,941 - INFO - ====== WebDriver manager ======
+2026-03-13 16:19:18,001 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:19:18,090 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:19:18,173 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:19:18,990 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:19:18,990 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=51
+2026-03-13 16:19:20,113 - INFO - Aguardando 6.6s para carregamento...
+2026-03-13 16:19:34,260 - INFO - Analisando página HTML...
+2026-03-13 16:19:34,262 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:19:34,264 - INFO - ✓ Página 51: 29 imóveis extraídos
+2026-03-13 16:19:34,340 - INFO - Driver fechado
+2026-03-13 16:19:34,342 - INFO - ✓ Página 51 salva em data/raw/por_pagina/sao-paulo_sp_pagina51.csv
+2026-03-13 16:19:34,342 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:19:40,294 - INFO - ============================================================
+2026-03-13 16:19:40,294 - INFO - PÁGINA 52
+2026-03-13 16:19:40,294 - INFO - ============================================================
+2026-03-13 16:19:40,294 - INFO - ====== WebDriver manager ======
+2026-03-13 16:19:40,354 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:19:40,418 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:19:40,496 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:19:41,304 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:19:41,305 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=52
+2026-03-13 16:19:42,420 - INFO - Aguardando 6.3s para carregamento...
+2026-03-13 16:19:56,520 - INFO - Analisando página HTML...
+2026-03-13 16:19:56,522 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:19:56,525 - INFO - ✓ Página 52: 29 imóveis extraídos
+2026-03-13 16:19:56,600 - INFO - Driver fechado
+2026-03-13 16:19:56,601 - INFO - ✓ Página 52 salva em data/raw/por_pagina/sao-paulo_sp_pagina52.csv
+2026-03-13 16:19:56,601 - INFO - Aguardando 7.1s antes da próxima página...
+2026-03-13 16:20:03,707 - INFO - ============================================================
+2026-03-13 16:20:03,707 - INFO - PÁGINA 53
+2026-03-13 16:20:03,707 - INFO - ============================================================
+2026-03-13 16:20:03,707 - INFO - ====== WebDriver manager ======
+2026-03-13 16:20:03,766 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:20:03,884 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:20:03,986 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:20:04,810 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:20:04,810 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=53
+2026-03-13 16:20:16,530 - INFO - Aguardando 6.0s para carregamento...
+2026-03-13 16:20:30,150 - INFO - Analisando página HTML...
+2026-03-13 16:20:30,151 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:20:30,154 - INFO - ✓ Página 53: 29 imóveis extraídos
+2026-03-13 16:20:30,230 - INFO - Driver fechado
+2026-03-13 16:20:30,232 - INFO - ✓ Página 53 salva em data/raw/por_pagina/sao-paulo_sp_pagina53.csv
+2026-03-13 16:20:30,232 - INFO - Aguardando 5.3s antes da próxima página...
+2026-03-13 16:20:35,561 - INFO - ============================================================
+2026-03-13 16:20:35,561 - INFO - PÁGINA 54
+2026-03-13 16:20:35,561 - INFO - ============================================================
+2026-03-13 16:20:35,561 - INFO - ====== WebDriver manager ======
+2026-03-13 16:20:35,622 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:20:35,843 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:20:35,910 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:20:36,737 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:20:36,737 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=54
+2026-03-13 16:20:37,968 - INFO - Aguardando 7.4s para carregamento...
+2026-03-13 16:20:54,473 - INFO - Analisando página HTML...
+2026-03-13 16:20:54,475 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:20:54,477 - INFO - ✓ Página 54: 28 imóveis extraídos
+2026-03-13 16:20:54,555 - INFO - Driver fechado
+2026-03-13 16:20:54,557 - INFO - ✓ Página 54 salva em data/raw/por_pagina/sao-paulo_sp_pagina54.csv
+2026-03-13 16:20:54,557 - INFO - Aguardando 8.2s antes da próxima página...
+2026-03-13 16:21:02,735 - INFO - ============================================================
+2026-03-13 16:21:02,736 - INFO - PÁGINA 55
+2026-03-13 16:21:02,736 - INFO - ============================================================
+2026-03-13 16:21:02,736 - INFO - ====== WebDriver manager ======
+2026-03-13 16:21:02,795 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:21:02,867 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:21:02,949 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:21:03,771 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:21:03,771 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=55
+2026-03-13 16:21:04,972 - INFO - Aguardando 7.3s para carregamento...
+2026-03-13 16:21:20,404 - INFO - Analisando página HTML...
+2026-03-13 16:21:20,405 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:21:20,408 - INFO - ✓ Página 55: 28 imóveis extraídos
+2026-03-13 16:21:20,483 - INFO - Driver fechado
+2026-03-13 16:21:20,485 - INFO - ✓ Página 55 salva em data/raw/por_pagina/sao-paulo_sp_pagina55.csv
+2026-03-13 16:21:20,485 - INFO - Aguardando 9.9s antes da próxima página...
+2026-03-13 16:21:30,338 - INFO - ============================================================
+2026-03-13 16:21:30,338 - INFO - PÁGINA 56
+2026-03-13 16:21:30,339 - INFO - ============================================================
+2026-03-13 16:21:30,339 - INFO - ====== WebDriver manager ======
+2026-03-13 16:21:30,398 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:21:30,464 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:21:30,560 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:21:31,384 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:21:31,384 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=56
+2026-03-13 16:21:32,374 - INFO - Aguardando 5.7s para carregamento...
+2026-03-13 16:21:45,777 - INFO - Analisando página HTML...
+2026-03-13 16:21:45,779 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:21:45,782 - INFO - ✓ Página 56: 26 imóveis extraídos
+2026-03-13 16:21:45,853 - INFO - Driver fechado
+2026-03-13 16:21:45,854 - INFO - ✓ Página 56 salva em data/raw/por_pagina/sao-paulo_sp_pagina56.csv
+2026-03-13 16:21:45,854 - INFO - Aguardando 9.3s antes da próxima página...
+2026-03-13 16:21:55,147 - INFO - ============================================================
+2026-03-13 16:21:55,148 - INFO - PÁGINA 57
+2026-03-13 16:21:55,148 - INFO - ============================================================
+2026-03-13 16:21:55,148 - INFO - ====== WebDriver manager ======
+2026-03-13 16:21:55,207 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:21:55,292 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:21:55,384 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:21:56,208 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:21:56,208 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=57
+2026-03-13 16:21:57,534 - INFO - Aguardando 7.0s para carregamento...
+2026-03-13 16:22:13,072 - INFO - Analisando página HTML...
+2026-03-13 16:22:13,074 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:22:13,077 - INFO - ✓ Página 57: 28 imóveis extraídos
+2026-03-13 16:22:13,155 - INFO - Driver fechado
+2026-03-13 16:22:13,156 - INFO - ✓ Página 57 salva em data/raw/por_pagina/sao-paulo_sp_pagina57.csv
+2026-03-13 16:22:13,156 - INFO - Aguardando 9.0s antes da próxima página...
+2026-03-13 16:22:22,183 - INFO - ============================================================
+2026-03-13 16:22:22,183 - INFO - PÁGINA 58
+2026-03-13 16:22:22,183 - INFO - ============================================================
+2026-03-13 16:22:22,184 - INFO - ====== WebDriver manager ======
+2026-03-13 16:22:22,241 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:22:22,332 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:22:22,404 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:22:23,210 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:22:23,210 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=58
+2026-03-13 16:22:24,253 - INFO - Aguardando 7.5s para carregamento...
+2026-03-13 16:22:40,247 - INFO - Analisando página HTML...
+2026-03-13 16:22:40,249 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:22:40,252 - INFO - ✓ Página 58: 29 imóveis extraídos
+2026-03-13 16:22:40,330 - INFO - Driver fechado
+2026-03-13 16:22:40,331 - INFO - ✓ Página 58 salva em data/raw/por_pagina/sao-paulo_sp_pagina58.csv
+2026-03-13 16:22:40,331 - INFO - Aguardando 7.9s antes da próxima página...
+2026-03-13 16:22:48,199 - INFO - ============================================================
+2026-03-13 16:22:48,199 - INFO - PÁGINA 59
+2026-03-13 16:22:48,199 - INFO - ============================================================
+2026-03-13 16:22:48,199 - INFO - ====== WebDriver manager ======
+2026-03-13 16:22:48,259 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:22:48,330 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:22:48,412 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:22:49,255 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:22:49,255 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=59
+2026-03-13 16:22:50,338 - INFO - Aguardando 6.8s para carregamento...
+2026-03-13 16:23:04,689 - INFO - Analisando página HTML...
+2026-03-13 16:23:04,690 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:23:04,693 - INFO - ✓ Página 59: 30 imóveis extraídos
+2026-03-13 16:23:04,768 - INFO - Driver fechado
+2026-03-13 16:23:04,769 - INFO - ✓ Página 59 salva em data/raw/por_pagina/sao-paulo_sp_pagina59.csv
+2026-03-13 16:23:04,770 - INFO - Aguardando 6.3s antes da próxima página...
+2026-03-13 16:23:11,117 - INFO - ============================================================
+2026-03-13 16:23:11,117 - INFO - PÁGINA 60
+2026-03-13 16:23:11,117 - INFO - ============================================================
+2026-03-13 16:23:11,117 - INFO - ====== WebDriver manager ======
+2026-03-13 16:23:11,177 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:23:11,265 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:23:11,345 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:23:12,167 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:23:12,168 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=60
+2026-03-13 16:23:13,580 - INFO - Aguardando 5.7s para carregamento...
+2026-03-13 16:23:27,711 - INFO - Analisando página HTML...
+2026-03-13 16:23:27,712 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:23:27,715 - INFO - ✓ Página 60: 27 imóveis extraídos
+2026-03-13 16:23:27,791 - INFO - Driver fechado
+2026-03-13 16:23:27,792 - INFO - ✓ Página 60 salva em data/raw/por_pagina/sao-paulo_sp_pagina60.csv
+2026-03-13 16:23:27,792 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:23:33,779 - INFO - ============================================================
+2026-03-13 16:23:33,779 - INFO - PÁGINA 61
+2026-03-13 16:23:33,779 - INFO - ============================================================
+2026-03-13 16:23:33,779 - INFO - ====== WebDriver manager ======
+2026-03-13 16:23:33,839 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:23:33,917 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:23:33,987 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:23:34,810 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:23:34,810 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=61
+2026-03-13 16:23:36,047 - INFO - Aguardando 6.8s para carregamento...
+2026-03-13 16:23:51,691 - INFO - Analisando página HTML...
+2026-03-13 16:23:51,693 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:23:51,696 - INFO - ✓ Página 61: 28 imóveis extraídos
+2026-03-13 16:23:51,773 - INFO - Driver fechado
+2026-03-13 16:23:51,774 - INFO - ✓ Página 61 salva em data/raw/por_pagina/sao-paulo_sp_pagina61.csv
+2026-03-13 16:23:51,775 - INFO - Aguardando 6.1s antes da próxima página...
+2026-03-13 16:23:57,836 - INFO - ============================================================
+2026-03-13 16:23:57,836 - INFO - PÁGINA 62
+2026-03-13 16:23:57,836 - INFO - ============================================================
+2026-03-13 16:23:57,836 - INFO - ====== WebDriver manager ======
+2026-03-13 16:23:57,896 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:23:57,990 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:23:58,080 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:23:58,894 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:23:58,895 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=62
+2026-03-13 16:23:59,958 - INFO - Aguardando 6.2s para carregamento...
+2026-03-13 16:24:13,326 - INFO - Analisando página HTML...
+2026-03-13 16:24:13,327 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:24:13,331 - INFO - ✓ Página 62: 30 imóveis extraídos
+2026-03-13 16:24:13,401 - INFO - Driver fechado
+2026-03-13 16:24:13,404 - INFO - ✓ Página 62 salva em data/raw/por_pagina/sao-paulo_sp_pagina62.csv
+2026-03-13 16:24:13,404 - INFO - Aguardando 6.3s antes da próxima página...
+2026-03-13 16:24:19,700 - INFO - ============================================================
+2026-03-13 16:24:19,700 - INFO - PÁGINA 63
+2026-03-13 16:24:19,700 - INFO - ============================================================
+2026-03-13 16:24:19,700 - INFO - ====== WebDriver manager ======
+2026-03-13 16:24:19,761 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:24:19,848 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:24:19,941 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:24:20,760 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:24:20,760 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=63
+2026-03-13 16:24:21,868 - INFO - Aguardando 6.2s para carregamento...
+2026-03-13 16:24:35,952 - INFO - Analisando página HTML...
+2026-03-13 16:24:35,954 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:24:35,956 - INFO - ✓ Página 63: 27 imóveis extraídos
+2026-03-13 16:24:36,031 - INFO - Driver fechado
+2026-03-13 16:24:36,033 - INFO - ✓ Página 63 salva em data/raw/por_pagina/sao-paulo_sp_pagina63.csv
+2026-03-13 16:24:36,033 - INFO - Aguardando 7.7s antes da próxima página...
+2026-03-13 16:24:43,716 - INFO - ============================================================
+2026-03-13 16:24:43,717 - INFO - PÁGINA 64
+2026-03-13 16:24:43,717 - INFO - ============================================================
+2026-03-13 16:24:43,717 - INFO - ====== WebDriver manager ======
+2026-03-13 16:24:43,776 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:24:43,865 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:24:43,935 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:24:44,774 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:24:44,774 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=64
+2026-03-13 16:24:46,023 - INFO - Aguardando 7.3s para carregamento...
+2026-03-13 16:25:01,858 - INFO - Analisando página HTML...
+2026-03-13 16:25:01,860 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:25:01,862 - INFO - ✓ Página 64: 28 imóveis extraídos
+2026-03-13 16:25:01,939 - INFO - Driver fechado
+2026-03-13 16:25:01,940 - INFO - ✓ Página 64 salva em data/raw/por_pagina/sao-paulo_sp_pagina64.csv
+2026-03-13 16:25:01,940 - INFO - Aguardando 6.4s antes da próxima página...
+2026-03-13 16:25:08,346 - INFO - ============================================================
+2026-03-13 16:25:08,346 - INFO - PÁGINA 65
+2026-03-13 16:25:08,346 - INFO - ============================================================
+2026-03-13 16:25:08,346 - INFO - ====== WebDriver manager ======
+2026-03-13 16:25:08,410 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:25:08,482 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:25:08,577 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:25:09,426 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:25:09,426 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=65
+2026-03-13 16:25:10,587 - INFO - Aguardando 6.7s para carregamento...
+2026-03-13 16:25:25,938 - INFO - Analisando página HTML...
+2026-03-13 16:25:25,940 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:25:25,943 - INFO - ✓ Página 65: 29 imóveis extraídos
+2026-03-13 16:25:26,020 - INFO - Driver fechado
+2026-03-13 16:25:26,021 - INFO - ✓ Página 65 salva em data/raw/por_pagina/sao-paulo_sp_pagina65.csv
+2026-03-13 16:25:26,021 - INFO - Aguardando 9.2s antes da próxima página...
+2026-03-13 16:25:35,218 - INFO - ============================================================
+2026-03-13 16:25:35,218 - INFO - PÁGINA 66
+2026-03-13 16:25:35,218 - INFO - ============================================================
+2026-03-13 16:25:35,218 - INFO - ====== WebDriver manager ======
+2026-03-13 16:25:35,276 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:25:35,369 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:25:35,463 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:25:36,291 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:25:36,291 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=66
+2026-03-13 16:25:37,458 - INFO - Aguardando 6.4s para carregamento...
+2026-03-13 16:25:51,446 - INFO - Analisando página HTML...
+2026-03-13 16:25:51,447 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:25:51,450 - INFO - ✓ Página 66: 28 imóveis extraídos
+2026-03-13 16:25:51,524 - INFO - Driver fechado
+2026-03-13 16:25:51,526 - INFO - ✓ Página 66 salva em data/raw/por_pagina/sao-paulo_sp_pagina66.csv
+2026-03-13 16:25:51,526 - INFO - Aguardando 5.9s antes da próxima página...
+2026-03-13 16:25:57,461 - INFO - ============================================================
+2026-03-13 16:25:57,461 - INFO - PÁGINA 67
+2026-03-13 16:25:57,461 - INFO - ============================================================
+2026-03-13 16:25:57,461 - INFO - ====== WebDriver manager ======
+2026-03-13 16:25:57,521 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:25:57,607 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:25:57,684 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:25:58,534 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:25:58,534 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=67
+2026-03-13 16:25:59,770 - INFO - Aguardando 7.3s para carregamento...
+2026-03-13 16:26:15,549 - INFO - Analisando página HTML...
+2026-03-13 16:26:15,551 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:26:15,553 - INFO - ✓ Página 67: 29 imóveis extraídos
+2026-03-13 16:26:15,630 - INFO - Driver fechado
+2026-03-13 16:26:15,632 - INFO - ✓ Página 67 salva em data/raw/por_pagina/sao-paulo_sp_pagina67.csv
+2026-03-13 16:26:15,632 - INFO - Aguardando 7.9s antes da próxima página...
+2026-03-13 16:26:23,500 - INFO - ============================================================
+2026-03-13 16:26:23,501 - INFO - PÁGINA 68
+2026-03-13 16:26:23,501 - INFO - ============================================================
+2026-03-13 16:26:23,501 - INFO - ====== WebDriver manager ======
+2026-03-13 16:26:23,560 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:26:23,639 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:26:23,708 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:26:24,538 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:26:24,538 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=68
+2026-03-13 16:26:25,766 - INFO - Aguardando 7.7s para carregamento...
+2026-03-13 16:26:41,664 - INFO - Analisando página HTML...
+2026-03-13 16:26:41,665 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:26:41,668 - INFO - ✓ Página 68: 28 imóveis extraídos
+2026-03-13 16:26:41,744 - INFO - Driver fechado
+2026-03-13 16:26:41,745 - INFO - ✓ Página 68 salva em data/raw/por_pagina/sao-paulo_sp_pagina68.csv
+2026-03-13 16:26:41,746 - INFO - Aguardando 7.7s antes da próxima página...
+2026-03-13 16:26:49,438 - INFO - ============================================================
+2026-03-13 16:26:49,439 - INFO - PÁGINA 69
+2026-03-13 16:26:49,439 - INFO - ============================================================
+2026-03-13 16:26:49,439 - INFO - ====== WebDriver manager ======
+2026-03-13 16:26:49,496 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:26:49,585 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:26:49,678 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:26:50,491 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:26:50,491 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=69
+2026-03-13 16:26:52,483 - INFO - Aguardando 7.2s para carregamento...
+2026-03-13 16:27:08,185 - INFO - Analisando página HTML...
+2026-03-13 16:27:08,186 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:27:08,189 - INFO - ✓ Página 69: 29 imóveis extraídos
+2026-03-13 16:27:08,264 - INFO - Driver fechado
+2026-03-13 16:27:08,266 - INFO - ✓ Página 69 salva em data/raw/por_pagina/sao-paulo_sp_pagina69.csv
+2026-03-13 16:27:08,266 - INFO - Aguardando 6.2s antes da próxima página...
+2026-03-13 16:27:14,491 - INFO - ============================================================
+2026-03-13 16:27:14,491 - INFO - PÁGINA 70
+2026-03-13 16:27:14,491 - INFO - ============================================================
+2026-03-13 16:27:14,491 - INFO - ====== WebDriver manager ======
+2026-03-13 16:27:14,551 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:27:14,627 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:27:14,733 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:27:15,549 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:27:15,550 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=70
+2026-03-13 16:27:16,705 - INFO - Aguardando 7.1s para carregamento...
+2026-03-13 16:27:32,585 - INFO - Analisando página HTML...
+2026-03-13 16:27:32,587 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:27:32,590 - INFO - ✓ Página 70: 29 imóveis extraídos
+2026-03-13 16:27:32,668 - INFO - Driver fechado
+2026-03-13 16:27:32,669 - INFO - ✓ Página 70 salva em data/raw/por_pagina/sao-paulo_sp_pagina70.csv
+2026-03-13 16:27:32,669 - INFO - Aguardando 9.2s antes da próxima página...
+2026-03-13 16:27:41,890 - INFO - ============================================================
+2026-03-13 16:27:41,890 - INFO - PÁGINA 71
+2026-03-13 16:27:41,890 - INFO - ============================================================
+2026-03-13 16:27:41,890 - INFO - ====== WebDriver manager ======
+2026-03-13 16:27:41,950 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:27:42,039 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:27:42,113 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:27:42,938 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:27:42,939 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=71
+2026-03-13 16:27:44,097 - INFO - Aguardando 6.5s para carregamento...
+2026-03-13 16:27:58,103 - INFO - Analisando página HTML...
+2026-03-13 16:27:58,104 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:27:58,107 - INFO - ✓ Página 71: 29 imóveis extraídos
+2026-03-13 16:27:58,182 - INFO - Driver fechado
+2026-03-13 16:27:58,184 - INFO - ✓ Página 71 salva em data/raw/por_pagina/sao-paulo_sp_pagina71.csv
+2026-03-13 16:27:58,184 - INFO - Aguardando 8.8s antes da próxima página...
+2026-03-13 16:28:07,004 - INFO - ============================================================
+2026-03-13 16:28:07,004 - INFO - PÁGINA 72
+2026-03-13 16:28:07,004 - INFO - ============================================================
+2026-03-13 16:28:07,004 - INFO - ====== WebDriver manager ======
+2026-03-13 16:28:07,064 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:28:07,142 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:28:07,225 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:28:08,052 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:28:08,052 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=72
+2026-03-13 16:28:09,636 - INFO - Aguardando 5.7s para carregamento...
+2026-03-13 16:28:23,948 - INFO - Analisando página HTML...
+2026-03-13 16:28:23,950 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:28:23,953 - INFO - ✓ Página 72: 30 imóveis extraídos
+2026-03-13 16:28:24,034 - INFO - Driver fechado
+2026-03-13 16:28:24,035 - INFO - ✓ Página 72 salva em data/raw/por_pagina/sao-paulo_sp_pagina72.csv
+2026-03-13 16:28:24,035 - INFO - Aguardando 7.8s antes da próxima página...
+2026-03-13 16:28:31,867 - INFO - ============================================================
+2026-03-13 16:28:31,867 - INFO - PÁGINA 73
+2026-03-13 16:28:31,867 - INFO - ============================================================
+2026-03-13 16:28:31,868 - INFO - ====== WebDriver manager ======
+2026-03-13 16:28:31,927 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:28:32,052 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:28:32,127 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:28:32,942 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:28:32,942 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=73
+2026-03-13 16:28:34,289 - INFO - Aguardando 5.8s para carregamento...
+2026-03-13 16:28:48,339 - INFO - Analisando página HTML...
+2026-03-13 16:28:48,340 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:28:48,343 - INFO - ✓ Página 73: 29 imóveis extraídos
+2026-03-13 16:28:48,412 - INFO - Driver fechado
+2026-03-13 16:28:48,414 - INFO - ✓ Página 73 salva em data/raw/por_pagina/sao-paulo_sp_pagina73.csv
+2026-03-13 16:28:48,414 - INFO - Aguardando 6.9s antes da próxima página...
+2026-03-13 16:28:55,295 - INFO - ============================================================
+2026-03-13 16:28:55,295 - INFO - PÁGINA 74
+2026-03-13 16:28:55,295 - INFO - ============================================================
+2026-03-13 16:28:55,295 - INFO - ====== WebDriver manager ======
+2026-03-13 16:28:55,355 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:29:00,590 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:29:00,672 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:29:01,482 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:29:01,482 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=74
+2026-03-13 16:29:02,829 - INFO - Aguardando 5.1s para carregamento...
+2026-03-13 16:29:15,557 - INFO - Analisando página HTML...
+2026-03-13 16:29:15,559 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:29:15,562 - INFO - ✓ Página 74: 28 imóveis extraídos
+2026-03-13 16:29:15,632 - INFO - Driver fechado
+2026-03-13 16:29:15,634 - INFO - ✓ Página 74 salva em data/raw/por_pagina/sao-paulo_sp_pagina74.csv
+2026-03-13 16:29:15,634 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:29:21,666 - INFO - ============================================================
+2026-03-13 16:29:21,666 - INFO - PÁGINA 75
+2026-03-13 16:29:21,666 - INFO - ============================================================
+2026-03-13 16:29:21,666 - INFO - ====== WebDriver manager ======
+2026-03-13 16:29:21,724 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:29:21,820 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:29:21,898 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:29:22,725 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:29:22,725 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=75
+2026-03-13 16:29:23,737 - INFO - Aguardando 6.2s para carregamento...
+2026-03-13 16:29:38,401 - INFO - Analisando página HTML...
+2026-03-13 16:29:38,402 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:29:38,405 - INFO - ✓ Página 75: 27 imóveis extraídos
+2026-03-13 16:29:38,481 - INFO - Driver fechado
+2026-03-13 16:29:38,484 - INFO - ✓ Página 75 salva em data/raw/por_pagina/sao-paulo_sp_pagina75.csv
+2026-03-13 16:29:38,484 - INFO - Aguardando 5.3s antes da próxima página...
+2026-03-13 16:29:43,826 - INFO - ============================================================
+2026-03-13 16:29:43,826 - INFO - PÁGINA 76
+2026-03-13 16:29:43,826 - INFO - ============================================================
+2026-03-13 16:29:43,826 - INFO - ====== WebDriver manager ======
+2026-03-13 16:29:43,885 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:29:43,966 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:29:44,058 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:29:44,874 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:29:44,874 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=76
+2026-03-13 16:29:46,111 - INFO - Aguardando 6.1s para carregamento...
+2026-03-13 16:30:00,671 - INFO - Analisando página HTML...
+2026-03-13 16:30:00,672 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:30:00,675 - INFO - ✓ Página 76: 29 imóveis extraídos
+2026-03-13 16:30:00,753 - INFO - Driver fechado
+2026-03-13 16:30:00,755 - INFO - ✓ Página 76 salva em data/raw/por_pagina/sao-paulo_sp_pagina76.csv
+2026-03-13 16:30:00,755 - INFO - Aguardando 9.4s antes da próxima página...
+2026-03-13 16:30:10,188 - INFO - ============================================================
+2026-03-13 16:30:10,189 - INFO - PÁGINA 77
+2026-03-13 16:30:10,189 - INFO - ============================================================
+2026-03-13 16:30:10,189 - INFO - ====== WebDriver manager ======
+2026-03-13 16:30:10,248 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:30:10,339 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:30:10,443 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:30:11,262 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:30:11,262 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=77
+2026-03-13 16:30:12,511 - INFO - Aguardando 7.4s para carregamento...
+2026-03-13 16:30:28,221 - INFO - Analisando página HTML...
+2026-03-13 16:30:28,222 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:30:28,226 - INFO - ✓ Página 77: 29 imóveis extraídos
+2026-03-13 16:30:28,301 - INFO - Driver fechado
+2026-03-13 16:30:28,303 - INFO - ✓ Página 77 salva em data/raw/por_pagina/sao-paulo_sp_pagina77.csv
+2026-03-13 16:30:28,304 - INFO - Aguardando 5.6s antes da próxima página...
+2026-03-13 16:30:33,863 - INFO - ============================================================
+2026-03-13 16:30:33,864 - INFO - PÁGINA 78
+2026-03-13 16:30:33,864 - INFO - ============================================================
+2026-03-13 16:30:33,864 - INFO - ====== WebDriver manager ======
+2026-03-13 16:30:33,925 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:30:34,006 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:30:34,098 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:30:34,934 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:30:34,934 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=78
+2026-03-13 16:30:36,320 - INFO - Aguardando 7.3s para carregamento...
+2026-03-13 16:30:51,782 - INFO - Analisando página HTML...
+2026-03-13 16:30:51,783 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:30:51,786 - INFO - ✓ Página 78: 30 imóveis extraídos
+2026-03-13 16:30:51,862 - INFO - Driver fechado
+2026-03-13 16:30:51,864 - INFO - ✓ Página 78 salva em data/raw/por_pagina/sao-paulo_sp_pagina78.csv
+2026-03-13 16:30:51,864 - INFO - Aguardando 8.2s antes da próxima página...
+2026-03-13 16:31:00,053 - INFO - ============================================================
+2026-03-13 16:31:00,053 - INFO - PÁGINA 79
+2026-03-13 16:31:00,054 - INFO - ============================================================
+2026-03-13 16:31:00,054 - INFO - ====== WebDriver manager ======
+2026-03-13 16:31:00,113 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:31:00,200 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:31:00,285 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:31:01,118 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:31:01,118 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=79
+2026-03-13 16:31:02,460 - INFO - Aguardando 8.0s para carregamento...
+2026-03-13 16:31:18,622 - INFO - Analisando página HTML...
+2026-03-13 16:31:18,623 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:31:18,626 - INFO - ✓ Página 79: 28 imóveis extraídos
+2026-03-13 16:31:18,701 - INFO - Driver fechado
+2026-03-13 16:31:18,703 - INFO - ✓ Página 79 salva em data/raw/por_pagina/sao-paulo_sp_pagina79.csv
+2026-03-13 16:31:18,703 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:31:24,731 - INFO - ============================================================
+2026-03-13 16:31:24,731 - INFO - PÁGINA 80
+2026-03-13 16:31:24,731 - INFO - ============================================================
+2026-03-13 16:31:24,731 - INFO - ====== WebDriver manager ======
+2026-03-13 16:31:24,791 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:31:24,863 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:31:24,953 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:31:25,781 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:31:25,781 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=80
+2026-03-13 16:31:26,923 - INFO - Aguardando 6.7s para carregamento...
+2026-03-13 16:31:42,891 - INFO - Analisando página HTML...
+2026-03-13 16:31:42,892 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:31:42,895 - INFO - ✓ Página 80: 28 imóveis extraídos
+2026-03-13 16:31:42,972 - INFO - Driver fechado
+2026-03-13 16:31:42,974 - INFO - ✓ Página 80 salva em data/raw/por_pagina/sao-paulo_sp_pagina80.csv
+2026-03-13 16:31:42,974 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:31:49,010 - INFO - ============================================================
+2026-03-13 16:31:49,011 - INFO - PÁGINA 81
+2026-03-13 16:31:49,011 - INFO - ============================================================
+2026-03-13 16:31:49,011 - INFO - ====== WebDriver manager ======
+2026-03-13 16:31:49,072 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:31:49,148 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:31:49,222 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:31:50,075 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:31:50,075 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=81
+2026-03-13 16:31:51,329 - INFO - Aguardando 5.7s para carregamento...
+2026-03-13 16:32:05,602 - INFO - Analisando página HTML...
+2026-03-13 16:32:05,603 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:32:05,606 - INFO - ✓ Página 81: 29 imóveis extraídos
+2026-03-13 16:32:05,688 - INFO - Driver fechado
+2026-03-13 16:32:05,690 - INFO - ✓ Página 81 salva em data/raw/por_pagina/sao-paulo_sp_pagina81.csv
+2026-03-13 16:32:05,690 - INFO - Aguardando 7.2s antes da próxima página...
+2026-03-13 16:32:12,924 - INFO - ============================================================
+2026-03-13 16:32:12,924 - INFO - PÁGINA 82
+2026-03-13 16:32:12,924 - INFO - ============================================================
+2026-03-13 16:32:12,924 - INFO - ====== WebDriver manager ======
+2026-03-13 16:32:12,986 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:32:13,078 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:32:13,157 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:32:13,981 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:32:13,981 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=82
+2026-03-13 16:32:15,140 - INFO - Aguardando 6.0s para carregamento...
+2026-03-13 16:32:28,876 - INFO - Analisando página HTML...
+2026-03-13 16:32:28,877 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:32:28,880 - INFO - ✓ Página 82: 28 imóveis extraídos
+2026-03-13 16:32:28,955 - INFO - Driver fechado
+2026-03-13 16:32:28,957 - INFO - ✓ Página 82 salva em data/raw/por_pagina/sao-paulo_sp_pagina82.csv
+2026-03-13 16:32:28,957 - INFO - Aguardando 9.3s antes da próxima página...
+2026-03-13 16:32:38,248 - INFO - ============================================================
+2026-03-13 16:32:38,248 - INFO - PÁGINA 83
+2026-03-13 16:32:38,248 - INFO - ============================================================
+2026-03-13 16:32:38,248 - INFO - ====== WebDriver manager ======
+2026-03-13 16:32:38,314 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:32:38,398 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:32:38,469 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:32:39,292 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:32:39,292 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=83
+2026-03-13 16:32:40,757 - INFO - Aguardando 7.1s para carregamento...
+2026-03-13 16:32:55,523 - INFO - Analisando página HTML...
+2026-03-13 16:32:55,525 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:32:55,528 - INFO - ✓ Página 83: 26 imóveis extraídos
+2026-03-13 16:32:55,605 - INFO - Driver fechado
+2026-03-13 16:32:55,607 - INFO - ✓ Página 83 salva em data/raw/por_pagina/sao-paulo_sp_pagina83.csv
+2026-03-13 16:32:55,607 - INFO - Aguardando 7.3s antes da próxima página...
+2026-03-13 16:33:02,945 - INFO - ============================================================
+2026-03-13 16:33:02,946 - INFO - PÁGINA 84
+2026-03-13 16:33:02,946 - INFO - ============================================================
+2026-03-13 16:33:02,946 - INFO - ====== WebDriver manager ======
+2026-03-13 16:33:03,006 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:33:03,077 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:33:03,170 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:33:04,009 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:33:04,009 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=84
+2026-03-13 16:33:05,295 - INFO - Aguardando 8.0s para carregamento...
+2026-03-13 16:33:22,807 - INFO - Analisando página HTML...
+2026-03-13 16:33:22,808 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:33:22,811 - INFO - ✓ Página 84: 29 imóveis extraídos
+2026-03-13 16:33:22,888 - INFO - Driver fechado
+2026-03-13 16:33:22,890 - INFO - ✓ Página 84 salva em data/raw/por_pagina/sao-paulo_sp_pagina84.csv
+2026-03-13 16:33:22,890 - INFO - Aguardando 7.6s antes da próxima página...
+2026-03-13 16:33:30,537 - INFO - ============================================================
+2026-03-13 16:33:30,538 - INFO - PÁGINA 85
+2026-03-13 16:33:30,538 - INFO - ============================================================
+2026-03-13 16:33:30,538 - INFO - ====== WebDriver manager ======
+2026-03-13 16:33:30,596 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:33:30,668 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:33:30,750 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:33:31,566 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:33:31,567 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=85
+2026-03-13 16:33:32,693 - INFO - Aguardando 5.5s para carregamento...
+2026-03-13 16:33:46,757 - INFO - Analisando página HTML...
+2026-03-13 16:33:46,759 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:33:46,762 - INFO - ✓ Página 85: 29 imóveis extraídos
+2026-03-13 16:33:46,836 - INFO - Driver fechado
+2026-03-13 16:33:46,838 - INFO - ✓ Página 85 salva em data/raw/por_pagina/sao-paulo_sp_pagina85.csv
+2026-03-13 16:33:46,838 - INFO - Aguardando 7.9s antes da próxima página...
+2026-03-13 16:33:54,717 - INFO - ============================================================
+2026-03-13 16:33:54,717 - INFO - PÁGINA 86
+2026-03-13 16:33:54,717 - INFO - ============================================================
+2026-03-13 16:33:54,717 - INFO - ====== WebDriver manager ======
+2026-03-13 16:33:54,776 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:33:54,892 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:33:54,984 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:33:55,816 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:33:55,817 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=86
+2026-03-13 16:33:57,243 - INFO - Aguardando 5.3s para carregamento...
+2026-03-13 16:34:10,103 - INFO - Analisando página HTML...
+2026-03-13 16:34:10,104 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:34:10,107 - INFO - ✓ Página 86: 27 imóveis extraídos
+2026-03-13 16:34:10,180 - INFO - Driver fechado
+2026-03-13 16:34:10,182 - INFO - ✓ Página 86 salva em data/raw/por_pagina/sao-paulo_sp_pagina86.csv
+2026-03-13 16:34:10,182 - INFO - Aguardando 8.8s antes da próxima página...
+2026-03-13 16:34:18,990 - INFO - ============================================================
+2026-03-13 16:34:18,990 - INFO - PÁGINA 87
+2026-03-13 16:34:18,990 - INFO - ============================================================
+2026-03-13 16:34:18,990 - INFO - ====== WebDriver manager ======
+2026-03-13 16:34:19,050 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:34:19,130 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:34:19,217 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:34:20,069 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:34:20,069 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=87
+2026-03-13 16:34:22,020 - INFO - Aguardando 6.1s para carregamento...
+2026-03-13 16:34:35,149 - INFO - Analisando página HTML...
+2026-03-13 16:34:35,150 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:34:35,153 - INFO - ✓ Página 87: 28 imóveis extraídos
+2026-03-13 16:34:35,228 - INFO - Driver fechado
+2026-03-13 16:34:35,230 - INFO - ✓ Página 87 salva em data/raw/por_pagina/sao-paulo_sp_pagina87.csv
+2026-03-13 16:34:35,230 - INFO - Aguardando 8.9s antes da próxima página...
+2026-03-13 16:34:44,093 - INFO - ============================================================
+2026-03-13 16:34:44,093 - INFO - PÁGINA 88
+2026-03-13 16:34:44,093 - INFO - ============================================================
+2026-03-13 16:34:44,093 - INFO - ====== WebDriver manager ======
+2026-03-13 16:34:44,155 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:34:44,277 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:34:44,356 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:34:45,193 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:34:45,193 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=88
+2026-03-13 16:34:46,390 - INFO - Aguardando 7.4s para carregamento...
+2026-03-13 16:35:01,510 - INFO - Analisando página HTML...
+2026-03-13 16:35:01,512 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:35:01,515 - INFO - ✓ Página 88: 27 imóveis extraídos
+2026-03-13 16:35:01,592 - INFO - Driver fechado
+2026-03-13 16:35:01,595 - INFO - ✓ Página 88 salva em data/raw/por_pagina/sao-paulo_sp_pagina88.csv
+2026-03-13 16:35:01,595 - INFO - Aguardando 5.3s antes da próxima página...
+2026-03-13 16:35:06,853 - INFO - ============================================================
+2026-03-13 16:35:06,853 - INFO - PÁGINA 89
+2026-03-13 16:35:06,853 - INFO - ============================================================
+2026-03-13 16:35:06,853 - INFO - ====== WebDriver manager ======
+2026-03-13 16:35:06,915 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:35:07,007 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:35:07,079 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:35:07,886 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:35:07,886 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=89
+2026-03-13 16:35:08,900 - INFO - Aguardando 6.5s para carregamento...
+2026-03-13 16:35:23,742 - INFO - Analisando página HTML...
+2026-03-13 16:35:23,744 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:35:23,747 - INFO - ✓ Página 89: 29 imóveis extraídos
+2026-03-13 16:35:23,825 - INFO - Driver fechado
+2026-03-13 16:35:23,827 - INFO - ✓ Página 89 salva em data/raw/por_pagina/sao-paulo_sp_pagina89.csv
+2026-03-13 16:35:23,827 - INFO - Aguardando 8.4s antes da próxima página...
+2026-03-13 16:35:32,179 - INFO - ============================================================
+2026-03-13 16:35:32,179 - INFO - PÁGINA 90
+2026-03-13 16:35:32,179 - INFO - ============================================================
+2026-03-13 16:35:32,179 - INFO - ====== WebDriver manager ======
+2026-03-13 16:35:32,244 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:35:32,348 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:35:32,429 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:35:33,251 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:35:33,252 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=90
+2026-03-13 16:35:34,443 - INFO - Aguardando 5.0s para carregamento...
+2026-03-13 16:35:47,500 - INFO - Analisando página HTML...
+2026-03-13 16:35:47,501 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:35:47,504 - INFO - ✓ Página 90: 28 imóveis extraídos
+2026-03-13 16:35:47,573 - INFO - Driver fechado
+2026-03-13 16:35:47,575 - INFO - ✓ Página 90 salva em data/raw/por_pagina/sao-paulo_sp_pagina90.csv
+2026-03-13 16:35:47,575 - INFO - Aguardando 8.8s antes da próxima página...
+2026-03-13 16:35:56,408 - INFO - ============================================================
+2026-03-13 16:35:56,408 - INFO - PÁGINA 91
+2026-03-13 16:35:56,408 - INFO - ============================================================
+2026-03-13 16:35:56,408 - INFO - ====== WebDriver manager ======
+2026-03-13 16:35:56,468 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:35:56,574 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:35:56,654 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:35:57,479 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:35:57,479 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=91
+2026-03-13 16:36:03,511 - INFO - Aguardando 5.8s para carregamento...
+2026-03-13 16:36:18,534 - INFO - Analisando página HTML...
+2026-03-13 16:36:18,535 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:36:18,538 - INFO - ✓ Página 91: 26 imóveis extraídos
+2026-03-13 16:36:18,615 - INFO - Driver fechado
+2026-03-13 16:36:18,617 - INFO - ✓ Página 91 salva em data/raw/por_pagina/sao-paulo_sp_pagina91.csv
+2026-03-13 16:36:18,617 - INFO - Aguardando 8.9s antes da próxima página...
+2026-03-13 16:36:27,514 - INFO - ============================================================
+2026-03-13 16:36:27,514 - INFO - PÁGINA 92
+2026-03-13 16:36:27,514 - INFO - ============================================================
+2026-03-13 16:36:27,514 - INFO - ====== WebDriver manager ======
+2026-03-13 16:36:27,575 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:36:27,740 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:36:27,821 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:36:28,643 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:36:28,644 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=92
+2026-03-13 16:36:29,878 - INFO - Aguardando 7.6s para carregamento...
+2026-03-13 16:36:45,398 - INFO - Analisando página HTML...
+2026-03-13 16:36:45,399 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:36:45,402 - INFO - ✓ Página 92: 26 imóveis extraídos
+2026-03-13 16:36:45,479 - INFO - Driver fechado
+2026-03-13 16:36:45,481 - INFO - ✓ Página 92 salva em data/raw/por_pagina/sao-paulo_sp_pagina92.csv
+2026-03-13 16:36:45,481 - INFO - Aguardando 6.0s antes da próxima página...
+2026-03-13 16:36:51,502 - INFO - ============================================================
+2026-03-13 16:36:51,503 - INFO - PÁGINA 93
+2026-03-13 16:36:51,503 - INFO - ============================================================
+2026-03-13 16:36:51,503 - INFO - ====== WebDriver manager ======
+2026-03-13 16:36:51,567 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:36:51,659 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:36:51,749 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:36:52,572 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:36:52,572 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=93
+2026-03-13 16:36:54,783 - INFO - Aguardando 5.8s para carregamento...
+2026-03-13 16:37:08,766 - INFO - Analisando página HTML...
+2026-03-13 16:37:08,767 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:37:08,770 - INFO - ✓ Página 93: 27 imóveis extraídos
+2026-03-13 16:37:08,848 - INFO - Driver fechado
+2026-03-13 16:37:08,849 - INFO - ✓ Página 93 salva em data/raw/por_pagina/sao-paulo_sp_pagina93.csv
+2026-03-13 16:37:08,849 - INFO - Aguardando 6.8s antes da próxima página...
+2026-03-13 16:37:15,645 - INFO - ============================================================
+2026-03-13 16:37:15,645 - INFO - PÁGINA 94
+2026-03-13 16:37:15,645 - INFO - ============================================================
+2026-03-13 16:37:15,645 - INFO - ====== WebDriver manager ======
+2026-03-13 16:37:15,707 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:37:15,788 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:37:15,867 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:37:16,683 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:37:16,683 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=94
+2026-03-13 16:37:19,028 - INFO - Aguardando 6.8s para carregamento...
+2026-03-13 16:37:33,087 - INFO - Analisando página HTML...
+2026-03-13 16:37:33,089 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:37:33,092 - INFO - ✓ Página 94: 26 imóveis extraídos
+2026-03-13 16:37:33,169 - INFO - Driver fechado
+2026-03-13 16:37:33,170 - INFO - ✓ Página 94 salva em data/raw/por_pagina/sao-paulo_sp_pagina94.csv
+2026-03-13 16:37:33,171 - INFO - Aguardando 7.3s antes da próxima página...
+2026-03-13 16:37:40,484 - INFO - ============================================================
+2026-03-13 16:37:40,484 - INFO - PÁGINA 95
+2026-03-13 16:37:40,484 - INFO - ============================================================
+2026-03-13 16:37:40,484 - INFO - ====== WebDriver manager ======
+2026-03-13 16:37:40,549 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:37:40,637 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:37:40,735 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:37:41,590 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:37:41,590 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=95
+2026-03-13 16:37:43,000 - INFO - Aguardando 6.3s para carregamento...
+2026-03-13 16:37:57,333 - INFO - Analisando página HTML...
+2026-03-13 16:37:57,335 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:37:57,338 - INFO - ✓ Página 95: 28 imóveis extraídos
+2026-03-13 16:37:57,416 - INFO - Driver fechado
+2026-03-13 16:37:57,417 - INFO - ✓ Página 95 salva em data/raw/por_pagina/sao-paulo_sp_pagina95.csv
+2026-03-13 16:37:57,417 - INFO - Aguardando 9.4s antes da próxima página...
+2026-03-13 16:38:06,854 - INFO - ============================================================
+2026-03-13 16:38:06,855 - INFO - PÁGINA 96
+2026-03-13 16:38:06,855 - INFO - ============================================================
+2026-03-13 16:38:06,855 - INFO - ====== WebDriver manager ======
+2026-03-13 16:38:06,918 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:38:07,017 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:38:07,104 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:38:07,940 - INFO - Driver criado com User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2026-03-13 16:38:07,940 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=96
+2026-03-13 16:38:09,613 - INFO - Aguardando 7.0s para carregamento...
+2026-03-13 16:38:23,681 - INFO - Analisando página HTML...
+2026-03-13 16:38:23,683 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:38:23,686 - INFO - ✓ Página 96: 30 imóveis extraídos
+2026-03-13 16:38:23,763 - INFO - Driver fechado
+2026-03-13 16:38:23,765 - INFO - ✓ Página 96 salva em data/raw/por_pagina/sao-paulo_sp_pagina96.csv
+2026-03-13 16:38:23,765 - INFO - Aguardando 8.0s antes da próxima página...
+2026-03-13 16:38:31,760 - INFO - ============================================================
+2026-03-13 16:38:31,760 - INFO - PÁGINA 97
+2026-03-13 16:38:31,760 - INFO - ============================================================
+2026-03-13 16:38:31,760 - INFO - ====== WebDriver manager ======
+2026-03-13 16:38:31,826 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:38:31,902 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:38:31,979 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:38:32,804 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:38:32,804 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=97
+2026-03-13 16:38:33,914 - INFO - Aguardando 7.8s para carregamento...
+2026-03-13 16:38:49,541 - INFO - Analisando página HTML...
+2026-03-13 16:38:49,543 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:38:49,546 - INFO - ✓ Página 97: 28 imóveis extraídos
+2026-03-13 16:38:49,623 - INFO - Driver fechado
+2026-03-13 16:38:49,627 - INFO - ✓ Página 97 salva em data/raw/por_pagina/sao-paulo_sp_pagina97.csv
+2026-03-13 16:38:49,627 - INFO - Aguardando 5.9s antes da próxima página...
+2026-03-13 16:38:55,572 - INFO - ============================================================
+2026-03-13 16:38:55,572 - INFO - PÁGINA 98
+2026-03-13 16:38:55,572 - INFO - ============================================================
+2026-03-13 16:38:55,572 - INFO - ====== WebDriver manager ======
+2026-03-13 16:38:55,632 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:38:55,711 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:38:55,804 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:38:56,636 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:38:56,636 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=98
+2026-03-13 16:38:58,915 - INFO - Aguardando 7.0s para carregamento...
+2026-03-13 16:39:14,039 - INFO - Analisando página HTML...
+2026-03-13 16:39:14,041 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:39:14,044 - INFO - ✓ Página 98: 27 imóveis extraídos
+2026-03-13 16:39:14,118 - INFO - Driver fechado
+2026-03-13 16:39:14,121 - INFO - ✓ Página 98 salva em data/raw/por_pagina/sao-paulo_sp_pagina98.csv
+2026-03-13 16:39:14,122 - INFO - Aguardando 8.3s antes da próxima página...
+2026-03-13 16:39:22,400 - INFO - ============================================================
+2026-03-13 16:39:22,400 - INFO - PÁGINA 99
+2026-03-13 16:39:22,400 - INFO - ============================================================
+2026-03-13 16:39:22,400 - INFO - ====== WebDriver manager ======
+2026-03-13 16:39:22,462 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:39:22,534 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:39:22,613 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:39:23,460 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:39:23,460 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=99
+2026-03-13 16:39:24,567 - INFO - Aguardando 7.0s para carregamento...
+2026-03-13 16:39:39,512 - INFO - Analisando página HTML...
+2026-03-13 16:39:39,514 - INFO - Tentativa 1 (links com /imovel/): 29 cards
+2026-03-13 16:39:39,517 - INFO - ✓ Página 99: 29 imóveis extraídos
+2026-03-13 16:39:39,592 - INFO - Driver fechado
+2026-03-13 16:39:39,594 - INFO - ✓ Página 99 salva em data/raw/por_pagina/sao-paulo_sp_pagina99.csv
+2026-03-13 16:39:39,594 - INFO - Aguardando 5.2s antes da próxima página...
+2026-03-13 16:39:44,779 - INFO - ============================================================
+2026-03-13 16:39:44,779 - INFO - PÁGINA 100
+2026-03-13 16:39:44,779 - INFO - ============================================================
+2026-03-13 16:39:44,779 - INFO - ====== WebDriver manager ======
+2026-03-13 16:39:44,840 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:39:44,935 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:39:45,015 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:39:45,846 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:39:45,846 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=100
+2026-03-13 16:39:47,009 - INFO - Aguardando 6.1s para carregamento...
+2026-03-13 16:40:01,465 - INFO - Analisando página HTML...
+2026-03-13 16:40:01,466 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:40:01,469 - INFO - ✓ Página 100: 27 imóveis extraídos
+2026-03-13 16:40:01,549 - INFO - Driver fechado
+2026-03-13 16:40:01,550 - INFO - ✓ Página 100 salva em data/raw/por_pagina/sao-paulo_sp_pagina100.csv
+2026-03-13 16:40:01,550 - INFO - Aguardando 5.9s antes da próxima página...
+2026-03-13 16:40:07,409 - INFO - ============================================================
+2026-03-13 16:40:07,409 - INFO - PÁGINA 101
+2026-03-13 16:40:07,409 - INFO - ============================================================
+2026-03-13 16:40:07,409 - INFO - ====== WebDriver manager ======
+2026-03-13 16:40:07,468 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:40:07,546 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:40:07,629 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:40:08,448 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:40:08,448 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=101
+2026-03-13 16:40:10,655 - INFO - Aguardando 7.1s para carregamento...
+2026-03-13 16:40:24,710 - INFO - Analisando página HTML...
+2026-03-13 16:40:24,712 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:40:24,715 - INFO - ✓ Página 101: 30 imóveis extraídos
+2026-03-13 16:40:24,793 - INFO - Driver fechado
+2026-03-13 16:40:24,795 - INFO - ✓ Página 101 salva em data/raw/por_pagina/sao-paulo_sp_pagina101.csv
+2026-03-13 16:40:24,795 - INFO - Aguardando 9.2s antes da próxima página...
+2026-03-13 16:40:33,998 - INFO - ============================================================
+2026-03-13 16:40:33,998 - INFO - PÁGINA 102
+2026-03-13 16:40:33,998 - INFO - ============================================================
+2026-03-13 16:40:33,998 - INFO - ====== WebDriver manager ======
+2026-03-13 16:40:34,057 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:40:34,130 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:40:34,206 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:40:35,025 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:40:35,026 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=102
+2026-03-13 16:40:36,183 - INFO - Aguardando 5.5s para carregamento...
+2026-03-13 16:40:50,916 - INFO - Analisando página HTML...
+2026-03-13 16:40:50,918 - INFO - Tentativa 1 (links com /imovel/): 30 cards
+2026-03-13 16:40:50,923 - INFO - ✓ Página 102: 30 imóveis extraídos
+2026-03-13 16:40:51,002 - INFO - Driver fechado
+2026-03-13 16:40:51,005 - INFO - ✓ Página 102 salva em data/raw/por_pagina/sao-paulo_sp_pagina102.csv
+2026-03-13 16:40:51,005 - INFO - Aguardando 8.9s antes da próxima página...
+2026-03-13 16:40:59,880 - INFO - ============================================================
+2026-03-13 16:40:59,880 - INFO - PÁGINA 103
+2026-03-13 16:40:59,880 - INFO - ============================================================
+2026-03-13 16:40:59,880 - INFO - ====== WebDriver manager ======
+2026-03-13 16:40:59,938 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:41:00,027 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:41:00,120 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:41:00,944 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:41:00,944 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=103
+2026-03-13 16:41:02,063 - INFO - Aguardando 5.1s para carregamento...
+2026-03-13 16:41:13,674 - INFO - Analisando página HTML...
+2026-03-13 16:41:13,676 - INFO - Tentativa 1 (links com /imovel/): 27 cards
+2026-03-13 16:41:13,679 - INFO - ✓ Página 103: 27 imóveis extraídos
+2026-03-13 16:41:13,747 - INFO - Driver fechado
+2026-03-13 16:41:13,748 - INFO - ✓ Página 103 salva em data/raw/por_pagina/sao-paulo_sp_pagina103.csv
+2026-03-13 16:41:13,748 - INFO - Aguardando 5.5s antes da próxima página...
+2026-03-13 16:41:19,236 - INFO - ============================================================
+2026-03-13 16:41:19,237 - INFO - PÁGINA 104
+2026-03-13 16:41:19,237 - INFO - ============================================================
+2026-03-13 16:41:19,237 - INFO - ====== WebDriver manager ======
+2026-03-13 16:41:19,297 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:41:19,415 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:41:19,495 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:41:20,307 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:41:20,307 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=104
+2026-03-13 16:41:21,512 - INFO - Aguardando 6.5s para carregamento...
+2026-03-13 16:41:36,497 - INFO - Analisando página HTML...
+2026-03-13 16:41:36,498 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:41:36,501 - INFO - ✓ Página 104: 28 imóveis extraídos
+2026-03-13 16:41:36,569 - INFO - Driver fechado
+2026-03-13 16:41:36,571 - INFO - ✓ Página 104 salva em data/raw/por_pagina/sao-paulo_sp_pagina104.csv
+2026-03-13 16:41:36,571 - INFO - Aguardando 8.6s antes da próxima página...
+2026-03-13 16:41:45,177 - INFO - ============================================================
+2026-03-13 16:41:45,177 - INFO - PÁGINA 105
+2026-03-13 16:41:45,177 - INFO - ============================================================
+2026-03-13 16:41:45,177 - INFO - ====== WebDriver manager ======
+2026-03-13 16:41:45,239 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:41:45,352 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:41:45,421 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:41:46,264 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2026-03-13 16:41:46,264 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=105
+2026-03-13 16:41:52,792 - INFO - Aguardando 7.9s para carregamento...
+2026-03-13 16:42:08,139 - INFO - Analisando página HTML...
+2026-03-13 16:42:08,141 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:42:08,143 - INFO - ✓ Página 105: 26 imóveis extraídos
+2026-03-13 16:42:08,220 - INFO - Driver fechado
+2026-03-13 16:42:08,221 - INFO - ✓ Página 105 salva em data/raw/por_pagina/sao-paulo_sp_pagina105.csv
+2026-03-13 16:42:08,221 - INFO - Aguardando 6.6s antes da próxima página...
+2026-03-13 16:42:14,844 - INFO - ============================================================
+2026-03-13 16:42:14,844 - INFO - PÁGINA 106
+2026-03-13 16:42:14,844 - INFO - ============================================================
+2026-03-13 16:42:14,845 - INFO - ====== WebDriver manager ======
+2026-03-13 16:42:14,907 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:42:15,061 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:42:15,153 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:42:15,990 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:42:15,990 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=106
+2026-03-13 16:42:17,086 - INFO - Aguardando 6.4s para carregamento...
+2026-03-13 16:42:31,746 - INFO - Analisando página HTML...
+2026-03-13 16:42:31,747 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:42:31,750 - INFO - ✓ Página 106: 28 imóveis extraídos
+2026-03-13 16:42:31,827 - INFO - Driver fechado
+2026-03-13 16:42:31,829 - INFO - ✓ Página 106 salva em data/raw/por_pagina/sao-paulo_sp_pagina106.csv
+2026-03-13 16:42:31,829 - INFO - Aguardando 8.6s antes da próxima página...
+2026-03-13 16:42:40,431 - INFO - ============================================================
+2026-03-13 16:42:40,431 - INFO - PÁGINA 107
+2026-03-13 16:42:40,431 - INFO - ============================================================
+2026-03-13 16:42:40,431 - INFO - ====== WebDriver manager ======
+2026-03-13 16:42:40,489 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:42:40,558 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:42:40,637 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:42:41,466 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:42:41,466 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=107
+2026-03-13 16:42:42,571 - INFO - Aguardando 5.1s para carregamento...
+2026-03-13 16:42:55,931 - INFO - Analisando página HTML...
+2026-03-13 16:42:55,932 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:42:55,935 - INFO - ✓ Página 107: 26 imóveis extraídos
+2026-03-13 16:42:56,009 - INFO - Driver fechado
+2026-03-13 16:42:56,011 - INFO - ✓ Página 107 salva em data/raw/por_pagina/sao-paulo_sp_pagina107.csv
+2026-03-13 16:42:56,011 - INFO - Aguardando 6.3s antes da próxima página...
+2026-03-13 16:43:02,282 - INFO - ============================================================
+2026-03-13 16:43:02,282 - INFO - PÁGINA 108
+2026-03-13 16:43:02,282 - INFO - ============================================================
+2026-03-13 16:43:02,283 - INFO - ====== WebDriver manager ======
+2026-03-13 16:43:02,342 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:43:02,431 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:43:02,522 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:43:03,332 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2026-03-13 16:43:03,332 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=108
+2026-03-13 16:43:04,961 - INFO - Aguardando 6.2s para carregamento...
+2026-03-13 16:43:19,508 - INFO - Analisando página HTML...
+2026-03-13 16:43:19,509 - INFO - Tentativa 1 (links com /imovel/): 28 cards
+2026-03-13 16:43:19,512 - INFO - ✓ Página 108: 28 imóveis extraídos
+2026-03-13 16:43:19,591 - INFO - Driver fechado
+2026-03-13 16:43:19,593 - INFO - ✓ Página 108 salva em data/raw/por_pagina/sao-paulo_sp_pagina108.csv
+2026-03-13 16:43:19,593 - INFO - Aguardando 8.1s antes da próxima página...
+2026-03-13 16:43:27,675 - INFO - ============================================================
+2026-03-13 16:43:27,675 - INFO - PÁGINA 109
+2026-03-13 16:43:27,675 - INFO - ============================================================
+2026-03-13 16:43:27,675 - INFO - ====== WebDriver manager ======
+2026-03-13 16:43:27,733 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:43:27,816 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-13 16:43:27,883 - INFO - Driver [/home/felipe/.wdm/drivers/chromedriver/linux64/145.0.7632.117/chromedriver-linux64/chromedriver] found in cache
+2026-03-13 16:43:28,693 - INFO - Driver criado com User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2026-03-13 16:43:28,693 - INFO - Acessando: https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?tipos=apartamento_residencial%2Cstudio_residencial%2Ckitnet_residencial%2Ccasa_residencial%2Csobrado_residencial%2Ccondominio_residencial%2Ccasa-vila_residencial%2Ccobertura_residencial%2Cflat_residencial%2Cloft_residencial&pagina=109
+2026-03-13 16:43:30,267 - INFO - Aguardando 7.6s para carregamento...
+2026-03-13 16:43:45,627 - INFO - Analisando página HTML...
+2026-03-13 16:43:45,628 - INFO - Tentativa 1 (links com /imovel/): 26 cards
+2026-03-13 16:43:45,631 - INFO - ✓ Página 109: 26 imóveis extraídos
+2026-03-13 16:43:45,709 - INFO - Driver fechado
+2026-03-13 16:43:45,710 - INFO - ✓ Página 109 salva em data/raw/por_pagina/sao-paulo_sp_pagina109.csv
+2026-03-13 16:43:45,710 - INFO - Aguardando 5.4s antes da próxima página...

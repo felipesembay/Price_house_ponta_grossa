@@ -73,3 +73,60 @@ def save_metric(
                 )
             )
         conn.commit()
+
+
+def save_distribution_stats(
+    feature_name: str,
+    dataset_type: str,  # 'baseline' ou 'production'
+    stats: dict,
+    modelo: str,
+    versao_modelo: str
+):
+    """
+    Salva estatísticas descritivas de uma feature.
+    
+    Args:
+        feature_name: nome da feature
+        dataset_type: 'baseline' ou 'production'
+        stats: dict com keys: mean, std, min, max, p25, p50, p75, count
+        modelo: nome do modelo
+        versao_modelo: versão do modelo
+    """
+    query = """
+        INSERT INTO distribution_stats (
+            feature_name,
+            dataset_type,
+            mean_value,
+            std_value,
+            min_value,
+            max_value,
+            p25_value,
+            p50_value,
+            p75_value,
+            sample_count,
+            modelo,
+            versao_modelo
+        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    """
+
+    with get_connection() as conn:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                query,
+                (
+                    feature_name,
+                    dataset_type,
+                    stats.get('mean'),
+                    stats.get('std'),
+                    stats.get('min'),
+                    stats.get('max'),
+                    stats.get('p25'),
+                    stats.get('p50'),
+                    stats.get('p75'),
+                    stats.get('count'),
+                    modelo,
+                    versao_modelo
+                )
+            )
+        conn.commit()
+        conn.commit()

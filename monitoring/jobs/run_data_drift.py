@@ -35,7 +35,7 @@ from evidently import Dataset, Report
 from evidently.presets import DataDriftPreset
 
 from monitoring.db.mysql import (load_baseline_data, load_current_data,
-                                 save_metric)
+                                 save_distribution_stats, save_metric)
 
 # ── Configuração ──────────────────────────────────────────────────────────────
 CONFIG_PATH      = os.path.join(os.path.dirname(__file__), "../config/features.yaml")
@@ -87,6 +87,42 @@ else:
     current_df = current_df[NUM_FEATURES].dropna()
 
 print(f"   Referência: {len(baseline_df)} linhas | Atual: {len(current_df)} linhas")
+
+# ── Calcular e salvar estatísticas de distribuição ───────────────────────────
+print("📊 Calculando estatísticas de distribuição...")
+
+def calc_stats(series: pd.Series) -> dict:
+    """Calcula estatísticas descritivas de uma Series pandas"""
+    # Garantir que é numérica e dropna
+    series_clean = pd.to_numeric(series, errors='coerce').dropna()
+    
+    if len(series_clean) == 0:
+        return {
+            'mean': 0.0, 'std': 0.0, 'min': 0.0, 'max': 0.0,
+            'p25': 0.0, 'p50': 0.0, 'p75': 0.0, 'count': 0
+        }
+    
+    return {
+        'mean': float(series_clean.mean()),
+        'std': float(series_clean.std()),
+        'min': float(series_clean.min()),
+        'max': float(series_clean.max()),
+        'p25': float(series_clean.quantile(0.25)),
+        'p50': float(series_clean.quantile(0.50)),
+        'p75': float(series_clean.quantile(0.75)),
+        'count': int(len(series_clean))
+    }
+
+for feature in NUM_FEATURES:
+    if feature in baseline_df.columns and feature in current_df.columns:
+        baseline_stats = calc_stats(baseline_df[feature])
+        current_stats = calc_stats(current_df[feature])
+        
+        if not DRY_RUN or SEED_MODE:
+            save_distribution_stats(feature, 'baseline', baseline_stats, MODEL_NAME, MODEL_VERSION)
+            save_distribution_stats(feature, 'production', current_stats, MODEL_NAME, MODEL_VERSION)
+
+print(f"   Estatísticas salvas para {len(NUM_FEATURES)} features")
 
 # ── Relatório Evidently 0.7.x ─────────────────────────────────────────────────
 print("🔍 Calculando Data Drift com Evidently 0.7.x ...")

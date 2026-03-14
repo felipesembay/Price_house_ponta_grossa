@@ -61,6 +61,37 @@ last_run_gauge = Gauge(
     "Unix timestamp da última vez que o job de drift foi executado",
 )
 
+# ── Métricas de distribuição (baseline vs production) ────────────────────────
+distribution_mean_gauge = Gauge(
+    "feature_distribution_mean",
+    "Média da distribuição de uma feature",
+    ["feature", "dataset_type", "modelo", "versao"],
+)
+
+distribution_std_gauge = Gauge(
+    "feature_distribution_std",
+    "Desvio padrão da distribuição de uma feature",
+    ["feature", "dataset_type", "modelo", "versao"],
+)
+
+distribution_median_gauge = Gauge(
+    "feature_distribution_median",
+    "Mediana (p50) da distribuição de uma feature",
+    ["feature", "dataset_type", "modelo", "versao"],
+)
+
+distribution_min_gauge = Gauge(
+    "feature_distribution_min",
+    "Valor mínimo da distribuição de uma feature",
+    ["feature", "dataset_type", "modelo", "versao"],
+)
+
+distribution_max_gauge = Gauge(
+    "feature_distribution_max",
+    "Valor máximo da distribuição de uma feature",
+    ["feature", "dataset_type", "modelo", "versao"],
+)
+
 
 # ─── Lógica de coleta ─────────────────────────────────────────────────────────
 def _get_connection():
@@ -131,7 +162,70 @@ def collect_and_expose() -> None:
         if last_ts is not None:
             last_run_gauge.set(last_ts.timestamp() if hasattr(last_ts, "timestamp") else float(last_ts))
 
-        log.info("Métricas coletadas: %d registros.", len(rows))
+        log.info("Métricas de drift coletadas: %d registros.", len(rows))
+
+        # ── Estatísticas de distribuição (latest por feature/tipo/modelo) ────
+        try:
+            with _get_connection() as conn:
+                with conn.cursor() as cur:
+                    cur.execute(
+                        """
+                        SELECT d.feature_name, d.dataset_type, d.mean_value,
+                               d.std_value, d.min_value, d.max_value, d.p50_value,
+                               d.modelo, d.versao_modelo
+                        FROM distribution_stats d
+                        INNER JOIN (
+                            SELECT feature_name, dataset_type, modelo, versao_modelo,
+                                   MAX(created_at) AS max_ts
+                            FROM distribution_stats
+                            GROUP BY feature_name, dataset_type, modelo, versao_modelo
+                        ) latest
+                            ON  d.feature_name    = latest.feature_name
+                            AND d.dataset_type    = latest.dataset_type
+                            AND COALESCE(d.modelo, '') = COALESCE(latest.modelo, '')
+                            AND COALESCE(d.versao_modelo, '') = COALESCE(latest.versao_modelo, '')
+                            AND d.created_at      = latest.max_ts
+                        ORDER BY d.created_at DESC
+                        LIMIT 500
+                        """
+                    )
+                    dist_rows = cur.fetchall()
+
+            for row in dist_rows:
+                feature = row["feature_name"]
+                dtype = row["dataset_type"]
+                modelo = row["modelo"] or "unknown"
+                versao = row["versao_modelo"] or "unknown"
+
+                if row["mean_value"] is not None:
+                    distribution_mean_gauge.labels(
+                        feature=feature, dataset_type=dtype, modelo=modelo, versao=versao
+                    ).set(float(row["mean_value"]))
+                
+                if row["std_value"] is not None:
+                    distribution_std_gauge.labels(
+                        feature=feature, dataset_type=dtype, modelo=modelo, versao=versao
+                    ).set(float(row["std_value"]))
+                
+                if row["p50_value"] is not None:
+                    distribution_median_gauge.labels(
+                        feature=feature, dataset_type=dtype, modelo=modelo, versao=versao
+                    ).set(float(row["p50_value"]))
+                
+                if row["min_value"] is not None:
+                    distribution_min_gauge.labels(
+                        feature=feature, dataset_type=dtype, modelo=modelo, versao=versao
+                    ).set(float(row["min_value"]))
+                
+                if row["max_value"] is not None:
+                    distribution_max_gauge.labels(
+                        feature=feature, dataset_type=dtype, modelo=modelo, versao=versao
+                    ).set(float(row["max_value"]))
+
+            log.info("Estatísticas de distribuição coletadas: %d registros.", len(dist_rows))
+        
+        except Exception as exc_dist:
+            log.error("Erro ao coletar estatísticas de distribuição: %s", exc_dist)
 
     except Exception as exc:
         log.error("Erro ao coletar métricas do MySQL: %s", exc)
